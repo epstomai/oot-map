@@ -1,0 +1,482 @@
+{
+  "ui": {
+    "zh-CN": {
+      "appTitle": "塞尔达传说：时之笛 收集进度管理器",
+      "appSubtitle": "实时位置同步 · 存档解析 · 全收集攻略",
+      "navOverworld": "海拉鲁全图",
+      "navPlaces": "地点列表",
+      "navItems": "收集清单",
+      "savePathLabel": "存档目录",
+      "savePathPlaceholder": "输入或浏览 Hookshot 存档根目录...",
+      "browseBtn": "浏览目录",
+      "rescanBtn": "刷新存档",
+      "slotLabel": "存档槽位",
+      "autoFollowSlot": "自动跟随最新存档",
+      "autoFollowMap": "自动跟随主角场景/楼层",
+      "syncLiveMem": "实时内存同步",
+      "syncSaveWatch": "存档文件监听 (progress.sav)",
+      "syncIdle": "已连接存档 · 等待变更",
+      "heroPos": "主角坐标",
+      "heroScene": "当前场景",
+      "heroFloor": "当前楼层",
+      "ageChild": "少年期",
+      "ageAdult": "青年期",
+      "ageBoth": "少年/青年均可",
+      "nightOnly": "仅限夜晚",
+      "dayOrNight": "全天",
+      "progressTotal": "总收集进度",
+      "collected": "已收集",
+      "uncollected": "未收集",
+      "manualOverride": "手动标记",
+      "savedInFile": "存档已收集",
+      "notInSave": "存档未收集",
+      "searchPlaceholder": "搜索名称、地点、道具或攻略关键词...",
+      "filterAll": "全部",
+      "filterRemaining": "仅看未收集",
+      "filterDone": "仅看已收集",
+      "filterAgeAll": "全部时期",
+      "filterNightOnly": "仅看夜晚",
+      "reqLabel": "前置条件",
+      "noReq": "无前置道具要求",
+      "hintTitle": "收集提示",
+      "guideTitle": "详细攻略",
+      "saveFlagLabel": "存档检测标志",
+      "coordsLabel": "世界坐标 (X, Y, Z)",
+      "manualCheckLabel": "手动覆写标记（仅本地辅助）",
+      "notePlaceholder": "添加个人备注...",
+      "pouchSummary": "当前存档状态",
+      "hearts": "心之容器",
+      "tokens": "黄金蜘蛛印记",
+      "bottles": "空瓶",
+      "stones": "精灵石",
+      "medallions": "贤者徽章",
+      "dungeonsTitle": "迷宫神殿",
+      "zonesTitle": "海拉鲁地区",
+      "browseModalTitle": "选择存档目录",
+      "browseSelectCurrent": "使用当前目录",
+      "browseCancel": "取消",
+      "browseParent": "上级目录",
+      "noPlaceMap": "该区域暂无独立平面图，请在海拉鲁全图查看位置与攻略。",
+      "centerOnLink": "定位主角",
+      "resetZoom": "重置视图",
+      "lastModified": "最后保存",
+      "loading": "正在加载海拉鲁地图与存档数据...",
+      "noSaveLoaded": "未检测到有效存档文件 (progress.sav)",
+      "memoryScanHint": "当 longshot.exe / hookshot.exe 运行时自动尝试绑定实时坐标，关闭时自动切换为存档文件实时监听。"
+    },
+    "ja": {
+      "appTitle": "ゼルダの伝説 時のオカリナ 収集進捗マネージャー",
+      "appSubtitle": "リアルタイム位置同期・セーブ解析・攻略ガイド",
+      "navOverworld": "ハイラル全体図",
+      "navPlaces": "エリア一覧",
+      "navItems": "収集リスト",
+      "savePathLabel": "セーブフォルダ",
+      "savePathPlaceholder": "Hookshotのセーブフォルダを入力または選択...",
+      "browseBtn": "参照",
+      "rescanBtn": "再読み込み",
+      "slotLabel": "セーブスロット",
+      "autoFollowSlot": "最新更新スロットを自動追跡",
+      "autoFollowMap": "主人公の現在地・階層に自動追従",
+      "syncLiveMem": "リアルタイムメモリ同期",
+      "syncSaveWatch": "セーブファイル監視 (progress.sav)",
+      "syncIdle": "セーブ接続済み・待機中",
+      "heroPos": "主人公座標",
+      "heroScene": "現在エリア",
+      "heroFloor": "現在階層",
+      "ageChild": "子供時代",
+      "ageAdult": "大人時代",
+      "ageBoth": "どちらでも可",
+      "nightOnly": "夜のみ",
+      "dayOrNight": "昼夜不問",
+      "progressTotal": "総合収集率",
+      "collected": "収集済み",
+      "uncollected": "未収集",
+      "manualOverride": "手動チェック",
+      "savedInFile": "セーブで取得済み",
+      "notInSave": "セーブ未取得",
+      "searchPlaceholder": "アイテム名・場所・必要アイテム・攻略で検索...",
+      "filterAll": "すべて",
+      "filterRemaining": "未収集のみ",
+      "filterDone": "収集済みのみ",
+      "filterAgeAll": "全時代",
+      "filterNightOnly": "夜限定のみ",
+      "reqLabel": "必要条件",
+      "noReq": "特別なアイテム不要",
+      "hintTitle": "収集ヒント",
+      "guideTitle": "詳細攻略",
+      "saveFlagLabel": "セーブ判定フラグ",
+      "coordsLabel": "ワールド座標 (X, Y, Z)",
+      "manualCheckLabel": "手動チェック上書き（ローカル補助）",
+      "notePlaceholder": "メモを入力...",
+      "pouchSummary": "セーブ状況サマリー",
+      "hearts": "ハートの器",
+      "tokens": "黄金のスタルチュラのしるし",
+      "bottles": "あきビン",
+      "stones": "精霊石",
+      "medallions": "賢者のメダル",
+      "dungeonsTitle": "ダンジョン",
+      "zonesTitle": "フィールド・町",
+      "browseModalTitle": "セーブフォルダを選択",
+      "browseSelectCurrent": "このフォルダを使用",
+      "browseCancel": "キャンセル",
+      "browseParent": "上のフォルダへ",
+      "noPlaceMap": "このエリアには個別マップがありません。全体図と攻略ガイドをご参照ください。",
+      "centerOnLink": "リンクにフォーカス",
+      "resetZoom": "表示リセット",
+      "lastModified": "最終更新",
+      "loading": "ハイラルマップとセーブデータを読み込み中...",
+      "noSaveLoaded": "有効なセーブファイル (progress.sav) が見つかりません",
+      "memoryScanHint": "longshot.exe / hookshot.exe 起動中はメモリからリアルタイム座標を取得し、未起動時は progress.sav を監視します。"
+    },
+    "en": {
+      "appTitle": "Ocarina of Time Collection Tracker",
+      "appSubtitle": "Live Position Sync · Save Parser · Hints & Walkthrough",
+      "navOverworld": "Hyrule Overworld",
+      "navPlaces": "Locations",
+      "navItems": "Checklist",
+      "savePathLabel": "Save Directory",
+      "savePathPlaceholder": "Enter or browse Hookshot save folder...",
+      "browseBtn": "Browse",
+      "rescanBtn": "Refresh",
+      "slotLabel": "Save Slot",
+      "autoFollowSlot": "Auto-follow latest slot",
+      "autoFollowMap": "Auto-follow Link's scene/floor",
+      "syncLiveMem": "Live Memory Sync",
+      "syncSaveWatch": "Save File Watch (progress.sav)",
+      "syncIdle": "Save Loaded · Watching",
+      "heroPos": "Link Position",
+      "heroScene": "Current Scene",
+      "heroFloor": "Current Floor",
+      "ageChild": "Child",
+      "ageAdult": "Adult",
+      "ageBoth": "Child or Adult",
+      "nightOnly": "Night only",
+      "dayOrNight": "Any time",
+      "progressTotal": "Total Progress",
+      "collected": "Collected",
+      "uncollected": "Remaining",
+      "manualOverride": "Manual check",
+      "savedInFile": "Collected in Save",
+      "notInSave": "Not in Save",
+      "searchPlaceholder": "Search item, location, requirement, or guide...",
+      "filterAll": "All",
+      "filterRemaining": "Remaining",
+      "filterDone": "Collected",
+      "filterAgeAll": "All Ages",
+      "filterNightOnly": "Night Only",
+      "reqLabel": "Requirements",
+      "noReq": "No special items required",
+      "hintTitle": "Collection Tip",
+      "guideTitle": "Walkthrough",
+      "saveFlagLabel": "Save Flag Verification",
+      "coordsLabel": "World Coords (X, Y, Z)",
+      "manualCheckLabel": "Manual Override (local note)",
+      "notePlaceholder": "Add personal note...",
+      "pouchSummary": "Save File Summary",
+      "hearts": "Hearts",
+      "tokens": "Gold Tokens",
+      "bottles": "Bottles",
+      "stones": "Spiritual Stones",
+      "medallions": "Medallions",
+      "dungeonsTitle": "Dungeons",
+      "zonesTitle": "Hyrule Zones",
+      "browseModalTitle": "Select Save Directory",
+      "browseSelectCurrent": "Use This Folder",
+      "browseCancel": "Cancel",
+      "browseParent": "Up One Level",
+      "noPlaceMap": "This zone has no separate floor plan SVG. View its location pin and guides below.",
+      "centerOnLink": "Center on Link",
+      "resetZoom": "Reset View",
+      "lastModified": "Last Saved",
+      "loading": "Loading Hyrule map and save data...",
+      "noSaveLoaded": "No valid save file (progress.sav) found",
+      "memoryScanHint": "Reads live memory when longshot.exe / hookshot.exe is running; automatically watches progress.sav otherwise."
+    }
+  },
+  "regions": {
+    "Bosques": {
+      "zh-CN": "森林区域",
+      "ja": "森エリア",
+      "en": "Forest"
+    },
+    "Centro": {
+      "zh-CN": "海拉鲁中央",
+      "ja": "ハイラル中央",
+      "en": "Central Hyrule"
+    },
+    "Castillo": {
+      "zh-CN": "城堡区域",
+      "ja": "城エリア",
+      "en": "Castle"
+    },
+    "Kakariko": {
+      "zh-CN": "卡卡利科区域",
+      "ja": "カカリコエリア",
+      "en": "Kakariko"
+    },
+    "Montaña": {
+      "zh-CN": "死亡之山",
+      "ja": "デスマウンテン",
+      "en": "Death Mountain"
+    },
+    "Zora": {
+      "zh-CN": "卓拉水域",
+      "ja": "ゾーラエリア",
+      "en": "Zora"
+    },
+    "Lago": {
+      "zh-CN": "海利亚湖",
+      "ja": "ハイリア湖",
+      "en": "Lake Hylia"
+    },
+    "Oeste": {
+      "zh-CN": "格鲁德沙漠",
+      "ja": "ゲルド地方",
+      "en": "Gerudo"
+    }
+  },
+  "floorLabels": {
+    "principal": {
+      "zh-CN": "主地图",
+      "ja": "メイン",
+      "en": "Main"
+    },
+    "nino": {
+      "zh-CN": "少年期",
+      "ja": "子供時代",
+      "en": "Child"
+    },
+    "adulto": {
+      "zh-CN": "青年期",
+      "ja": "大人時代",
+      "en": "Adult"
+    },
+    "1F": {
+      "zh-CN": "1F",
+      "ja": "1F",
+      "en": "1F"
+    },
+    "2F": {
+      "zh-CN": "2F",
+      "ja": "2F",
+      "en": "2F"
+    },
+    "3F": {
+      "zh-CN": "3F",
+      "ja": "3F",
+      "en": "3F"
+    },
+    "4F": {
+      "zh-CN": "4F",
+      "ja": "4F",
+      "en": "4F"
+    },
+    "5F": {
+      "zh-CN": "5F",
+      "ja": "5F",
+      "en": "5F"
+    },
+    "S1": {
+      "zh-CN": "B1",
+      "ja": "B1",
+      "en": "B1"
+    },
+    "S2": {
+      "zh-CN": "B2",
+      "ja": "B2",
+      "en": "B2"
+    },
+    "S3": {
+      "zh-CN": "B3",
+      "ja": "B3",
+      "en": "B3"
+    },
+    "S4": {
+      "zh-CN": "B4",
+      "ja": "B4",
+      "en": "B4"
+    }
+  },
+  "locations": {
+    "BottomOfTheWell": {
+      "zh-CN": "井底",
+      "ja": "井戸の底",
+      "en": "Bottom of the Well"
+    },
+    "DeathMountainCrater": {
+      "zh-CN": "死亡之山火山口",
+      "ja": "デスマウンテン火口",
+      "en": "Death Mountain Crater"
+    },
+    "DeathMountainTrail": {
+      "zh-CN": "死亡之山登山道",
+      "ja": "デスマウンテン登山道",
+      "en": "Death Mountain Trail"
+    },
+    "DesertColossus": {
+      "zh-CN": "巨大邪神像",
+      "ja": "巨大邪神像",
+      "en": "Evil Desert Colossus"
+    },
+    "DodongoCavern": {
+      "zh-CN": "多东哥洞窟",
+      "ja": "ドドンゴの洞窟",
+      "en": "Dodongo Cavern"
+    },
+    "DreamWorld": {
+      "zh-CN": "万魔殿",
+      "ja": "万魔殿",
+      "en": "Hall of Fallen Foes"
+    },
+    "FireTemple": {
+      "zh-CN": "火之神殿",
+      "ja": "炎の神殿",
+      "en": "Fire Temple"
+    },
+    "ForestTemple": {
+      "zh-CN": "森之神殿",
+      "ja": "森の神殿",
+      "en": "Forest Temple"
+    },
+    "GanonCastle": {
+      "zh-CN": "加侬多夫城堡",
+      "ja": "ガノンドロフ城",
+      "en": "Ganondorf's Castle"
+    },
+    "GerudoFortress": {
+      "zh-CN": "格鲁德要塞",
+      "ja": "ゲルドの砦",
+      "en": "Gerudo Fortress"
+    },
+    "GerudoTrainingGround": {
+      "zh-CN": "格鲁德训练场",
+      "ja": "ゲルドの修練場",
+      "en": "Gerudo Proving Grounds"
+    },
+    "GerudoValley": {
+      "zh-CN": "格鲁德之谷",
+      "ja": "ゲルドの谷",
+      "en": "Gerudo Valley"
+    },
+    "GoronCity": {
+      "zh-CN": "鼓隆城",
+      "ja": "ゴロンシティ",
+      "en": "Goron City"
+    },
+    "Graveyard": {
+      "zh-CN": "墓地",
+      "ja": "墓地",
+      "en": "Graveyard"
+    },
+    "HountedWasteland": {
+      "zh-CN": "幻影沙漠",
+      "ja": "幻影の砂漠",
+      "en": "Mirage Desert"
+    },
+    "HyruleCastle": {
+      "zh-CN": "海拉鲁城堡",
+      "ja": "ハイラル城",
+      "en": "Hyrule Castle"
+    },
+    "HyruleField": {
+      "zh-CN": "海拉鲁平原",
+      "ja": "ハイラル平原",
+      "en": "Hyrule Field"
+    },
+    "IceCavern": {
+      "zh-CN": "冰之洞窟",
+      "ja": "氷の洞窟",
+      "en": "Ice Cavern"
+    },
+    "IngoRanch": {
+      "zh-CN": "印格牧场",
+      "ja": "インゴー牧場",
+      "en": "Ingo Ranch"
+    },
+    "InsideGanonCastle": {
+      "zh-CN": "加侬多夫城堡内部",
+      "ja": "ガノンドロフ城内部",
+      "en": "Inside Ganondorf's Castle"
+    },
+    "InsideJabuJabuBelly": {
+      "zh-CN": "加卜加卜大人腹中",
+      "ja": "ジャブジャブ様のお腹",
+      "en": "Lord Jabu-Jabu's Belly"
+    },
+    "InsideTheDekuTree": {
+      "zh-CN": "德库树长老体内",
+      "ja": "デクの樹サマの中",
+      "en": "Great Deku Tree"
+    },
+    "KakarikoVillage": {
+      "zh-CN": "卡卡利科村",
+      "ja": "カカリコ村",
+      "en": "Kakariko Village"
+    },
+    "KokiriForest": {
+      "zh-CN": "科奇里森林",
+      "ja": "コキリの森",
+      "en": "Kokiri Forest"
+    },
+    "LakeHylia": {
+      "zh-CN": "海利亚湖畔",
+      "ja": "ハイリア湖畔",
+      "en": "Lake Hylia"
+    },
+    "LonLonRanch": {
+      "zh-CN": "荣蓉牧场",
+      "ja": "ロンロン牧場",
+      "en": "Lon Lon Ranch"
+    },
+    "LostWood": {
+      "zh-CN": "迷途森林",
+      "ja": "迷いの森",
+      "en": "Lost Woods"
+    },
+    "Market": {
+      "zh-CN": "海拉鲁城邑",
+      "ja": "ハイラル城下町",
+      "en": "Hyrule Castle Town"
+    },
+    "SacredForestMeadow": {
+      "zh-CN": "森之圣域",
+      "ja": "森の聖域",
+      "en": "Sacred Grove"
+    },
+    "ShadowTemple": {
+      "zh-CN": "暗之神殿",
+      "ja": "闇の神殿",
+      "en": "Shadow Temple"
+    },
+    "SpiritTemple": {
+      "zh-CN": "魂之神殿",
+      "ja": "魂の神殿",
+      "en": "Spirit Temple"
+    },
+    "TimeTemple": {
+      "zh-CN": "时之神殿",
+      "ja": "時の神殿",
+      "en": "Temple of Time"
+    },
+    "WaterTemple": {
+      "zh-CN": "水之神殿",
+      "ja": "水の神殿",
+      "en": "Water Temple"
+    },
+    "ZoraDomain": {
+      "zh-CN": "卓拉领地",
+      "ja": "ゾーラの里",
+      "en": "Zora Domain"
+    },
+    "ZoraFountain": {
+      "zh-CN": "卓拉之泉",
+      "ja": "ゾーラの泉",
+      "en": "Zora Fountain"
+    },
+    "ZoraRiver": {
+      "zh-CN": "卓拉河",
+      "ja": "ゾーラ川",
+      "en": "Zora River"
+    }
+  }
+}

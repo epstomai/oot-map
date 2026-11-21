@@ -1,0 +1,5425 @@
+{
+  "map": {
+    "image": "maps/hyrule_hd.webp",
+    "aspect": 1.3749,
+    "overworld_hyrule_tf": {
+      "mode": "scale_offset",
+      "ax": 0.0005399183720537082,
+      "az": 0.0,
+      "c": 0.45393635003064126,
+      "bx": 0.0,
+      "bz": 0.0009592387374215522,
+      "d": 0.40013928076614047,
+      "n": 8
+    }
+  },
+  "places": [
+    {
+      "id": "kokiri",
+      "kind": "zone",
+      "region": "Bosques",
+      "region_i18n": {
+        "zh-CN": "森林区域",
+        "ja": "森エリア",
+        "en": "Forest"
+      },
+      "pin": {
+        "x": 0.5913,
+        "y": 0.674
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_kokiri_principal.webp",
+          "aspect": 1.73,
+          "viewBox": [
+            13.0,
+            189.0,
+            1986.0,
+            1148.0
+          ]
+        }
+      ],
+      "scenes": [
+        "KokiriForest_Child",
+        "KokiriForest_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 6.666667,
+        "az": 0.0,
+        "c": 1033.3333,
+        "bx": 0.0,
+        "bz": 6.666667,
+        "d": 800.0,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "科奇里森林",
+        "ja": "コキリの森",
+        "en": "Kokiri Forest"
+      },
+      "intro": {
+        "zh-CN": "冒险开始的村庄。包含3只黄金蜘蛛与1处魔法豆松土：少年期夜晚可抓无所不知兄弟屋后及商店后方虫洞蜘蛛（顺便种下魔法豆），青年期夜晚可用钩爪拿下双胞胎屋顶后方的第3只蜘蛛。",
+        "ja": "冒険が始まるコキリの森。黄金のスタルチュラ3匹と魔法のマメの土が1か所あります。子供時代にはものしり兄弟の家の裏（夜）と店の裏のムシ穴（昼夜不問）を回収し、同じ土にマメを植えておきましょう。大人時代の夜にフックショットで双子の家の屋根裏の3匹目を取れます。",
+        "en": "The starting village holds 3 Gold Skulltulas and 1 Magic Bean soil patch. Get the two Child Skulltulas behind the Know-It-All House (night) and the shop soft soil (bugs, any time), plant a Magic Bean there, and return as Adult at night with the Hookshot for the third."
+      }
+    },
+    {
+      "id": "perdido",
+      "kind": "zone",
+      "region": "Bosques",
+      "region_i18n": {
+        "zh-CN": "森林区域",
+        "ja": "森エリア",
+        "en": "Forest"
+      },
+      "pin": {
+        "x": 0.6947,
+        "y": 0.6392
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/lostwood_hd.webp",
+          "aspect": 1.0,
+          "viewBox": [
+            0.0,
+            0.0,
+            2048.0,
+            2048.0
+          ]
+        }
+      ],
+      "scenes": [
+        "LostWood_Child",
+        "LostWood_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 9.198631,
+        "az": 0.0,
+        "c": 970.6248,
+        "bx": 0.0,
+        "bz": 9.225477,
+        "d": 1031.2999,
+        "n": 9
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "迷途森林",
+        "ja": "迷いの森",
+        "en": "Lost Woods"
+      },
+      "intro": {
+        "zh-CN": "连接科奇里森林与森之圣域的迷宫森林。包含2块心之碎片（吹奏《莎莉亚之歌》及记忆演奏小游戏）、3只黄金蜘蛛与2处魔法豆松土。",
+        "ja": "コキリの森と森の聖域を結ぶ迷いの森。オカリナで遊ぶ2つのハートのかけら（サリアの歌・記憶セッション）、黄金のスタルチュラ3匹、魔法のマメの土2か所があります。",
+        "en": "This maze connects Kokiri Forest and the Sacred Forest Meadow. Almost everything is done as Child: two Skull Kid Pieces of Heart, three Gold Skulltulas, and two Magic Bean patches."
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "prado",
+          "x": 0.5817,
+          "y": 0.1265,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "goron",
+          "x": 0.5817,
+          "y": 0.3429,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "rio",
+          "x": 0.7816,
+          "y": 0.3882,
+          "rot": 90,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "kokiri",
+          "x": 0.4739,
+          "y": 0.5351,
+          "rot": 180,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
+    },
+    {
+      "id": "prado",
+      "kind": "zone",
+      "region": "Bosques",
+      "region_i18n": {
+        "zh-CN": "森林区域",
+        "ja": "森エリア",
+        "en": "Forest"
+      },
+      "pin": {
+        "x": 0.7774,
+        "y": 0.6745
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_prado_principal.webp",
+          "aspect": 0.4722,
+          "viewBox": [
+            702.0,
+            0.0,
+            680.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "SacredForestMeadow_Child",
+        "SacredForestMeadow_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 6.309148,
+        "az": 0.0,
+        "c": 1075.7098,
+        "bx": 0.0,
+        "bz": 6.309148,
+        "d": 877.7287,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "森之圣域",
+        "ja": "森の聖域",
+        "en": "Sacred Forest Meadow"
+      },
+      "intro": {
+        "zh-CN": "通往森之神殿的迷宫花园。仅在青年期夜晚迷宫右侧墙壁出现1只黄金蜘蛛，用钩爪即可击落收集。",
+        "ja": "森の神殿へ続く迷路庭園。大人時代の夜のみ、階段手前の右側壁面に黄金のスタルチュラが1匹現れます。フックショットで倒しましょう。",
+        "en": "A single Adult night Gold Skulltula waits on the right-hand wall halfway through the maze leading to the Forest Temple."
+      }
+    },
+    {
+      "id": "llanura",
+      "kind": "zone",
+      "region": "Centro",
+      "region_i18n": {
+        "zh-CN": "海拉鲁中央",
+        "ja": "ハイラル中央",
+        "en": "Central Hyrule"
+      },
+      "pin": {
+        "x": 0.4475,
+        "y": 0.6267
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_llanura_principal.webp",
+          "aspect": 1.2553,
+          "viewBox": [
+            53.0,
+            29.0,
+            1770.0,
+            1410.0
+          ]
+        }
+      ],
+      "scenes": [
+        "HyruleField_Child",
+        "HyruleField_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 2.717391,
+        "az": 0.0,
+        "c": 1062.5,
+        "bx": 0.0,
+        "bz": 2.717391,
+        "d": 184.6739,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "海拉鲁平原",
+        "ja": "ハイラル平原",
+        "en": "Hyrule Field"
+      },
+      "intro": {
+        "zh-CN": "广袤的中央平原藏有2块心之碎片、3只黄金蜘蛛与多达10处妖精的思绪。多数目标隐藏在需要炸弹或重锤炸开的地下秘窟中。",
+        "ja": "広大なハイラル平原にはハートのかけら2個、黄金のスタルチュラ3匹、そして10か所の妖精の想いが隠されています。バクダンやメガトンハンマーで開く隠し穴が多いので要チェック。",
+        "en": "Hyrule Field hides 2 Pieces of Heart, 3 Gold Skulltulas, and 10 Fairy Thoughts, many tucked inside grottos opened with Bombs or the Megaton Hammer."
+      }
+    },
+    {
+      "id": "lonlon",
+      "kind": "zone",
+      "region": "Centro",
+      "region_i18n": {
+        "zh-CN": "海拉鲁中央",
+        "ja": "ハイラル中央",
+        "en": "Central Hyrule"
+      },
+      "pin": {
+        "x": 0.3816,
+        "y": 0.573
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_lonlon_principal.webp",
+          "aspect": 1.0932,
+          "viewBox": [
+            305.0,
+            97.0,
+            1360.0,
+            1244.0
+          ]
+        }
+      ],
+      "scenes": [
+        "LonLonRanch_Child",
+        "LonLonRanch_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 7.246377,
+        "az": 0.0,
+        "c": 1623.1884,
+        "bx": 0.0,
+        "bz": 7.246377,
+        "d": -1011.8841,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "荣蓉牧场",
+        "ja": "ロンロン牧場",
+        "en": "Lon Lon Ranch"
+      },
+      "intro": {
+        "zh-CN": "牧场内有4只黄金蜘蛛（注意窗口与石塔高处）、石塔最深处箱后的心之碎片、1处妖精的思绪，以及唤醒塔隆后参加超级鸡小游戏获得的空瓶。",
+        "ja": "ロンロン牧場には黄金のスタルチュラ3匹、石塔奥のハートのかけら、妖精の想い1か所、そしてタロンを起こした後に遊べるスーパーコッコ探しで手に入るあきビンがあります。",
+        "en": "Lon Lon Ranch holds 3 Gold Skulltulas, a Piece of Heart inside the stone silo, 1 Fairy Thought, and a Bottle won from Talon's Super Cucco game after waking him at Hyrule Castle."
+      }
+    },
+    {
+      "id": "ciudadela",
+      "kind": "zone",
+      "region": "Castillo",
+      "region_i18n": {
+        "zh-CN": "城堡区域",
+        "ja": "城エリア",
+        "en": "Castle"
+      },
+      "pin": {
+        "x": 0.4333,
+        "y": 0.385
+      },
+      "startMap": "nino",
+      "maps": [
+        {
+          "id": "nino",
+          "label": {
+            "zh-CN": "少年期",
+            "ja": "子供時代",
+            "en": "Child"
+          },
+          "image": "maps/official_ciudadela_nino.webp",
+          "aspect": 1.226,
+          "viewBox": [
+            112.0,
+            23.0,
+            1736.0,
+            1416.0
+          ]
+        },
+        {
+          "id": "adulto",
+          "label": {
+            "zh-CN": "青年期",
+            "ja": "大人時代",
+            "en": "Adult"
+          },
+          "image": "maps/official_ciudadela_adulto.webp",
+          "aspect": 1.226,
+          "viewBox": [
+            112.0,
+            23.0,
+            1736.0,
+            1416.0
+          ]
+        }
+      ],
+      "scenes": [
+        "Market_Child",
+        "Market_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 9.345794,
+        "az": 0.0,
+        "c": 1000.0,
+        "bx": 0.0,
+        "bz": 9.345794,
+        "d": 691.9626,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "海拉鲁城邑",
+        "ja": "ハイラル城下町",
+        "en": "Hyrule Castle Town"
+      },
+      "intro": {
+        "zh-CN": "海拉鲁城下町包含3块心之碎片（夜晚宝箱屋、寻狗任务、炸弹鼠保龄球）、入口警卫室的1只黄金蜘蛛，以及药店抓虫与幽灵屋500分兑换的2个空瓶。",
+        "ja": "ハイラル城下町にはハートのかけら3個（宝箱屋・リチャード探し・ボムチュウボウリング）、見張り小屋のスタルチュラ1匹、さらに子供時代のクスリ屋と大人時代のゴーストショップで2つのあきビンが手に入ります。",
+        "en": "Hyrule Castle Town offers 3 Pieces of Heart (Treasure Chest Shop, Richard's dog, Bombchu Bowling), 1 Gold Skulltula in the Guard House, and 2 Bottles (Potion Shop bugs as Child, Poe Collector 500 pts as Adult)."
+      }
+    },
+    {
+      "id": "castillo",
+      "kind": "zone",
+      "region": "Castillo",
+      "region_i18n": {
+        "zh-CN": "城堡区域",
+        "ja": "城エリア",
+        "en": "Castle"
+      },
+      "pin": {
+        "x": 0.4259,
+        "y": 0.3128
+      },
+      "startMap": "nino",
+      "maps": [
+        {
+          "id": "nino",
+          "label": {
+            "zh-CN": "少年期",
+            "ja": "子供時代",
+            "en": "Child"
+          },
+          "image": "maps/official_castillo_nino.webp",
+          "aspect": 0.7764,
+          "viewBox": [
+            578.0,
+            0.0,
+            1118.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "adulto",
+          "label": {
+            "zh-CN": "青年期",
+            "ja": "大人時代",
+            "en": "Adult"
+          },
+          "image": "maps/official_castillo_adulto.webp",
+          "aspect": 0.8331,
+          "viewBox": [
+            500.0,
+            0.0,
+            1108.0,
+            1330.0
+          ],
+          "transform": {
+            "mode": "scale_offset",
+            "ax": 7.462687,
+            "az": 0.0,
+            "c": 544.7761,
+            "bx": 0.0,
+            "bz": 7.462687,
+            "d": -1496.4179,
+            "n": 100
+          }
+        }
+      ],
+      "scenes": [
+        "HyruleCastle_Child",
+        "HyruleCastle_Adult",
+        "GanonCastle_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 8.264463,
+        "az": 0.0,
+        "c": 1000.0,
+        "bx": 0.0,
+        "bz": 8.264463,
+        "d": 1381.157,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "海拉鲁城堡 / 加侬城外",
+        "ja": "ハイラル城 / ガノン城外周",
+        "en": "Hyrule / Ganon's Castle"
+      },
+      "intro": {
+        "zh-CN": "少年期海拉鲁城堡与青年期加侬城堡共用区域，包含3只黄金蜘蛛（庭院树、暴风雨秘窟、废墟拱门）及2座大妖精之泉（迪恩之火、双倍防御）。",
+        "ja": "子供時代のハイラル城と大人時代のガノン城周辺。黄金のスタルチュラ3匹（庭園の木・嵐の歌の穴・廃墟のアーチ）と2つの大妖精の泉（ディンの炎・防御力2倍）があります。",
+        "en": "Covers Hyrule Castle as Child and outside Ganon's Castle as Adult, containing 3 Gold Skulltulas and 2 Great Fairy Fountains."
+      }
+    },
+    {
+      "id": "kakariko",
+      "kind": "zone",
+      "region": "Kakariko",
+      "region_i18n": {
+        "zh-CN": "卡卡利科区域",
+        "ja": "カカリコエリア",
+        "en": "Kakariko"
+      },
+      "pin": {
+        "x": 0.5815,
+        "y": 0.4426
+      },
+      "startMap": "nino",
+      "maps": [
+        {
+          "id": "nino",
+          "label": {
+            "zh-CN": "少年期",
+            "ja": "子供時代",
+            "en": "Child"
+          },
+          "image": "maps/official_kakariko_nino.webp",
+          "aspect": 1.0847,
+          "viewBox": [
+            192.0,
+            0.0,
+            1562.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "adulto",
+          "label": {
+            "zh-CN": "青年期",
+            "ja": "大人時代",
+            "en": "Adult"
+          },
+          "image": "maps/official_kakariko_adulto.webp",
+          "aspect": 1.0847,
+          "viewBox": [
+            192.0,
+            0.0,
+            1562.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "KakarikoVillage_Child",
+        "KakarikoVillage_Adult",
+        "KakarikoVillage_Adult_Alternative"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 8.130081,
+        "az": 0.0,
+        "c": 1406.5041,
+        "bx": 0.0,
+        "bz": 8.130081,
+        "d": 378.5366,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "卡卡利科村",
+        "ja": "カカリコ村",
+        "en": "Kakariko Village"
+      },
+      "intro": {
+        "zh-CN": "收集密度极高的村庄：共4块心之碎片（含50蜘蛛奖励与风车/屋顶）、6只黄金蜘蛛，以及集齐7只走失鸡获得的空瓶。",
+        "ja": "収集物が非常に多い村。ハートのかけら4個（50匹報酬含む）、黄金のスタルチュラ6匹、そして7羽のコッコ集めでもらえるあきビンがあります。",
+        "en": "A packed hub with 4 Pieces of Heart (including the 50-Skulltula reward), 6 Gold Skulltulas, and the Cucco Lady's Bottle."
+      }
+    },
+    {
+      "id": "cementerio",
+      "kind": "zone",
+      "region": "Kakariko",
+      "region_i18n": {
+        "zh-CN": "卡卡利科区域",
+        "ja": "カカリコエリア",
+        "en": "Kakariko"
+      },
+      "pin": {
+        "x": 0.7398,
+        "y": 0.3872
+      },
+      "startMap": "nino",
+      "maps": [
+        {
+          "id": "nino",
+          "label": {
+            "zh-CN": "少年期",
+            "ja": "子供時代",
+            "en": "Child"
+          },
+          "image": "maps/official_cementerio_nino.webp",
+          "aspect": 2.1285,
+          "viewBox": [
+            46.0,
+            209.0,
+            1954.0,
+            918.0
+          ]
+        },
+        {
+          "id": "adulto",
+          "label": {
+            "zh-CN": "青年期",
+            "ja": "大人時代",
+            "en": "Adult"
+          },
+          "image": "maps/official_cementerio_adulto.webp",
+          "aspect": 2.1285,
+          "viewBox": [
+            46.0,
+            209.0,
+            1954.0,
+            918.0
+          ]
+        }
+      ],
+      "scenes": [
+        "Graveyard_Child",
+        "Graveyard_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 13.513514,
+        "az": 0.0,
+        "c": 756.7568,
+        "bx": 0.0,
+        "bz": 13.513514,
+        "d": 611.8919,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "墓地",
+        "ja": "墓地",
+        "en": "Graveyard"
+      },
+      "intro": {
+        "zh-CN": "卡卡利科墓地包含4块心之碎片（夜晚掘墓、丹培赛跑、王室墓穴前墓碑、高台）、2只黄金蜘蛛、1处魔法豆松土和2处妖精的思绪。",
+        "ja": "カカリコ村の墓地にはハートのかけら4個（夜の穴掘り・ダンペイ競争・王家の墓前の墓石・高台）、スタルチュラ2匹、魔法のマメの土1か所、妖精の想い2か所があります。",
+        "en": "The Graveyard features 4 Pieces of Heart (gravedigging tour, Dampé race, grave chest, high ledge), 2 Gold Skulltulas, 1 Magic Bean patch, and 2 Fairy Thoughts."
+      }
+    },
+    {
+      "id": "sendero",
+      "kind": "zone",
+      "region": "Montaña",
+      "region_i18n": {
+        "zh-CN": "死亡之山",
+        "ja": "デスマウンテン",
+        "en": "Death Mountain"
+      },
+      "pin": {
+        "x": 0.5774,
+        "y": 0.3015
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_sendero_principal.webp",
+          "aspect": 0.5167,
+          "viewBox": [
+            585.0,
+            0.0,
+            744.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "DeathMountainTrail_Child",
+        "DeathMountainTrail_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 5.128205,
+        "az": 0.0,
+        "c": 1107.6923,
+        "bx": 0.0,
+        "bz": 5.128205,
+        "d": 904.6154,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "死亡之山登山道",
+        "ja": "デスマウンテン登山道",
+        "en": "Death Mountain Trail"
+      },
+      "intro": {
+        "zh-CN": "通往山顶的登山道有1块心之碎片、4只黄金蜘蛛、多东哥洞窟前魔法豆松土、1处妖精的思绪，以及山顶大妖精之泉（魔力槽/回旋斩）。",
+        "ja": "登山道にはハートのかけら1個、黄金のスタルチュラ4匹、ドドンゴの洞窟前のマメの土、妖精の想い1か所、そして山頂の大妖精の泉があります。",
+        "en": "Death Mountain Trail has 1 Piece of Heart, 4 Gold Skulltulas, 1 Magic Bean patch, 1 Fairy Thought, and the summit Great Fairy Fountain."
+      }
+    },
+    {
+      "id": "goron",
+      "kind": "zone",
+      "region": "Montaña",
+      "region_i18n": {
+        "zh-CN": "死亡之山",
+        "ja": "デスマウンテン",
+        "en": "Death Mountain"
+      },
+      "pin": {
+        "x": 0.6998,
+        "y": 0.3015
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_goron_principal.webp",
+          "aspect": 1.0753,
+          "viewBox": [
+            265.0,
+            0.0,
+            1486.0,
+            1382.0
+          ]
+        }
+      ],
+      "scenes": [
+        "GoronCity_Child",
+        "GoronCity_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 12.820513,
+        "az": 0.0,
+        "c": 1064.1026,
+        "bx": 0.0,
+        "bz": 12.820513,
+        "d": 720.0,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "鼓隆城",
+        "ja": "ゴロンシティ",
+        "en": "Goron City"
+      },
+      "intro": {
+        "zh-CN": "鼓隆族居住的洞穴城市。少年期点燃全部火把向旋转大壶投炸弹可得心之碎片；迷宫尽头木箱与青年期天花板悬岩各有1只黄金蜘蛛。",
+        "ja": "ゴロン族の都市。子供時代に燭台を灯して回る大ツボにバクダンを入れるとハートのかけら。岩迷路の木箱と大人時代の天井岩に黄金のスタルチュラが各1匹います。",
+        "en": "Goron City holds 1 Piece of Heart (spinning pot), 1 Child Gold Skulltula in the boulder maze crate, and 1 Adult Gold Skulltula on the ceiling overhang."
+      }
+    },
+    {
+      "id": "crater",
+      "kind": "zone",
+      "region": "Montaña",
+      "region_i18n": {
+        "zh-CN": "死亡之山",
+        "ja": "デスマウンテン",
+        "en": "Death Mountain"
+      },
+      "pin": {
+        "x": 0.6556,
+        "y": 0.1237
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_crater_principal.webp",
+          "aspect": 1.0056,
+          "viewBox": [
+            287.0,
+            0.0,
+            1448.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "DeathMountainCrater_Child",
+        "DeathMountainCrater_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 10.638298,
+        "az": 0.0,
+        "c": 1127.6596,
+        "bx": 0.0,
+        "bz": 10.638298,
+        "d": 592.3404,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "死亡之山火山口",
+        "ja": "デスマウンテン火口",
+        "en": "Death Mountain Crater"
+      },
+      "intro": {
+        "zh-CN": "炙热的火山口地区：少年期需要火之波莱罗快速种豆、抓虫蜘蛛与找商贩买碎片；青年期穿红衣采集高岩/洞壁碎片并前往双倍魔力大妖精之泉。",
+        "ja": "高熱の火口エリア。子供時代に炎のボレロで移動しマメ植え・ムシ穴・アキンドナッツ回収を行い、大人時代にゴロンの服を着てかけら2個と魔力2倍の大妖精へ向かいます。",
+        "en": "Heat-filled crater with 3 Pieces of Heart, 2 Gold Skulltulas, 1 Magic Bean patch, and the Double Magic Great Fairy Fountain."
+      }
+    },
+    {
+      "id": "rio",
+      "kind": "zone",
+      "region": "Zora",
+      "region_i18n": {
+        "zh-CN": "卓拉水域",
+        "ja": "ゾーラエリア",
+        "en": "Zora"
+      },
+      "pin": {
+        "x": 0.5803,
+        "y": 0.5244
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_rio_principal.webp",
+          "aspect": 1.8282,
+          "viewBox": [
+            0.0,
+            201.0,
+            2000.0,
+            1094.0
+          ]
+        }
+      ],
+      "scenes": [
+        "ZoraRiver_Child",
+        "ZoraRiver_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 7.54717,
+        "az": 0.0,
+        "c": 849.0566,
+        "bx": 0.0,
+        "bz": 7.54717,
+        "d": 833.2075,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "卓拉河",
+        "ja": "ゾーラ川",
+        "en": "Zora's River"
+      },
+      "intro": {
+        "zh-CN": "通往卓拉领地的溪流峡谷：包含4块心之碎片（青蛙合奏、瀑布高台、河中柱、母鸡滑翔洞）、4只黄金蜘蛛，以及站着魔法豆卖家的松软泥土。",
+        "ja": "ゾーラの里へ続く渓谷。カエルの合唱などハートのかけら4個、黄金のスタルチュラ4匹、マメ売り子が座る魔法のマメの土があります。",
+        "en": "Features 4 Pieces of Heart (including the frog choir), 4 Gold Skulltulas, and the Magic Bean salesman with a soft soil patch."
+      }
+    },
+    {
+      "id": "dominio",
+      "kind": "zone",
+      "region": "Zora",
+      "region_i18n": {
+        "zh-CN": "卓拉水域",
+        "ja": "ゾーラエリア",
+        "en": "Zora"
+      },
+      "pin": {
+        "x": 0.6859,
+        "y": 0.4747
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_dominio_principal.webp",
+          "aspect": 1.5626,
+          "viewBox": [
+            19.0,
+            178.0,
+            1972.0,
+            1262.0
+          ]
+        }
+      ],
+      "scenes": [
+        "ZoraDomain_Child",
+        "ZoraDomain_Adult",
+        "ZoraDomain_Adult_Alternative"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 13.245033,
+        "az": 0.0,
+        "c": 602.649,
+        "bx": 0.0,
+        "bz": 13.245033,
+        "d": 905.4305,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "卓拉领地",
+        "ja": "ゾーラの里",
+        "en": "Zora's Domain"
+      },
+      "intro": {
+        "zh-CN": "卓拉族水下宫殿：少年期在瀑布后点燃全部火把得心之碎片，青年期夜晚在瀑布旁岩石上用钩爪击落1只黄金蜘蛛。",
+        "ja": "ゾーラの里。子供時代に滝裏の燭台を全て灯すとハートのかけら、大人時代の夜に凍結した滝の横の壁面から黄金のスタルチュラを回収できます。",
+        "en": "Zora's Domain has 1 Piece of Heart (lighting all torches behind the waterfall as Child) and 1 Adult night Gold Skulltula by the frozen waterfall."
+      }
+    },
+    {
+      "id": "fuente",
+      "kind": "zone",
+      "region": "Zora",
+      "region_i18n": {
+        "zh-CN": "卓拉水域",
+        "ja": "ゾーラエリア",
+        "en": "Zora"
+      },
+      "pin": {
+        "x": 0.803,
+        "y": 0.5223
+      },
+      "startMap": "nino",
+      "maps": [
+        {
+          "id": "nino",
+          "label": {
+            "zh-CN": "少年期",
+            "ja": "子供時代",
+            "en": "Child"
+          },
+          "image": "maps/official_fuente_nino.webp",
+          "aspect": 1.0208,
+          "viewBox": [
+            299.0,
+            0.0,
+            1470.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "adulto",
+          "label": {
+            "zh-CN": "青年期",
+            "ja": "大人時代",
+            "en": "Adult"
+          },
+          "image": "maps/official_fuente_adulto.webp",
+          "aspect": 1.0208,
+          "viewBox": [
+            299.0,
+            0.0,
+            1470.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "ZoraFountain_Child",
+        "ZoraFountain_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 10.25641,
+        "az": 0.0,
+        "c": 692.3077,
+        "bx": 0.0,
+        "bz": 10.25641,
+        "d": 853.3333,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "卓拉之泉",
+        "ja": "ゾーラの泉",
+        "en": "Zora's Fountain"
+      },
+      "intro": {
+        "zh-CN": "加卜加卜大人所在的圣泉：少年期及青年期水面漂流冰块各藏有心之碎片，共有3只黄金蜘蛛，以及授予《花之风》的大妖精之泉。",
+        "ja": "ジャブジャブ様がいた聖なる泉。氷上のハートのかけら2個、黄金のスタルチュラ3匹、そして『フロルの風』を授ける大妖精の泉があります。",
+        "en": "Zora's Fountain holds 2 Pieces of Heart (underwater & floating ice), 3 Gold Skulltulas, and the Great Fairy of Farore's Wind."
+      }
+    },
+    {
+      "id": "lago",
+      "kind": "zone",
+      "region": "Lago",
+      "region_i18n": {
+        "zh-CN": "海利亚湖",
+        "ja": "ハイリア湖",
+        "en": "Lake Hylia"
+      },
+      "pin": {
+        "x": 0.4268,
+        "y": 0.7706
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_lago_principal.webp",
+          "aspect": 1.2387,
+          "viewBox": [
+            224.0,
+            67.0,
+            1650.0,
+            1332.0
+          ]
+        }
+      ],
+      "scenes": [
+        "LakeHylia_Child",
+        "LakeHylia_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 4.739336,
+        "az": 0.0,
+        "c": 1947.8673,
+        "bx": 0.0,
+        "bz": 4.739336,
+        "d": -1602.2749,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "海利亚湖畔",
+        "ja": "ハイリア湖畔",
+        "en": "Lake Hylia"
+      },
+      "intro": {
+        "zh-CN": "海拉鲁南部的广阔湖泊：包含3块心之碎片（钓鱼、潜水、博士屋顶）、5只黄金蜘蛛、1处豆苗土、露托的信空瓶，以及西岸1处妖精的思绪。",
+        "ja": "広大なハイリア湖畔。ハートのかけら3個（釣り・潜水・研究所屋根）、黄金のスタルチュラ5匹、マメの土、ルトの手紙入りあきビン、西岸の妖精の想いがあります。",
+        "en": "Lake Hylia has 3 Pieces of Heart, 5 Gold Skulltulas, 1 Magic Bean patch, Ruto's Letter Bottle, and 1 Fairy Thought on the west shore."
+      }
+    },
+    {
+      "id": "valle",
+      "kind": "zone",
+      "region": "Oeste",
+      "region_i18n": {
+        "zh-CN": "格鲁德沙漠",
+        "ja": "ゲルド地方",
+        "en": "Gerudo"
+      },
+      "pin": {
+        "x": 0.2228,
+        "y": 0.562
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_valle_principal.webp",
+          "aspect": 1.0806,
+          "viewBox": [
+            284.0,
+            0.0,
+            1556.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "GerudoValley_Child",
+        "GerudoValley_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 8.333333,
+        "az": 0.0,
+        "c": 1000.0,
+        "bx": 0.0,
+        "bz": 8.333333,
+        "d": 828.3333,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "格鲁德之谷",
+        "ja": "ゲルドの谷",
+        "en": "Gerudo Valley"
+      },
+      "intro": {
+        "zh-CN": "通往西部格鲁德地区的峡谷：包含2块心之碎片（瀑布后与帐篷旁岩台）、4只黄金蜘蛛与峡谷底部的1处魔法豆松土。",
+        "ja": "ゲルド地方へ続く渓谷。ハートのかけら2個（滝の裏と崖の宝箱）、黄金のスタルチュラ4匹、川底の魔法のマメの土1か所があります。",
+        "en": "Gerudo Valley features 2 Pieces of Heart, 4 Gold Skulltulas, and 1 Magic Bean patch by the cow at the canyon floor."
+      }
+    },
+    {
+      "id": "fortaleza",
+      "kind": "zone",
+      "region": "Oeste",
+      "region_i18n": {
+        "zh-CN": "格鲁德沙漠",
+        "ja": "ゲルド地方",
+        "en": "Gerudo"
+      },
+      "pin": {
+        "x": 0.2067,
+        "y": 0.4079
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_fortaleza_principal.webp",
+          "aspect": 1.2486,
+          "viewBox": [
+            85.0,
+            0.0,
+            1798.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "GerudoFortress_Child",
+        "GerudoFortress_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 5.882353,
+        "az": 0.0,
+        "c": 494.1176,
+        "bx": 0.0,
+        "bz": 5.882353,
+        "d": 849.4118,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "格鲁德要塞",
+        "ja": "ゲルドの砦",
+        "en": "Gerudo's Fortress"
+      },
+      "intro": {
+        "zh-CN": "取得格鲁德通行证后可自由探索：包含2块心之碎片（骑马射箭1000分与屋顶宝箱）以及夜晚出现的2只黄金蜘蛛。",
+        "ja": "ゲルドの会員証入手後に探索できる砦。流鏑馬1000点と屋上宝箱のハートのかけら2個、夜出現の黄金のスタルチュラ2匹があります。",
+        "en": "After earning the Gerudo Token, collect 2 Pieces of Heart (Horseback Archery 1,000 pts & rooftop chest) and 2 night Gold Skulltulas."
+      }
+    },
+    {
+      "id": "desierto",
+      "kind": "zone",
+      "region": "Oeste",
+      "region_i18n": {
+        "zh-CN": "格鲁德沙漠",
+        "ja": "ゲルド地方",
+        "en": "Gerudo"
+      },
+      "pin": {
+        "x": 0.1554,
+        "y": 0.3466
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/wasteland_hd.webp",
+          "aspect": 1.0,
+          "viewBox": [
+            0.0,
+            0.0,
+            2048.0,
+            2048.0
+          ]
+        }
+      ],
+      "scenes": [
+        "HountedWasteland_Child",
+        "HountedWasteland_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 7.323383,
+        "az": 0.0,
+        "c": 965.9224,
+        "bx": 0.0,
+        "bz": 7.323383,
+        "d": 1483.4372,
+        "n": 3
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "幻影沙漠",
+        "ja": "幻影の砂漠",
+        "en": "Haunted Wasteland"
+      },
+      "intro": {
+        "zh-CN": "风沙肆虐的幻影沙漠：追随旗帜穿越流沙，石碑遗迹内部藏有1只黄金蜘蛛。",
+        "ja": "砂嵐の幻影の砂漠。旗を目印に進んだ先にある石造りの建物内部に黄金のスタルチュラが1匹います。",
+        "en": "Cross the sand river following the flags to find 1 Gold Skulltula inside the stone monument."
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "coloso",
+          "x": 0.0518,
+          "y": 0.5248,
+          "rot": -90,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "fortaleza",
+          "x": 0.894,
+          "y": 0.9199,
+          "rot": 90,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
+    },
+    {
+      "id": "coloso",
+      "kind": "zone",
+      "region": "Oeste",
+      "region_i18n": {
+        "zh-CN": "格鲁德沙漠",
+        "ja": "ゲルド地方",
+        "en": "Gerudo"
+      },
+      "pin": {
+        "x": 0.231,
+        "y": 0.2873
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_coloso_principal.webp",
+          "aspect": 1.1921,
+          "viewBox": [
+            119.0,
+            43.0,
+            1638.0,
+            1374.0
+          ]
+        }
+      ],
+      "scenes": [
+        "DesertColossus_Child",
+        "DesertColossus_Adult"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 6.557377,
+        "az": 0.0,
+        "c": 1577.0492,
+        "bx": 0.0,
+        "bz": 6.557377,
+        "d": 641.3115,
+        "n": 100
+      },
+      "dungeon_floors": [],
+      "name": {
+        "zh-CN": "巨大邪神像",
+        "ja": "巨大邪神像",
+        "en": "Desert Colossus"
+      },
+      "intro": {
+        "zh-CN": "魂之神殿入口所在的大沙漠遗迹：包含1块心之碎片（须先少年期种豆）、3只黄金蜘蛛、1处豆土、1处妖精的思绪与《娜尤之爱》大妖精之泉。",
+        "ja": "魂の神殿の入口がある砂漠の遺跡。ハートのかけら1個、黄金のスタルチュラ3匹、マメの土、妖精の想い1か所、『ネールの愛』の大妖精の泉があります。",
+        "en": "Outside the Spirit Temple: 1 Piece of Heart (via Magic Bean), 3 Gold Skulltulas, 1 Magic Bean patch, 1 Fairy Thought, and Nayru's Love Great Fairy."
+      }
+    },
+    {
+      "id": "deku",
+      "kind": "dungeon",
+      "region": "Bosques",
+      "region_i18n": {
+        "zh-CN": "森林区域",
+        "ja": "森エリア",
+        "en": "Forest"
+      },
+      "pin": {
+        "x": 0.6835,
+        "y": 0.7656
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "3F",
+          "label": {
+            "zh-CN": "3F",
+            "ja": "3F",
+            "en": "3F"
+          },
+          "image": "maps/official_deku_3F.webp",
+          "aspect": 1.3899,
+          "viewBox": [
+            160.0,
+            111.0,
+            1704.0,
+            1226.0
+          ]
+        },
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_deku_2F.webp",
+          "aspect": 1.3899,
+          "viewBox": [
+            160.0,
+            111.0,
+            1704.0,
+            1226.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_deku_1F.webp",
+          "aspect": 1.3899,
+          "viewBox": [
+            160.0,
+            111.0,
+            1704.0,
+            1226.0
+          ]
+        },
+        {
+          "id": "S1",
+          "label": {
+            "zh-CN": "B1",
+            "ja": "B1",
+            "en": "B1"
+          },
+          "image": "maps/official_deku_S1.webp",
+          "aspect": 1.3899,
+          "viewBox": [
+            160.0,
+            111.0,
+            1704.0,
+            1226.0
+          ]
+        },
+        {
+          "id": "S2",
+          "label": {
+            "zh-CN": "B2",
+            "ja": "B2",
+            "en": "B2"
+          },
+          "image": "maps/official_deku_S2.webp",
+          "aspect": 1.3899,
+          "viewBox": [
+            160.0,
+            111.0,
+            1704.0,
+            1226.0
+          ]
+        }
+      ],
+      "scenes": [
+        "InsideTheDekuTree"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 16.0,
+        "az": 0.0,
+        "c": 1576.0,
+        "bx": 0.0,
+        "bz": 16.0,
+        "d": 432.0,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F",
+            "2F",
+            "3F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.0,
+            103.37,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -21.5,
+            109.3,
+            9.51
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -40.44,
+            112.1,
+            11.47
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -37.85,
+            120.29,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -18.5,
+            78.36,
+            2.5
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -9.21,
+            78.36,
+            26.58
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -30.15,
+            78.67,
+            37.0
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -57.5,
+            82.27,
+            40.0
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -62.0,
+            82.31,
+            14.28
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            -27.84,
+            52.8,
+            20.28
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            19.31,
+            53.04,
+            67.63
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -78.09,
+            82.27,
+            -3.57
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "德库树长老体内",
+        "ja": "デクの樹サマの中",
+        "en": "Inside the Deku Tree"
+      },
+      "intro": {
+        "zh-CN": "首座迷宫，内有4只黄金蜘蛛与击败首领格玛后掉落的心之容器。",
+        "ja": "最初のダンジョン。黄金のスタルチュラ4匹と、ボス・ゴーマ撃破後のハートの器があります。",
+        "en": "The first dungeon holds 4 Gold Skulltulas and Queen Gohma's Heart Container."
+      }
+    },
+    {
+      "id": "dodongos",
+      "kind": "dungeon",
+      "region": "Montaña",
+      "region_i18n": {
+        "zh-CN": "死亡之山",
+        "ja": "デスマウンテン",
+        "en": "Death Mountain"
+      },
+      "pin": {
+        "x": 0.525,
+        "y": 0.2207
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_dodongos_2F.webp",
+          "aspect": 1.1615,
+          "viewBox": [
+            190.0,
+            0.0,
+            1640.0,
+            1412.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_dodongos_1F.webp",
+          "aspect": 1.1615,
+          "viewBox": [
+            190.0,
+            0.0,
+            1640.0,
+            1412.0
+          ]
+        }
+      ],
+      "scenes": [
+        "DodongoCavern"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 7.8125,
+        "az": 0.0,
+        "c": 757.8125,
+        "bx": 0.0,
+        "bz": 7.8125,
+        "d": 954.375,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.0,
+            101.75,
+            28.0
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -0.0,
+            100.0,
+            -23.5
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            58.0,
+            98.5,
+            -9.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            64.0,
+            97.25,
+            10.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            92.5,
+            101.3,
+            -17.01
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            88.0,
+            109.42,
+            -52.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            62.5,
+            100.5,
+            -75.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            62.5,
+            101.53,
+            -90.5
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            42.0,
+            100.0,
+            -52.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            36.0,
+            101.5,
+            -23.0
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -49.0,
+            103.2,
+            -37.75
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -49.0,
+            104.02,
+            -5.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -49.0,
+            114.32,
+            -8.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            46.5,
+            112.25,
+            -16.5
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            73.75,
+            116.27,
+            -6.6
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            99.0,
+            115.25,
+            -9.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            110.0,
+            115.78,
+            -28.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            73.75,
+            113.77,
+            -23.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            21.0,
+            112.0,
+            -51.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -7.0,
+            95.5,
+            -80.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -41.25,
+            96.99,
+            -104.25
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            24.0,
+            92.4,
+            -78.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            24.0,
+            73.0,
+            -60.5
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "多东哥洞窟",
+        "ja": "ドドンゴの洞窟",
+        "en": "Dodongo's Cavern"
+      },
+      "intro": {
+        "zh-CN": "位于死亡之山的第二座迷宫：内有5只黄金蜘蛛（其中1只须青年期回来吹稻草人之歌）及多东哥王的心之容器。",
+        "ja": "2番目のダンジョン。黄金のスタルチュラ5匹（1匹は大人時代のカカシの歌が必要）とキングドドンゴのハートの器があります。",
+        "en": "Holds 5 Gold Skulltulas (one requires Adult Scarecrow's Song) and King Dodongo's Heart Container."
+      }
+    },
+    {
+      "id": "jabu",
+      "kind": "dungeon",
+      "region": "Zora",
+      "region_i18n": {
+        "zh-CN": "卓拉水域",
+        "ja": "ゾーラエリア",
+        "en": "Zora"
+      },
+      "pin": {
+        "x": 0.7673,
+        "y": 0.451
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_jabu_2F.webp",
+          "aspect": 0.5367,
+          "viewBox": [
+            659.0,
+            0.0,
+            760.0,
+            1416.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_jabu_1F.webp",
+          "aspect": 0.5367,
+          "viewBox": [
+            659.0,
+            0.0,
+            760.0,
+            1416.0
+          ]
+        },
+        {
+          "id": "S1",
+          "label": {
+            "zh-CN": "B1",
+            "ja": "B1",
+            "en": "B1"
+          },
+          "image": "maps/official_jabu_S1.webp",
+          "aspect": 0.5367,
+          "viewBox": [
+            659.0,
+            0.0,
+            760.0,
+            1416.0
+          ]
+        }
+      ],
+      "scenes": [
+        "InsideJabuJabuBelly"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 6.097561,
+        "az": 0.0,
+        "c": 1006.0976,
+        "bx": 0.0,
+        "bz": 6.097561,
+        "d": 1280.9756,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -0.16,
+            92.0,
+            -8.63
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.56,
+            91.54,
+            -42.49
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.06,
+            91.1,
+            -80.64
+          ]
+        },
+        {
+          "floors": [
+            "S1",
+            "1F"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -0.88,
+            82.21,
+            -79.87
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -22.88,
+            99.81,
+            -59.96
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            31.89,
+            107.53,
+            -53.7
+          ]
+        },
+        {
+          "floors": [
+            "S1",
+            "2F"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -32.39,
+            85.85,
+            -93.35
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.59,
+            92.35,
+            -141.61
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.66,
+            93.43,
+            -192.55
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -29.73,
+            92.35,
+            -131.89
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            36.99,
+            95.76,
+            -138.94
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -28.82,
+            92.72,
+            -181.03
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            24.24,
+            92.42,
+            -176.73
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -28.8,
+            82.13,
+            -56.12
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            29.0,
+            76.67,
+            -59.64
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            42.34,
+            102.13,
+            -112.5
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            42.75,
+            101.04,
+            -78.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.5,
+            98.47,
+            -46.06
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            0.56,
+            75.5,
+            -42.49
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "加卜加卜大人腹中",
+        "ja": "ジャブジャブ様のお腹",
+        "en": "Inside Jabu-Jabu's Belly"
+      },
+      "intro": {
+        "zh-CN": "少年期第三座迷宫：利用回旋镖在各层收集4只黄金蜘蛛，击败巴里纳德后拾取心之容器。",
+        "ja": "子供時代3番目のダンジョン。ブーメランを活用して黄金のスタルチュラ4匹とバリネードのハートの器を回収しましょう。",
+        "en": "Uses the Boomerang to reach 4 Gold Skulltulas before defeating Barinade for the Heart Container."
+      }
+    },
+    {
+      "id": "bosque",
+      "kind": "dungeon",
+      "region": "Bosques",
+      "region_i18n": {
+        "zh-CN": "森林区域",
+        "ja": "森エリア",
+        "en": "Forest"
+      },
+      "pin": {
+        "x": 0.8656,
+        "y": 0.6039
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "3F",
+          "label": {
+            "zh-CN": "3F",
+            "ja": "3F",
+            "en": "3F"
+          },
+          "image": "maps/official_bosque_3F.webp",
+          "aspect": 0.9664,
+          "viewBox": [
+            281.0,
+            9.0,
+            1380.0,
+            1428.0
+          ]
+        },
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_bosque_2F.webp",
+          "aspect": 0.9664,
+          "viewBox": [
+            281.0,
+            9.0,
+            1380.0,
+            1428.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_bosque_1F.webp",
+          "aspect": 0.9664,
+          "viewBox": [
+            281.0,
+            9.0,
+            1380.0,
+            1428.0
+          ]
+        },
+        {
+          "id": "S1",
+          "label": {
+            "zh-CN": "B1",
+            "ja": "B1",
+            "en": "B1"
+          },
+          "image": "maps/official_bosque_S1.webp",
+          "aspect": 0.9664,
+          "viewBox": [
+            281.0,
+            9.0,
+            1380.0,
+            1428.0
+          ]
+        },
+        {
+          "id": "S2",
+          "label": {
+            "zh-CN": "B2",
+            "ja": "B2",
+            "en": "B2"
+          },
+          "image": "maps/official_bosque_S2.webp",
+          "aspect": 0.9664,
+          "viewBox": [
+            281.0,
+            9.0,
+            1380.0,
+            1428.0
+          ]
+        }
+      ],
+      "scenes": [
+        "ForestTemple"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 8.163265,
+        "az": 0.0,
+        "c": 1024.4898,
+        "bx": 0.0,
+        "bz": 8.163265,
+        "d": 671.0204,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.09,
+            103.44,
+            59.7
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -0.07,
+            102.6,
+            34.8
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.0,
+            104.5,
+            -3.5
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -0.07,
+            106.43,
+            -39.42
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -0.1,
+            105.5,
+            -55.91
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -34.82,
+            103.51,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -60.92,
+            114.13,
+            5.67
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -60.92,
+            109.4,
+            5.67
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -60.92,
+            113.1,
+            5.67
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -60.92,
+            126.47,
+            5.67
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -56.4,
+            124.7,
+            -34.49
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -56.4,
+            126.35,
+            -59.49
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -30.27,
+            99.0,
+            -27.65
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            24.65,
+            99.99,
+            -24.55
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -7.63,
+            88.03,
+            -40.0
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -30.92,
+            125.53,
+            -59.48
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            0.13,
+            118.57,
+            -59.4
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            28.87,
+            125.53,
+            -59.49
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            56.98,
+            124.67,
+            -59.36
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            56.73,
+            124.98,
+            -32.12
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -56.43,
+            107.31,
+            -59.4
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -65.67,
+            107.0,
+            -26.77
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            56.54,
+            124.57,
+            3.31
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            54.52,
+            104.0,
+            -36.3
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            56.75,
+            103.94,
+            0.2
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            35.65,
+            105.53,
+            0.23
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            -0.07,
+            61.77,
+            -14.66
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            -0.18,
+            74.71,
+            -62.77
+          ]
+        },
+        {
+          "floors": [
+            "S1",
+            "1F"
+          ],
+          "floor_id": "S1",
+          "center": [
+            0.0,
+            81.0,
+            -3.5
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "森之神殿",
+        "ja": "森の神殿",
+        "en": "Forest Temple"
+      },
+      "intro": {
+        "zh-CN": "青年期第一座神殿：庭院与大厅等处共5只黄金蜘蛛，击败幻影加侬可得心之容器。",
+        "ja": "大人時代最初の神殿。中庭や大広間などに黄金のスタルチュラ5匹と、ファントムガノンのハートの器があります。",
+        "en": "The first Adult temple contains 5 Gold Skulltulas and Phantom Ganon's Heart Container."
+      }
+    },
+    {
+      "id": "fuego",
+      "kind": "dungeon",
+      "region": "Montaña",
+      "region_i18n": {
+        "zh-CN": "死亡之山",
+        "ja": "デスマウンテン",
+        "en": "Death Mountain"
+      },
+      "pin": {
+        "x": 0.6251,
+        "y": 0.1952
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "5F",
+          "label": {
+            "zh-CN": "5F",
+            "ja": "5F",
+            "en": "5F"
+          },
+          "image": "maps/official_fuego_5F.webp",
+          "aspect": 1.7422,
+          "viewBox": [
+            0.0,
+            184.0,
+            2000.0,
+            1148.0
+          ]
+        },
+        {
+          "id": "4F",
+          "label": {
+            "zh-CN": "4F",
+            "ja": "4F",
+            "en": "4F"
+          },
+          "image": "maps/official_fuego_4F.webp",
+          "aspect": 1.7422,
+          "viewBox": [
+            0.0,
+            184.0,
+            2000.0,
+            1148.0
+          ]
+        },
+        {
+          "id": "3F",
+          "label": {
+            "zh-CN": "3F",
+            "ja": "3F",
+            "en": "3F"
+          },
+          "image": "maps/official_fuego_3F.webp",
+          "aspect": 1.7422,
+          "viewBox": [
+            0.0,
+            184.0,
+            2000.0,
+            1148.0
+          ]
+        },
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_fuego_2F.webp",
+          "aspect": 1.7422,
+          "viewBox": [
+            0.0,
+            184.0,
+            2000.0,
+            1148.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_fuego_1F.webp",
+          "aspect": 1.7422,
+          "viewBox": [
+            0.0,
+            184.0,
+            2000.0,
+            1148.0
+          ]
+        }
+      ],
+      "scenes": [
+        "FireTemple"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 9.090909,
+        "az": 0.0,
+        "c": 845.4545,
+        "bx": 0.0,
+        "bz": 9.090909,
+        "d": 747.2727,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.0,
+            103.55,
+            12.25
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            41.42,
+            105.0,
+            -5.12
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -25.5,
+            105.0,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -6.97,
+            106.49,
+            -33.38
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            93.04,
+            141.05,
+            8.39
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            56.16,
+            151.42,
+            -2.51
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            42.08,
+            147.08,
+            0.33
+          ]
+        },
+        {
+          "floors": [
+            "4F",
+            "5F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            37.87,
+            179.84,
+            -13.12
+          ]
+        },
+        {
+          "floors": [
+            "5F"
+          ],
+          "floor_id": "5F",
+          "center": [
+            41.76,
+            187.0,
+            0.19
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            -28.06,
+            170.27,
+            -0.01
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -29.53,
+            160.2,
+            0.01
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -44.5,
+            145.2,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            -68.08,
+            182.14,
+            9.26
+          ]
+        },
+        {
+          "floors": [
+            "5F"
+          ],
+          "floor_id": "5F",
+          "center": [
+            -43.72,
+            189.5,
+            -0.07
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            -44.5,
+            180.73,
+            -19.6
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            4.17,
+            100.16,
+            -9.54
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            24.03,
+            147.03,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -7.05,
+            100.21,
+            -10.8
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            10.63,
+            100.0,
+            -31.03
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            57.0,
+            113.8,
+            -46.06
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            90.0,
+            112.11,
+            0.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            39.0,
+            105.0,
+            47.53
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -71.95,
+            151.22,
+            2.36
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -29.53,
+            153.29,
+            0.01
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            -57.54,
+            180.19,
+            -19.64
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -65.5,
+            105.0,
+            -0.0
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "火之神殿",
+        "ja": "炎の神殿",
+        "en": "Fire Temple"
+      },
+      "intro": {
+        "zh-CN": "死亡之山火山口深处的神殿：5只黄金蜘蛛（高处须配合稻草人之歌或百万吨重锤）与瓦尔巴基亚的心之容器。",
+        "ja": "デスマウンテン火口の炎の神殿。黄金のスタルチュラ5匹（カカシの歌やメガトンハンマー使用）とヴァルバジアのハートの器があります。",
+        "en": "Features 5 Gold Skulltulas (using Scarecrow's Song & Megaton Hammer) and Volvagia's Heart Container."
+      }
+    },
+    {
+      "id": "agua",
+      "kind": "dungeon",
+      "region": "Lago",
+      "region_i18n": {
+        "zh-CN": "海利亚湖",
+        "ja": "ハイリア湖",
+        "en": "Lake Hylia"
+      },
+      "pin": {
+        "x": 0.4045,
+        "y": 0.9097
+      },
+      "startMap": "3F",
+      "maps": [
+        {
+          "id": "3F",
+          "label": {
+            "zh-CN": "3F",
+            "ja": "3F",
+            "en": "3F"
+          },
+          "image": "maps/official_agua_3F.webp",
+          "aspect": 0.9764,
+          "viewBox": [
+            314.0,
+            0.0,
+            1406.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_agua_2F.webp",
+          "aspect": 0.9764,
+          "viewBox": [
+            314.0,
+            0.0,
+            1406.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_agua_1F.webp",
+          "aspect": 0.9764,
+          "viewBox": [
+            314.0,
+            0.0,
+            1406.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "S1",
+          "label": {
+            "zh-CN": "B1",
+            "ja": "B1",
+            "en": "B1"
+          },
+          "image": "maps/official_agua_S1.webp",
+          "aspect": 0.9764,
+          "viewBox": [
+            314.0,
+            0.0,
+            1406.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "WaterTemple"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 7.604563,
+        "az": 0.0,
+        "c": 1182.5095,
+        "bx": 0.0,
+        "bz": 7.604563,
+        "d": 1062.2053,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F",
+            "2F",
+            "3F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -4.5,
+            44.7,
+            -1.96
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -4.5,
+            111.48,
+            -1.96
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            0.0,
+            89.03,
+            -1.96
+          ]
+        },
+        {
+          "floors": [
+            "S1",
+            "1F"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -36.5,
+            101.0,
+            19.93
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            36.2,
+            115.13,
+            -23.91
+          ]
+        },
+        {
+          "floors": [
+            "S1",
+            "1F",
+            "2F",
+            "3F"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -47.97,
+            113.72,
+            -4.39
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -81.93,
+            122.24,
+            -19.39
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -78.0,
+            129.32,
+            -108.78
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -36.0,
+            100.0,
+            -19.6
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -26.0,
+            125.87,
+            3.43
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -4.24,
+            129.31,
+            -54.26
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -4.5,
+            100.0,
+            -73.5
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -4.5,
+            98.5,
+            -114.17
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            14.89,
+            103.0,
+            -98.0
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F",
+            "3F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            25.9,
+            106.93,
+            -4.21
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            40.11,
+            100.0,
+            -4.41
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -6.5,
+            113.06,
+            -43.61
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -59.0,
+            110.25,
+            -70.0
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -78.0,
+            127.0,
+            -64.19
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -4.52,
+            131.93,
+            -88.26
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            20.0,
+            102.5,
+            -66.64
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            43.0,
+            110.64,
+            -4.5
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "水之神殿",
+        "ja": "水の神殿",
+        "en": "Water Temple"
+      },
+      "intro": {
+        "zh-CN": "水之神殿内水位变化复杂，共有5只黄金蜘蛛（需铁靴与长钩爪）以及摩法的心之容器。",
+        "ja": "水位を切り替えながら進む水の神殿。ヘビーブーツやロングフックを使う黄金のスタルチュラ5匹とモーファのハートの器があります。",
+        "en": "Adjust water levels with Iron Boots and Longshot to find 5 Gold Skulltulas and Morpha's Heart Container."
+      }
+    },
+    {
+      "id": "sombra",
+      "kind": "dungeon",
+      "region": "Kakariko",
+      "region_i18n": {
+        "zh-CN": "卡卡利科区域",
+        "ja": "カカリコエリア",
+        "en": "Kakariko"
+      },
+      "pin": {
+        "x": 0.8012,
+        "y": 0.3182
+      },
+      "startMap": "S1",
+      "maps": [
+        {
+          "id": "S1",
+          "label": {
+            "zh-CN": "B1",
+            "ja": "B1",
+            "en": "B1"
+          },
+          "image": "maps/official_sombra_S1.webp",
+          "aspect": 1.5699,
+          "viewBox": [
+            0.0,
+            15.0,
+            2000.0,
+            1274.0
+          ]
+        },
+        {
+          "id": "S2",
+          "label": {
+            "zh-CN": "B2",
+            "ja": "B2",
+            "en": "B2"
+          },
+          "image": "maps/official_sombra_S2.webp",
+          "aspect": 1.5699,
+          "viewBox": [
+            0.0,
+            15.0,
+            2000.0,
+            1274.0
+          ]
+        },
+        {
+          "id": "S3",
+          "label": {
+            "zh-CN": "B3",
+            "ja": "B3",
+            "en": "B3"
+          },
+          "image": "maps/official_sombra_S3.webp",
+          "aspect": 1.5699,
+          "viewBox": [
+            0.0,
+            15.0,
+            2000.0,
+            1274.0
+          ]
+        },
+        {
+          "id": "S4",
+          "label": {
+            "zh-CN": "B4",
+            "ja": "B4",
+            "en": "B4"
+          },
+          "image": "maps/official_sombra_S4.webp",
+          "aspect": 1.5699,
+          "viewBox": [
+            0.0,
+            15.0,
+            2000.0,
+            1274.0
+          ]
+        }
+      ],
+      "scenes": [
+        "ShadowTemple"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 4.618938,
+        "az": 0.0,
+        "c": 1101.6166,
+        "bx": 0.0,
+        "bz": 4.618938,
+        "d": 687.6674,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            13.87,
+            90.43,
+            45.51
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            42.88,
+            89.99,
+            1.04
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -3.53,
+            90.4,
+            -4.67
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            2.74,
+            90.43,
+            -23.43
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -72.65,
+            90.95,
+            -10.2
+          ]
+        },
+        {
+          "floors": [
+            "S2",
+            "S1"
+          ],
+          "floor_id": "S2",
+          "center": [
+            77.39,
+            87.19,
+            1.46
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            83.5,
+            87.19,
+            -23.59
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            84.24,
+            87.19,
+            19.36
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            106.47,
+            75.43,
+            17.43
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            80.0,
+            65.52,
+            71.42
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            145.35,
+            61.44,
+            96.82
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            19.23,
+            56.4,
+            92.1
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            56.94,
+            52.5,
+            33.93
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            30.96,
+            59.3,
+            32.91
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            83.74,
+            52.0,
+            6.33
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            124.51,
+            52.0,
+            6.69
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            109.66,
+            52.0,
+            -18.8
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            7.84,
+            42.0,
+            -58.36
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            -181.61,
+            41.29,
+            -43.56
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -181.79,
+            41.29,
+            -66.99
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            -217.95,
+            41.28,
+            -43.59
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            -181.68,
+            41.8,
+            -17.49
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            -138.55,
+            42.28,
+            5.23
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            -138.44,
+            42.0,
+            27.22
+          ]
+        },
+        {
+          "floors": [
+            "S4"
+          ],
+          "floor_id": "S4",
+          "center": [
+            -138.57,
+            -11.06,
+            29.3
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -43.52,
+            90.43,
+            -9.83
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            99.54,
+            65.52,
+            -43.59
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            106.47,
+            73.37,
+            17.43
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            109.66,
+            43.58,
+            -18.8
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            13.87,
+            90.43,
+            15.24
+          ]
+        },
+        {
+          "floors": [
+            "S3"
+          ],
+          "floor_id": "S3",
+          "center": [
+            175.66,
+            61.44,
+            96.82
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "暗之神殿",
+        "ja": "闇の神殿",
+        "en": "Shadow Temple"
+      },
+      "intro": {
+        "zh-CN": "需使用真实之镜与悬浮靴的暗之神殿：含5只黄金蜘蛛、1处妖精的思绪以及邦戈邦戈的心之容器。",
+        "ja": "まことのメガネとホバーブーツを駆使する闇の神殿。黄金のスタルチュラ5匹、妖精の想い1か所、ボンゴボンゴのハートの器があります。",
+        "en": "Uses the Lenses of Truth and Hover Boots for 5 Gold Skulltulas, 1 Fairy Thought, and Bongo Bongo's Heart Container."
+      }
+    },
+    {
+      "id": "espiritu",
+      "kind": "dungeon",
+      "region": "Oeste",
+      "region_i18n": {
+        "zh-CN": "格鲁德沙漠",
+        "ja": "ゲルド地方",
+        "en": "Gerudo"
+      },
+      "pin": {
+        "x": 0.1562,
+        "y": 0.2396
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "4F",
+          "label": {
+            "zh-CN": "4F",
+            "ja": "4F",
+            "en": "4F"
+          },
+          "image": "maps/official_espiritu_4F.webp",
+          "aspect": 1.0083,
+          "viewBox": [
+            276.0,
+            0.0,
+            1452.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "3F",
+          "label": {
+            "zh-CN": "3F",
+            "ja": "3F",
+            "en": "3F"
+          },
+          "image": "maps/official_espiritu_3F.webp",
+          "aspect": 1.0083,
+          "viewBox": [
+            276.0,
+            0.0,
+            1452.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_espiritu_2F.webp",
+          "aspect": 1.0083,
+          "viewBox": [
+            276.0,
+            0.0,
+            1452.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_espiritu_1F.webp",
+          "aspect": 1.0083,
+          "viewBox": [
+            276.0,
+            0.0,
+            1452.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "SpiritTemple"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 9.90099,
+        "az": 0.0,
+        "c": 1000.0,
+        "bx": 0.0,
+        "bz": 9.90099,
+        "d": 957.6238,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.0,
+            100.0,
+            -10.0
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -33.57,
+            104.83,
+            -30.38
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -52.08,
+            104.75,
+            -52.85
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -33.38,
+            104.68,
+            -78.74
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -15.32,
+            104.74,
+            -52.31
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -33.6,
+            104.75,
+            -49.5
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -32.2,
+            119.47,
+            -47.5
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            0.0,
+            120.74,
+            -59.15
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -19.44,
+            129.69,
+            -30.18
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -44.15,
+            130.79,
+            -21.83
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -55.77,
+            132.8,
+            2.54
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            -55.89,
+            132.08,
+            21.79
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            -55.66,
+            133.7,
+            39.21
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            33.57,
+            104.75,
+            -30.74
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            18.09,
+            105.0,
+            -48.42
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            48.84,
+            100.24,
+            -54.8
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            48.89,
+            100.24,
+            -77.8
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            33.5,
+            105.0,
+            -49.0
+          ]
+        },
+        {
+          "floors": [
+            "2F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            35.4,
+            119.15,
+            -47.54
+          ]
+        },
+        {
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -0.48,
+            112.85,
+            -39.97
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            20.24,
+            129.35,
+            -30.31
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            38.63,
+            129.96,
+            -22.96
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            55.76,
+            130.0,
+            -23.24
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            55.85,
+            132.1,
+            0.29
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            55.61,
+            132.21,
+            21.79
+          ]
+        },
+        {
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F",
+          "center": [
+            55.72,
+            133.48,
+            43.75
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            55.8,
+            131.53,
+            -47.2
+          ]
+        },
+        {
+          "floors": [
+            "3F",
+            "4F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            17.07,
+            139.0,
+            -22.72
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            19.84,
+            154.04,
+            -47.97
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            19.8,
+            152.91,
+            -65.05
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            -0.08,
+            153.12,
+            -49.98
+          ]
+        },
+        {
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F",
+          "center": [
+            -20.96,
+            157.04,
+            -26.86
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            0.14,
+            137.45,
+            -88.94
+          ]
+        },
+        {
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F",
+          "center": [
+            0.16,
+            153.4,
+            -157.84
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "魂之神殿",
+        "ja": "魂の神殿",
+        "en": "Spirit Temple"
+      },
+      "intro": {
+        "zh-CN": "横跨少年与青年时期的魂之神殿：5只黄金蜘蛛分布于少年/青年双侧路线，击败双生妖婆可得最后的心之容器。",
+        "ja": "子供・大人両時代で攻略する魂の神殿。黄金のスタルチュラ5匹とツインローバのハートの器があります。",
+        "en": "Explored as both Child and Adult for 5 Gold Skulltulas and Twinrova's Heart Container."
+      }
+    },
+    {
+      "id": "pozo",
+      "kind": "dungeon",
+      "region": "Kakariko",
+      "region_i18n": {
+        "zh-CN": "卡卡利科区域",
+        "ja": "カカリコエリア",
+        "en": "Kakariko"
+      },
+      "pin": {
+        "x": 0.661,
+        "y": 0.3741
+      },
+      "startMap": "S1",
+      "maps": [
+        {
+          "id": "S1",
+          "label": {
+            "zh-CN": "B1",
+            "ja": "B1",
+            "en": "B1"
+          },
+          "image": "maps/official_pozo_S1.webp",
+          "aspect": 0.7028,
+          "viewBox": [
+            479.0,
+            0.0,
+            1012.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "S2",
+          "label": {
+            "zh-CN": "B2",
+            "ja": "B2",
+            "en": "B2"
+          },
+          "image": "maps/official_pozo_S2.webp",
+          "aspect": 0.7028,
+          "viewBox": [
+            479.0,
+            0.0,
+            1012.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "BottomOfTheWell"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 8.403361,
+        "az": 0.0,
+        "c": 1100.8403,
+        "bx": 0.0,
+        "bz": 8.403361,
+        "d": 988.9076,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            0.09,
+            106.0,
+            34.4
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -0.27,
+            100.0,
+            -14.11
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -1.21,
+            101.31,
+            -71.91
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -54.45,
+            100.0,
+            -18.5
+          ]
+        },
+        {
+          "floors": [
+            "S2",
+            "S1"
+          ],
+          "floor_id": "S2",
+          "center": [
+            8.34,
+            99.98,
+            -27.8
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -7.98,
+            100.0,
+            -27.42
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            27.27,
+            100.0,
+            -29.09
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            26.5,
+            100.0,
+            -15.73
+          ]
+        },
+        {
+          "floors": [
+            "S2",
+            "S1"
+          ],
+          "floor_id": "S2",
+          "center": [
+            0.11,
+            92.31,
+            -102.52
+          ]
+        },
+        {
+          "floors": [
+            "S2"
+          ],
+          "floor_id": "S2",
+          "center": [
+            1.75,
+            90.84,
+            -20.1
+          ]
+        },
+        {
+          "floors": [
+            "S2",
+            "S1"
+          ],
+          "floor_id": "S2",
+          "center": [
+            -26.3,
+            100.0,
+            -8.76
+          ]
+        },
+        {
+          "floors": [
+            "S1"
+          ],
+          "floor_id": "S1",
+          "center": [
+            -0.05,
+            102.17,
+            -94.99
+          ]
+        },
+        {
+          "floors": [
+            "S2",
+            "S1"
+          ],
+          "floor_id": "S2",
+          "center": [
+            8.1,
+            97.6,
+            -81.63
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "井底",
+        "ja": "井戸の底",
+        "en": "Bottom of the Well"
+      },
+      "intro": {
+        "zh-CN": "卡卡利科村井底隐藏的迷你迷宫：内含3只黄金蜘蛛、1处妖精的思绪以及关键道具真实之镜。",
+        "ja": "カカリコ村の井戸の底。黄金のスタルチュラ3匹、妖精の想い1か所、そしてまことのメガネが手に入ります。",
+        "en": "Mini-dungeon beneath Kakariko Village holding 3 Gold Skulltulas, 1 Fairy Thought, and the Lenses of Truth."
+      }
+    },
+    {
+      "id": "hielo",
+      "kind": "dungeon",
+      "region": "Zora",
+      "region_i18n": {
+        "zh-CN": "卓拉水域",
+        "ja": "ゾーラエリア",
+        "en": "Zora"
+      },
+      "pin": {
+        "x": 0.8637,
+        "y": 0.454
+      },
+      "startMap": "principal",
+      "maps": [
+        {
+          "id": "principal",
+          "label": {
+            "zh-CN": "主地图",
+            "ja": "メイン",
+            "en": "Main"
+          },
+          "image": "maps/official_hielo_principal.webp",
+          "aspect": 0.8667,
+          "viewBox": [
+            409.0,
+            0.0,
+            1248.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "IceCavern"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 6.968641,
+        "az": 0.0,
+        "c": 923.3449,
+        "bx": 0.0,
+        "bz": 6.968641,
+        "d": 636.3763,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            17.34,
+            102.3,
+            79.77
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            0.0,
+            99.75,
+            35.91
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            2.15,
+            103.05,
+            12.3
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            7.29,
+            105.23,
+            -13.35
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            41.0,
+            104.3,
+            3.65
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            18.43,
+            103.32,
+            -57.67
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            80.6,
+            103.02,
+            4.53
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -13.72,
+            100.66,
+            -17.5
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -32.06,
+            100.0,
+            -20.41
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -41.75,
+            105.81,
+            8.04
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -46.22,
+            109.62,
+            36.65
+          ]
+        },
+        {
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F",
+          "center": [
+            -50.74,
+            113.11,
+            62.74
+          ]
+        }
+      ],
+      "name": {
+        "zh-CN": "冰之洞窟",
+        "ja": "氷の洞窟",
+        "en": "Ice Cavern"
+      },
+      "intro": {
+        "zh-CN": "卓拉之泉深处的迷你迷宫：内含3只黄金蜘蛛与1处妖精的思绪，同时可获得铁靴。",
+        "ja": "ゾーラの泉の奥にあるミニダンジョン。黄金のスタルチュラ3匹、妖精の想い1か所があり、ヘビーブーツを入手できます。",
+        "en": "A mini-dungeon in Zora's Fountain with 3 Gold Skulltulas, 1 Fairy Thought, and the Iron Boots."
+      }
+    },
+    {
+      "id": "gerudo",
+      "kind": "dungeon",
+      "region": "Oeste",
+      "region_i18n": {
+        "zh-CN": "格鲁德沙漠",
+        "ja": "ゲルド地方",
+        "en": "Gerudo"
+      },
+      "pin": {
+        "x": 0.2614,
+        "y": 0.4397
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_gerudo_2F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_gerudo_1F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "GerudoTrainingGround"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 7.692308,
+        "az": 0.0,
+        "c": 1000.0,
+        "bx": 0.0,
+        "bz": 7.692308,
+        "d": 1196.9231,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "center": [
+            -1.83,
+            99.25,
+            -6.09
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -47.05,
+            97.75,
+            -5.13
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -46.77,
+            98.0,
+            -42.97
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -47.12,
+            103.97,
+            -85.33
+          ],
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -2.21,
+            108.21,
+            -82.21
+          ],
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            43.35,
+            98.36,
+            -82.4
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            43.15,
+            94.03,
+            -48.45
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            44.42,
+            98.53,
+            -5.36
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -1.42,
+            98.01,
+            -47.96
+          ],
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            68.91,
+            94.76,
+            -43.95
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -47.51,
+            103.97,
+            -126.19
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        }
+      ],
+      "name": {
+        "zh-CN": "格鲁德训练场",
+        "ja": "ゲルドの修練場",
+        "en": "Gerudo Training Ground"
+      },
+      "intro": {
+        "zh-CN": "格鲁德要塞内的试炼迷宫，包含大量钥匙与机关，最终奖励为冰箭（无黄金蜘蛛或心之碎片）。",
+        "ja": "ゲルドの砦内の修行場。カギを集めて氷の矢を手に入れるダンジョンで、スタルチュラやかけらはありません。",
+        "en": "An optional trial dungeon inside Gerudo's Fortress rewarding the Ice Arrows (no Skulltulas or Hearts)."
+      }
+    },
+    {
+      "id": "ganon",
+      "kind": "dungeon",
+      "region": "Castillo",
+      "region_i18n": {
+        "zh-CN": "城堡区域",
+        "ja": "城エリア",
+        "en": "Castle"
+      },
+      "pin": {
+        "x": 0.4092,
+        "y": 0.2333
+      },
+      "startMap": "1F",
+      "maps": [
+        {
+          "id": "7F",
+          "label": {
+            "zh-CN": "7F",
+            "ja": "7F",
+            "en": "7F"
+          },
+          "image": "maps/official_ganon_7F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "6F",
+          "label": {
+            "zh-CN": "6F",
+            "ja": "6F",
+            "en": "6F"
+          },
+          "image": "maps/official_ganon_6F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "5F",
+          "label": {
+            "zh-CN": "5F",
+            "ja": "5F",
+            "en": "5F"
+          },
+          "image": "maps/official_ganon_5F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "4F",
+          "label": {
+            "zh-CN": "4F",
+            "ja": "4F",
+            "en": "4F"
+          },
+          "image": "maps/official_ganon_4F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "3F",
+          "label": {
+            "zh-CN": "3F",
+            "ja": "3F",
+            "en": "3F"
+          },
+          "image": "maps/official_ganon_3F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "2F",
+          "label": {
+            "zh-CN": "2F",
+            "ja": "2F",
+            "en": "2F"
+          },
+          "image": "maps/official_ganon_2F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        },
+        {
+          "id": "1F",
+          "label": {
+            "zh-CN": "1F",
+            "ja": "1F",
+            "en": "1F"
+          },
+          "image": "maps/official_ganon_1F.webp",
+          "aspect": 1.3889,
+          "viewBox": [
+            0.0,
+            0.0,
+            2000.0,
+            1440.0
+          ]
+        }
+      ],
+      "scenes": [
+        "InsideGanonCastle",
+        "CrumblingGanonCastle"
+      ],
+      "transform": {
+        "mode": "scale_offset",
+        "ax": 5.263158,
+        "az": 0.0,
+        "c": 1000.0,
+        "bx": 0.0,
+        "bz": 5.263158,
+        "d": 835.7895,
+        "n": 100
+      },
+      "dungeon_floors": [
+        {
+          "center": [
+            -0.07,
+            106.0,
+            39.89
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            23.04,
+            103.25,
+            19.13
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            36.49,
+            102.75,
+            42.18
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            47.52,
+            102.9,
+            62.11
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            50.18,
+            104.64,
+            -21.0
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            78.36,
+            97.75,
+            -20.89
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            101.81,
+            99.75,
+            -20.99
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            38.59,
+            103.9,
+            -88.87
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            65.84,
+            105.4,
+            -135.91
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -30.46,
+            103.71,
+            -73.81
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -52.59,
+            103.98,
+            -103.92
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -45.56,
+            99.76,
+            -21.04
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -52.21,
+            99.95,
+            -21.06
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -67.52,
+            106.45,
+            -21.02
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -83.55,
+            102.71,
+            -21.0
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -22.28,
+            103.94,
+            18.59
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -30.06,
+            107.07,
+            37.42
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -38.08,
+            105.01,
+            51.37
+          ],
+          "floors": [
+            "1F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            -0.01,
+            129.91,
+            -19.68
+          ],
+          "floors": [
+            "1F",
+            "2F"
+          ],
+          "floor_id": "1F"
+        },
+        {
+          "center": [
+            0.39,
+            136.25,
+            -24.43
+          ],
+          "floors": [
+            "2F",
+            "3F"
+          ],
+          "floor_id": "2F"
+        },
+        {
+          "center": [
+            18.56,
+            137.25,
+            -24.67
+          ],
+          "floors": [
+            "3F"
+          ],
+          "floor_id": "3F"
+        },
+        {
+          "center": [
+            0.2,
+            142.96,
+            -25.0
+          ],
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F"
+        },
+        {
+          "center": [
+            0.05,
+            144.25,
+            -6.42
+          ],
+          "floors": [
+            "4F"
+          ],
+          "floor_id": "4F"
+        },
+        {
+          "center": [
+            0.09,
+            151.16,
+            -24.66
+          ],
+          "floors": [
+            "4F",
+            "5F"
+          ],
+          "floor_id": "4F"
+        },
+        {
+          "center": [
+            -24.09,
+            150.65,
+            -24.63
+          ],
+          "floors": [
+            "5F",
+            "6F"
+          ],
+          "floor_id": "5F"
+        },
+        {
+          "center": [
+            0.08,
+            213.25,
+            -24.62
+          ],
+          "floors": [
+            "7F"
+          ],
+          "floor_id": "7F"
+        }
+      ],
+      "name": {
+        "zh-CN": "加侬多夫城堡内部",
+        "ja": "ガノンドロフ城内部",
+        "en": "Ganon's Castle"
+      },
+      "intro": {
+        "zh-CN": "最终决战之塔。外围城堡废墟有黄金蜘蛛与大妖精，塔内部无额外收集品。",
+        "ja": "最終決戦の場となるガノン城内部。内部に収集物はありません。",
+        "en": "The final tower. Its exterior has a Gold Skulltula and Great Fairy, while the interior holds no collectibles."
+      }
+    }
+  ]
+}

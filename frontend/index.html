@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>OoT Remake · Collection & Live Sync Tracker</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Top Header (Zelda Notes Style) -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="triforce-badge" aria-hidden="true">
+          <svg viewBox="0 0 64 42" width="38" height="26">
+            <path d="M32 3 L38 14 L26 14 Z M25 15 L31 26 L19 26 Z M39 15 L45 26 L33 26 Z" fill="currentColor"/>
+            <path d="M23 19 L5 11 L11 19 L3 18 L15 24 L9 26 L21 26 Z" fill="currentColor" opacity="0.92"/>
+            <path d="M41 19 L59 11 L53 19 L61 18 L49 24 L55 26 L43 26 Z" fill="currentColor" opacity="0.92"/>
+            <path d="M28 28 L32 39 L36 28 Z" fill="currentColor" opacity="0.88"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-kicker">
+            <span class="kicker-rule"></span>
+            <span class="kicker-text">HYRULE ATLAS</span>
+            <span class="kicker-rule"></span>
+          </div>
+          <h1 id="appTitle">塞尔达传说：时之笛 收集进度管理器</h1>
+          <p id="appSubtitle" class="subtitle">实时位置同步 · 存档解析 · 全收集攻略</p>
+        </div>
+      </div>
+
+      <div class="topbar-center">
+        <div id="syncPill" class="sync-pill mode-idle">
+          <span class="pulse-dot"></span>
+          <span id="syncText">正在连接...</span>
+        </div>
+        <div class="hero-telemetry" id="heroTelemetry">
+          <span class="tel-item"><strong id="lblHeroScene">当前场景</strong>: <span id="valHeroScene">-</span></span>
+          <span class="tel-sep">·</span>
+          <span class="tel-item"><strong id="lblHeroFloor">楼层</strong>: <span id="valHeroFloor">-</span></span>
+          <span class="tel-sep">·</span>
+          <span class="tel-item"><strong id="lblHeroPos">坐标</strong>: <code id="valHeroPos">-</code></span>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <div class="overall-pill">
+          <span id="lblTotalProgress">总收集进度</span>
+          <strong id="valTotalProgress">0 / 184</strong>
+          <div class="overall-bar"><div id="barTotalProgress" class="overall-bar-fill"></div></div>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="zh-CN">简中</button>
+          <button class="lang-btn" data-lang="ja">日本語</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main 3-Column Workspace -->
+    <main class="workspace">
+      <!-- Left Sidebar: Save Control + Pouch Summary + Categories + Places/List -->
+      <aside class="sidebar-left">
+        <!-- Save Directory & Slot Card -->
+        <section class="panel-card save-card">
+          <div class="panel-header-row">
+            <h2 id="lblSaveSection">存档与同步</h2>
+            <div class="mini-btns local-only">
+              <button id="btnBrowseDir" class="btn-sm">浏览目录</button>
+              <button id="btnRescan" class="btn-sm btn-accent">刷新</button>
+            </div>
+          </div>
+
+          <div class="save-path-row local-only">
+            <input id="inputSavePath" type="text" spellcheck="false" />
+          </div>
+
+          <div id="webSaveBox" class="web-save-box hidden">
+            <input id="dirSaveUpload" type="file" webkitdirectory multiple class="hidden" />
+            <div class="web-save-actions">
+              <button id="btnPickWebDir" class="btn-sm btn-accent">选择存档目录</button>
+              <button id="btnResumeWebDir" class="btn-sm btn-accent hidden">恢复目录同步</button>
+              <button id="btnClearWebSave" class="btn-sm hidden">清除存档</button>
+              <button id="btnResetWebChecks" class="btn-sm">重置勾选</button>
+            </div>
+            <div id="webSaveHint" class="slot-sub"></div>
+          </div>
+
+          <div class="toggle-row">
+            <label class="switch-label">
+              <input id="chkAutoSlot" type="checkbox" checked />
+              <span id="lblAutoSlot">自动跟随最新存档</span>
+            </label>
+            <label class="switch-label">
+              <input id="chkAutoMap" type="checkbox" checked />
+              <span id="lblAutoMap">自动跟随主角场景/楼层</span>
+            </label>
+          </div>
+
+          <div id="slotsContainer" class="slots-list"></div>
+        </section>
+
+        <!-- Pouch & Quest Summary (Zelda Notes Tiles) -->
+        <section class="panel-card pouch-card" id="pouchCard">
+          <h2 id="lblPouchSummary">当前存档状态</h2>
+          <div class="pouch-metrics">
+            <div class="metric zn-tile"><span id="lblHearts">心之容器</span><strong id="valHearts">-</strong></div>
+            <div class="metric zn-tile"><span id="lblTokens">黄金蜘蛛</span><strong id="valTokens">-</strong></div>
+            <div class="metric zn-tile"><span id="lblBottles">空瓶</span><strong id="valBottles">-</strong></div>
+            <div class="metric zn-tile"><span>Rupees</span><strong id="valRupees">-</strong></div>
+          </div>
+          <div class="relics-row">
+            <div class="relic-group" id="stonesRow" title="Spiritual Stones"></div>
+            <div class="relic-group" id="medalsRow" title="Medallions"></div>
+          </div>
+        </section>
+
+        <!-- Category Progress Filter -->
+        <section class="panel-card cats-card">
+          <div id="categoriesGrid" class="categories-grid"></div>
+        </section>
+
+        <!-- Navigation Tabs: Locations / Checklist -->
+        <section class="panel-card nav-card">
+          <div class="nav-tabs">
+            <button id="tabPlaces" class="nav-tab active">地点列表</button>
+            <button id="tabItems" class="nav-tab">收集清单</button>
+          </div>
+
+          <div class="filter-bar">
+            <input id="searchInput" type="search" placeholder="搜索..." />
+            <div class="filter-pills">
+              <select id="filterStatus">
+                <option value="all">全部</option>
+                <option value="remaining">仅看未收集</option>
+                <option value="done">仅看已收集</option>
+              </select>
+              <select id="filterAge">
+                <option value="all">全部时期</option>
+                <option value="child">少年期</option>
+                <option value="adult">青年期</option>
+                <option value="night">仅看夜晚</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="placesList" class="scroll-list"></div>
+          <div id="itemsList" class="scroll-list hidden"></div>
+        </section>
+      </aside>
+
+      <!-- Center Map Viewport -->
+      <section class="map-stage">
+        <div class="map-toolbar">
+          <div class="map-breadcrumbs">
+            <button id="btnOverworld" class="crumb-btn active">海拉鲁全图</button>
+            <div id="eraSwitch" class="era-switch" role="group" aria-label="Era">
+              <button id="btnEraChild" class="era-btn active" data-era="child">少年地图</button>
+              <button id="btnEraAdult" class="era-btn" data-era="adult">青年地图</button>
+              <button id="btnEraAll" class="era-btn" data-era="all">全部</button>
+            </div>
+            <span id="crumbPlaceWrap" class="hidden">
+              <span class="crumb-sep">/</span>
+              <span id="crumbPlaceName" class="crumb-place"></span>
+            </span>
+          </div>
+
+          <div class="map-controls">
+            <button id="btnToggleLabels" class="tool-btn active" title="Toggle Place Labels & Progress">地名进度</button>
+            <button id="btnCenterLink" class="tool-btn" title="Center on Link">定位主角</button>
+            <button id="btnZoomIn" class="tool-btn icon-only" title="Zoom In">+</button>
+            <button id="btnZoomOut" class="tool-btn icon-only" title="Zoom Out">−</button>
+            <button id="btnResetZoom" class="tool-btn" title="Reset View">重置视图</button>
+            <button id="btnToggleDetailDrawer" class="tool-btn tablet-only" title="Detail & Guide">详情攻略</button>
+          </div>
+        </div>
+
+        <div id="mapViewport" class="map-viewport era-child">
+          <div id="eraCornerBadge" class="era-corner-badge">少年时代 · Child Hyrule</div>
+          <div id="floorTabs" class="floor-tabs hidden" role="group" aria-label="Floor Switcher"></div>
+          <div id="mapTransform" class="map-transform">
+            <div id="mapCanvasInner" class="map-canvas-inner">
+              <img id="mapImage" class="map-image" alt="Hyrule Map" draggable="false" />
+              <div id="pinsLayer" class="pins-layer"></div>
+              <div id="linkMarker" class="link-marker hidden" title="Link">
+                <div class="link-pulse"></div>
+                <div class="link-arrow" id="linkArrow">
+                  <svg viewBox="0 0 28 28" width="20" height="20">
+                    <path d="M14 2 L24 24 L14 18.5 L4 24 Z" fill="#e03e2d" stroke="#f7e7b4" stroke-width="2" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="link-label hidden" id="linkLabel">Link</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="noMapNotice" class="no-map-notice hidden">
+            <p id="noMapText"></p>
+            <button id="btnBackToOverworld" class="btn-accent"></button>
+          </div>
+
+          <div id="mapLoadingOverlay" class="map-loading-overlay" aria-live="polite">
+            <div class="map-loading-card">
+              <div class="map-loading-spinner" aria-hidden="true"></div>
+              <div id="mapLoadingText" class="map-loading-text">正在加载地图数据...</div>
+            </div>
+          </div>
+
+          <div id="mobileQuickCard" class="mobile-quick-card hidden">
+            <div class="mq-header">
+              <div class="mobile-quick-info">
+                <span id="mqCatIcon" class="cat-svg"></span>
+                <div class="mobile-quick-text">
+                  <div id="mqTitle" class="mobile-quick-title"></div>
+                  <div id="mqMeta" class="mobile-quick-meta"></div>
+                </div>
+              </div>
+              <div class="mobile-quick-actions">
+                <button id="btnMqGuide" class="btn-sm btn-accent">完整详情</button>
+                <button id="btnMqClose" class="icon-close" aria-label="Close">×</button>
+              </div>
+            </div>
+            <div id="mqReqs" class="mq-reqs hidden"></div>
+            <div id="mqGuideBody" class="mq-guide-body"></div>
+          </div>
+
+          <div id="hoverTooltip" class="hover-tooltip hidden"></div>
+        </div>
+      </section>
+
+      <div id="tabletDrawerBackdrop" class="tablet-drawer-backdrop hidden"></div>
+
+      <!-- Right Detail & Walkthrough Drawer -->
+      <aside id="sidebarRight" class="sidebar-right">
+        <div class="tablet-drawer-head tablet-only">
+          <span id="lblDrawerHeading">详情与攻略</span>
+          <button id="btnCloseDetailDrawer" class="icon-close" aria-label="Close">×</button>
+        </div>
+        <div id="detailEmpty" class="detail-panel">
+          <div id="placeOverview" class="place-overview"></div>
+        </div>
+
+        <div id="detailItem" class="detail-panel hidden">
+          <div class="detail-top-badges">
+            <span id="detailCatBadge" class="cat-badge"></span>
+            <span id="detailVerifyBadge" class="verify-badge"></span>
+          </div>
+          <h2 id="detailTitle" class="detail-title"></h2>
+          <p id="detailPlaceMeta" class="detail-place-meta"></p>
+
+          <div class="detail-tags" id="detailTags"></div>
+
+          <div class="detail-block">
+            <h3 id="lblDetailReq">前置条件</h3>
+            <div id="detailReqs" class="req-chips"></div>
+          </div>
+
+          <div class="detail-block guide-block">
+            <h3 id="lblDetailGuide">详细攻略</h3>
+            <div id="detailGuide" class="guide-body"></div>
+          </div>
+
+          <div class="detail-block meta-block">
+            <h3 id="lblDetailTech">存档验证与坐标</h3>
+            <div class="tech-grid">
+              <div><span id="lblCoords">世界坐标</span>: <code id="detailCoords">-</code></div>
+              <div><span id="lblSaveFlag">存档标志</span>: <code id="detailFlag">-</code></div>
+            </div>
+            <label class="manual-check-row">
+              <input id="chkManualOverride" type="checkbox" />
+              <span id="lblManualOverride">手动覆写标记（仅本地辅助）</span>
+            </label>
+            <textarea id="txtItemNote" rows="2" placeholder="添加个人备注..."></textarea>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Mobile & Portrait Tablet Bottom Navigation -->
+    <nav id="mobileTabBar" class="mobile-tab-bar" aria-label="Mobile Navigation">
+      <button class="mobile-tab-btn active" data-pane="map">
+        <span class="mtb-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+        </span>
+        <span id="lblMobTabMap">地图</span>
+      </button>
+      <button class="mobile-tab-btn" data-pane="list">
+        <span class="mtb-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg>
+        </span>
+        <span id="lblMobTabList">列表·存档</span>
+      </button>
+      <button class="mobile-tab-btn" data-pane="detail">
+        <span class="mtb-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </span>
+        <span id="lblMobTabDetail">攻略详情</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Directory Browser Modal -->
+  <div id="browseModal" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="lblBrowseTitle">选择存档目录</h3>
+        <button id="btnBrowseClose" class="icon-close">×</button>
+      </div>
+      <div class="modal-drives" id="browseDrives"></div>
+      <div class="modal-path-bar">
+        <button id="btnBrowseUp" class="btn-sm">上级目录</button>
+        <input id="browsePathInput" type="text" spellcheck="false" />
+        <button id="btnBrowseGo" class="btn-sm">Go</button>
+      </div>
+      <div id="browseDirsList" class="browse-dirs-list"></div>
+      <div class="modal-foot">
+        <button id="btnBrowseCancel" class="btn-sm">取消</button>
+        <button id="btnBrowseSelect" class="btn-sm btn-accent">使用当前目录</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reset Checks Confirm Modal -->
+  <div id="resetChecksModal" class="modal-backdrop hidden">
+    <div class="modal-card modal-card-sm">
+      <div class="modal-head">
+        <h3 id="lblResetModalTitle">重置勾选说明</h3>
+        <button id="btnResetModalClose" class="icon-close">×</button>
+      </div>
+      <div class="modal-body">
+        <p id="lblResetModalDesc"></p>
+      </div>
+      <div class="modal-foot">
+        <button id="btnResetModalCancel" class="btn-sm">取消</button>
+        <button id="btnResetModalConfirm" class="btn-sm btn-accent">确认重置</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

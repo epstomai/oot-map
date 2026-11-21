@@ -1,0 +1,12 @@
+.vercel
+.env*
+dist/
+data/config.json
+data/user_overrides.json
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+

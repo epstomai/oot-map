@@ -1,0 +1,177 @@
+{
+  "bugs": {
+    "zh-CN": "装虫的瓶子",
+    "ja": "ムシ入りのビン",
+    "en": "Bottled Bug"
+  },
+  "bombs": {
+    "zh-CN": "炸弹",
+    "ja": "バクダン",
+    "en": "Bombs"
+  },
+  "boomerang": {
+    "zh-CN": "回旋镖",
+    "ja": "ブーメラン",
+    "en": "Boomerang"
+  },
+  "slingshot": {
+    "zh-CN": "妖精弹弓",
+    "ja": "妖精のパチンコ",
+    "en": "Fairy Slingshot"
+  },
+  "bow": {
+    "zh-CN": "妖精之弓",
+    "ja": "妖精の弓",
+    "en": "Fairy Bow"
+  },
+  "hookshot": {
+    "zh-CN": "钩爪",
+    "ja": "フックショット",
+    "en": "Hookshot"
+  },
+  "longshot": {
+    "zh-CN": "长钩爪",
+    "ja": "ロングフック",
+    "en": "Longshot"
+  },
+  "megaton-hammer": {
+    "zh-CN": "百万吨重锤",
+    "ja": "メガトンハンマー",
+    "en": "Megaton Hammer"
+  },
+  "iron-boots": {
+    "zh-CN": "铁靴",
+    "ja": "ヘビーブーツ",
+    "en": "Iron Boots"
+  },
+  "golden-scale": {
+    "zh-CN": "黄金鳞片",
+    "ja": "金のウロコ",
+    "en": "Golden Scale"
+  },
+  "silver-gauntlets": {
+    "zh-CN": "白银护手",
+    "ja": "銀のグローブ",
+    "en": "Silver Gauntlets"
+  },
+  "lens-of-truth": {
+    "zh-CN": "真实之镜",
+    "ja": "まことのメガネ",
+    "en": "Lenses of Truth"
+  },
+  "ocarina": {
+    "zh-CN": "陶笛",
+    "ja": "オカリナ",
+    "en": "Ocarina"
+  },
+  "sarias-song": {
+    "zh-CN": "莎莉亚之歌",
+    "ja": "サリアの歌",
+    "en": "Saria's Song"
+  },
+  "song-of-storms": {
+    "zh-CN": "暴风雨之歌",
+    "ja": "嵐の歌",
+    "en": "Song of Storms"
+  },
+  "epona": {
+    "zh-CN": "艾波娜",
+    "ja": "エポナ",
+    "en": "Epona"
+  },
+  "planted-bean": {
+    "zh-CN": "已种植魔法豆",
+    "ja": "植えた魔法のマメ",
+    "en": "Planted Magic Bean"
+  },
+  "bombchus": {
+    "zh-CN": "炸弹鼠",
+    "ja": "ボムチュウ",
+    "en": "Bombchus"
+  },
+  "fire-arrows": {
+    "zh-CN": "火箭",
+    "ja": "炎の矢",
+    "en": "Fire Arrows"
+  },
+  "hover-boots": {
+    "zh-CN": "悬浮靴",
+    "ja": "ホバーブーツ",
+    "en": "Hover Boots"
+  },
+  "silver-scale": {
+    "zh-CN": "白银鳞片",
+    "ja": "銀のウロコ",
+    "en": "Silver Scale"
+  },
+  "goron-bracelet": {
+    "zh-CN": "鼓隆手环",
+    "ja": "ゴロンの腕輪",
+    "en": "Goron's Bracelet"
+  },
+  "golden-gauntlets": {
+    "zh-CN": "黄金护手",
+    "ja": "金のグローブ",
+    "en": "Golden Gauntlets"
+  },
+  "mirror-shield": {
+    "zh-CN": "镜盾",
+    "ja": "ミラーシールド",
+    "en": "Mirror Shield"
+  },
+  "zora-tunic": {
+    "zh-CN": "卓拉蓝衣",
+    "ja": "ゾーラの服",
+    "en": "Zora Tunic"
+  },
+  "deku-sticks": {
+    "zh-CN": "德库木棒",
+    "ja": "デクの棒",
+    "en": "Deku Sticks"
+  },
+  "dins-fire": {
+    "zh-CN": "迪恩之火",
+    "ja": "ディンの炎",
+    "en": "Din's Fire"
+  },
+  "blue-fire": {
+    "zh-CN": "蓝火",
+    "ja": "青い炎",
+    "en": "Blue Fire"
+  },
+  "zeldas-lullaby": {
+    "zh-CN": "塞尔达摇篮曲",
+    "ja": "ゼルダの子守唄",
+    "en": "Zelda's Lullaby"
+  },
+  "eponas-song": {
+    "zh-CN": "艾波娜之歌",
+    "ja": "エポナの歌",
+    "en": "Epona's Song"
+  },
+  "suns-song": {
+    "zh-CN": "太阳之歌",
+    "ja": "太陽の歌",
+    "en": "Sun's Song"
+  },
+  "song-of-time": {
+    "zh-CN": "时之歌",
+    "ja": "時の歌",
+    "en": "Song of Time"
+  },
+  "scarecrows-song": {
+    "zh-CN": "稻草人之歌",
+    "ja": "カカシの歌",
+    "en": "Scarecrow's Song"
+  },
+  "bolero-of-fire": {
+    "zh-CN": "火之波莱罗",
+    "ja": "炎のボレロ",
+    "en": "Bolero of Fire"
+  },
+  "gerudo-card": {
+    "zh-CN": "格鲁德通行证",
+    "ja": "ゲルドの会員証",
+    "en": "Gerudo Token"
+  }
+}
