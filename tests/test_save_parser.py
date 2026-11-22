@@ -18,6 +18,7 @@ from backend.app import DATA_DIR, MAPS_DIR, app, catalog  # noqa: E402
 from backend.live_sync import (  # noqa: E402
     LiveSyncService,
     TARGET_PROCESS_NAMES,
+    WindowsProcessMemoryScanner,
     compute_yaw_deg_from_matrix,
 )
 from backend.save_parser import (  # noqa: E402
@@ -198,6 +199,135 @@ class TestOoTTracker(unittest.TestCase):
                 self.assertEqual(svc._last_change_kind, "full")
                 self.assertEqual(svc.sync_info["mode"], "no_save")
                 self.assertIsNone(svc.live_player)
+
+    def test_longshot_scene_transition_reconciliation(self):
+        sc = WindowsProcessMemoryScanner(catalog.hashes)
+
+        # 1. Cold start with gui_valid=False falls back to fb_pos without locking _last_longshot_live
+        s1 = sc._reconcile_longshot_sample(
+            scene="HyruleField_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=False,
+            gui_pos=None,
+            gui_rot=None,
+            fb_pos=[-10.0, 0.0, 20.0],
+            fb_rot=15.0,
+            now_mono=1.0,
+        )
+        self.assertEqual(s1, {"scene": "HyruleField_Child", "is_child": True, "pos": [-10.0, 0.0, 20.0], "rot": 15.0})
+        self.assertIsNone(sc._last_longshot_live)
+
+        # 2. Normal valid frame updates _last_longshot_live
+        s2 = sc._reconcile_longshot_sample(
+            scene="HyruleField_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[-28.0, 0.0, -55.0],
+            gui_rot=90.0,
+            fb_pos=[-28.0, 0.0, -55.0],
+            fb_rot=90.0,
+            now_mono=2.0,
+        )
+        self.assertEqual(s2, {"scene": "HyruleField_Child", "is_child": True, "pos": [-28.0, 0.0, -55.0], "rot": 90.0})
+        self.assertEqual(sc._last_longshot_live["scene"], "HyruleField_Child")
+
+        # 3. Loading transition (gui_valid=False) holds last valid scene & pos despite stale fb_pos
+        s3 = sc._reconcile_longshot_sample(
+            scene="Market_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=False,
+            gui_pos=None,
+            gui_rot=None,
+            fb_pos=[-28.0, 0.0, -55.0],
+            fb_rot=90.0,
+            now_mono=2.5,
+        )
+        self.assertEqual(s3, {"scene": "HyruleField_Child", "is_child": True, "pos": [-28.0, 0.0, -55.0], "rot": 90.0})
+
+        # 4. Spawn completion immediately emits new scene & spawn pos
+        s4 = sc._reconcile_longshot_sample(
+            scene="Market_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[0.0, 0.0, 58.0],
+            gui_rot=180.0,
+            fb_pos=[-28.0, 0.0, -55.0],
+            fb_rot=90.0,
+            now_mono=3.0,
+        )
+        self.assertEqual(s4, {"scene": "Market_Child", "is_child": True, "pos": [0.0, 0.0, 58.0], "rot": 180.0})
+
+        # 5. Early scene flip while gui_valid=True & coords barely moved holds old scene up to 0.8s
+        s5a = sc._reconcile_longshot_sample(
+            scene="KakarikoVillage_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[0.05, 0.0, 58.0],
+            gui_rot=180.0,
+            fb_pos=None,
+            fb_rot=None,
+            now_mono=10.0,
+        )
+        self.assertEqual(s5a["scene"], "Market_Child")
+        self.assertEqual(s5a["pos"], [0.0, 0.0, 58.0])
+
+        s5b = sc._reconcile_longshot_sample(
+            scene="KakarikoVillage_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[0.05, 0.0, 58.0],
+            gui_rot=180.0,
+            fb_pos=None,
+            fb_rot=None,
+            now_mono=10.4,
+        )
+        self.assertEqual(s5b["scene"], "Market_Child")
+
+        # 5c: Once coords jump to new spawn, accepts new scene immediately
+        s5c = sc._reconcile_longshot_sample(
+            scene="KakarikoVillage_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[-60.0, 0.0, 30.0],
+            gui_rot=0.0,
+            fb_pos=None,
+            fb_rot=None,
+            now_mono=10.5,
+        )
+        self.assertEqual(s5c, {"scene": "KakarikoVillage_Child", "is_child": True, "pos": [-60.0, 0.0, 30.0], "rot": 0.0})
+
+        # 5d: Or if timeout >= 0.8s passes (e.g. two scenes actually spawn at the exact same coords)
+        s5d_hold = sc._reconcile_longshot_sample(
+            scene="Market_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[-60.0, 0.0, 30.0],
+            gui_rot=0.0,
+            fb_pos=None,
+            fb_rot=None,
+            now_mono=11.0,
+        )
+        self.assertEqual(s5d_hold["scene"], "KakarikoVillage_Child")
+        s5d_accept = sc._reconcile_longshot_sample(
+            scene="Market_Child",
+            is_child=True,
+            gui_available=True,
+            gui_valid=True,
+            gui_pos=[-60.0, 0.0, 30.0],
+            gui_rot=0.0,
+            fb_pos=None,
+            fb_rot=None,
+            now_mono=11.85,
+        )
+        self.assertEqual(s5d_accept, {"scene": "Market_Child", "is_child": True, "pos": [-60.0, 0.0, 30.0], "rot": 0.0})
 
 
 if __name__ == "__main__":

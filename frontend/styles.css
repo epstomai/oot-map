@@ -709,7 +709,6 @@ body.static-mode .local-only { display: none !important; }
   position: absolute; transform: translate(-50%, -50%);
   pointer-events: none; z-index: 70;
   display: flex; flex-direction: column; align-items: center;
-  transition: margin-top 0.15s ease;
 }
 .link-marker.live-smooth {
   transition: left 0.12s linear, top 0.12s linear, margin-top 0.15s ease;

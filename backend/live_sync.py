@@ -196,6 +196,9 @@ class WindowsProcessMemoryScanner:
         self.longshot_gui_bss_va: int | None = None
         self.cached_gd_inst: int | None = None
         self.cached_gd_entries: dict[str, int] = {}
+        self._last_longshot_live: dict[str, Any] | None = None
+        self._pending_scene_name: str | None = None
+        self._pending_scene_since: float = 0.0
 
         self._k32 = ctypes.WinDLL("kernel32", use_last_error=True) if os.name == "nt" else None
         self._psapi = None
@@ -247,6 +250,9 @@ class WindowsProcessMemoryScanner:
         self.longshot_gui_bss_va = None
         self.cached_gd_inst = None
         self.cached_gd_entries = {}
+        self._last_longshot_live = None
+        self._pending_scene_name = None
+        self._pending_scene_since = 0.0
 
     def _get_process_working_set(self, pid: int) -> int:
         if not self._k32 or not self._psapi:
@@ -472,6 +478,75 @@ class WindowsProcessMemoryScanner:
                 return None
         return None
 
+    def _reconcile_longshot_sample(
+        self,
+        *,
+        scene: str,
+        is_child: bool,
+        gui_available: bool,
+        gui_valid: bool,
+        gui_pos: list[float] | None,
+        gui_rot: float | None,
+        fb_pos: list[float] | None,
+        fb_rot: float | None,
+        now_mono: float | None = None,
+    ) -> dict[str, Any] | None:
+        if gui_available and (not gui_valid or gui_pos is None):
+            self._pending_scene_name = None
+            self._pending_scene_since = 0.0
+            if self._last_longshot_live is not None:
+                held = dict(self._last_longshot_live)
+                held["pos"] = list(held["pos"])
+                return held
+            if fb_pos is None:
+                return None
+            return {
+                "scene": scene,
+                "is_child": is_child,
+                "pos": list(fb_pos),
+                "rot": fb_rot if fb_rot is not None else 0.0,
+            }
+
+        if gui_available and gui_valid and gui_pos is not None:
+            rot = gui_rot if gui_rot is not None else (fb_rot if fb_rot is not None else 0.0)
+            if self._last_longshot_live is not None and scene != self._last_longshot_live["scene"]:
+                dist = math.dist(gui_pos, self._last_longshot_live["pos"])
+                if dist < 0.5:
+                    now = time.monotonic() if now_mono is None else now_mono
+                    if self._pending_scene_name != scene:
+                        self._pending_scene_name = scene
+                        self._pending_scene_since = now
+                    if now - self._pending_scene_since < 0.8:
+                        held = dict(self._last_longshot_live)
+                        held["pos"] = list(held["pos"])
+                        return held
+                self._pending_scene_name = None
+                self._pending_scene_since = 0.0
+            else:
+                self._pending_scene_name = None
+                self._pending_scene_since = 0.0
+            result = {
+                "scene": scene,
+                "is_child": is_child,
+                "pos": list(gui_pos),
+                "rot": rot,
+            }
+            saved = dict(result)
+            saved["pos"] = list(result["pos"])
+            self._last_longshot_live = saved
+            return result
+
+        self._pending_scene_name = None
+        self._pending_scene_since = 0.0
+        if fb_pos is None:
+            return None
+        return {
+            "scene": scene,
+            "is_child": is_child,
+            "pos": list(fb_pos),
+            "rot": fb_rot if fb_rot is not None else 0.0,
+        }
+
     def _poll_longshot_live(self, handle: int, pname: str) -> dict[str, Any] | None:
         if self.longshot_guest_base is None or self.longshot_gd_bss_va is None:
             now = time.monotonic()
@@ -493,15 +568,25 @@ class WindowsProcessMemoryScanner:
         if not self._is_valid_guest_heap_ptr(gd_inst):
             self.cached_gd_inst = None
             self.cached_gd_entries = {}
+            self._last_longshot_live = None
+            self._pending_scene_name = None
+            self._pending_scene_since = 0.0
             return None
 
         if gd_inst != self.cached_gd_inst or "banc" not in self.cached_gd_entries or "child" not in self.cached_gd_entries:
+            if gd_inst != self.cached_gd_inst:
+                self._last_longshot_live = None
+                self._pending_scene_name = None
+                self._pending_scene_since = 0.0
             entries: dict[str, int] = {}
             banc_e = self._lookup_gamedata_entry(handle, guest_base, gd_inst, 0x608, 0x108, self.h_banc)
             child_e = self._lookup_gamedata_entry(handle, guest_base, gd_inst, 0x008, 0x18, self.h_child)
             if banc_e is None or child_e is None:
                 self.cached_gd_inst = None
                 self.cached_gd_entries = {}
+                self._last_longshot_live = None
+                self._pending_scene_name = None
+                self._pending_scene_since = 0.0
                 return None
             entries["banc"] = banc_e
             entries["child"] = child_e
@@ -534,53 +619,58 @@ class WindowsProcessMemoryScanner:
             return None
         is_child = bool(child_raw[0])
 
-        pos: list[float] | None = None
-        rot: float | None = None
+        gui_available = False
+        gui_valid = False
+        gui_pos: list[float] | None = None
+        gui_rot: float | None = None
 
         if self.longshot_gui_bss_va is not None:
             gui_inst = self._read_u64(handle, guest_base + self.longshot_gui_bss_va)
             if self._is_valid_guest_heap_ptr(gui_inst):
                 blk = self._read_bytes(handle, guest_base + gui_inst + 0x588, 0x90)
                 if blk and len(blk) >= 0x90:
+                    gui_available = True
                     flags = struct.unpack_from("<H", blk, GAMEUI_VALID_OFF - 0x588)[0]
-                    if flags & 1:
+                    gui_valid = bool(flags & 1)
+                    if gui_valid:
                         x, y, z = struct.unpack_from("<3f", blk, GAMEUI_POS_OFF - 0x588)
                         if all(not math.isnan(v) and not math.isinf(v) and abs(v) <= 50000 for v in (x, y, z)):
-                            pos = [round(x, 3), round(y, 3), round(z, 3)]
+                            gui_pos = [round(x, 3), round(y, 3), round(z, 3)]
                             m_px = struct.unpack_from("<f", blk, GAMEUI_ROT_PRIMARY_OFFS[0] - 0x588)[0]
                             m_pz = struct.unpack_from("<f", blk, GAMEUI_ROT_PRIMARY_OFFS[1] - 0x588)[0]
-                            rot = compute_yaw_deg_from_matrix(m_px, m_pz)
-                            if rot is None:
+                            gui_rot = compute_yaw_deg_from_matrix(m_px, m_pz)
+                            if gui_rot is None:
                                 m_bx = struct.unpack_from("<f", blk, GAMEUI_ROT_BACKUP_OFFS[0] - 0x588)[0]
                                 m_bz = struct.unpack_from("<f", blk, GAMEUI_ROT_BACKUP_OFFS[1] - 0x588)[0]
-                                rot = compute_yaw_deg_from_matrix(m_bx, m_bz)
+                                gui_rot = compute_yaw_deg_from_matrix(m_bx, m_bz)
 
-        if pos is None and "pos" in self.cached_gd_entries:
-            fb_pos = self._read_bytes(handle, guest_base + self.cached_gd_entries["pos"] + 0x24, 12)
-            if fb_pos and len(fb_pos) == 12:
-                x, y, z = struct.unpack("<3f", fb_pos)
+        fb_pos: list[float] | None = None
+        if (not gui_available or (gui_pos is None and self._last_longshot_live is None)) and "pos" in self.cached_gd_entries:
+            raw_pos = self._read_bytes(handle, guest_base + self.cached_gd_entries["pos"] + 0x24, 12)
+            if raw_pos and len(raw_pos) == 12:
+                x, y, z = struct.unpack("<3f", raw_pos)
                 if all(not math.isnan(v) and not math.isinf(v) and abs(v) <= 50000 for v in (x, y, z)):
-                    pos = [round(x, 3), round(y, 3), round(z, 3)]
+                    fb_pos = [round(x, 3), round(y, 3), round(z, 3)]
 
-        if pos is None:
-            return None
+        fb_rot: float | None = None
+        if gui_rot is None and (not gui_available or gui_valid or self._last_longshot_live is None) and "rot" in self.cached_gd_entries:
+            raw_rot = self._read_bytes(handle, guest_base + self.cached_gd_entries["rot"] + 0x1C, 4)
+            if raw_rot and len(raw_rot) == 4:
+                rv = struct.unpack("<f", raw_rot)[0]
+                if not math.isnan(rv) and not math.isinf(rv):
+                    cw = round(-rv, 2)
+                    fb_rot = 0.0 if abs(cw) < 1e-6 else cw
 
-        if rot is None:
-            rot = 0.0
-            if "rot" in self.cached_gd_entries:
-                fb_rot = self._read_bytes(handle, guest_base + self.cached_gd_entries["rot"] + 0x1C, 4)
-                if fb_rot and len(fb_rot) == 4:
-                    rv = struct.unpack("<f", fb_rot)[0]
-                    if not math.isnan(rv) and not math.isinf(rv):
-                        cw = round(-rv, 2)
-                        rot = 0.0 if abs(cw) < 1e-6 else cw
-
-        return {
-            "scene": scene,
-            "is_child": is_child,
-            "pos": pos,
-            "rot": rot,
-        }
+        return self._reconcile_longshot_sample(
+            scene=scene,
+            is_child=is_child,
+            gui_available=gui_available,
+            gui_valid=gui_valid,
+            gui_pos=gui_pos,
+            gui_rot=gui_rot,
+            fb_pos=fb_pos,
+            fb_rot=fb_rot,
+        )
 
     def _parse_live_buffer(self, buf: bytes) -> dict[str, Any] | None:
         if len(buf) < 0x18000:

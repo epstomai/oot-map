@@ -80,6 +80,8 @@
     lastLinkOverworldUv: null,
     linkArrowDeg: null,
     lastLinkMapKey: null,
+    lastLinkUv: null,
+    lastLinkScene: null,
     // Map pan/zoom
     scale: 1,
     minScale: 0.1,
@@ -1697,7 +1699,7 @@
 
       // Render Link marker on overworld without blocking banners
       const owPos = player?.projected?.overworld;
-      updateLinkMarker(owPos, player?.rot || 0, "", false, true);
+      updateLinkMarker(owPos, player?.rot || 0, "", false, true, false, player?.scene || null);
       return;
     }
 
@@ -1854,13 +1856,13 @@
       const flMatch = player.floor === activeMap.id;
       const flObj = maps.find((m) => m.id === player.floor);
       const lbl = flMatch ? "" : `${flObj ? locText(flObj.label) : player.floor}`;
-      updateLinkMarker(pUv, player.rot || 0, lbl, !flMatch, false);
+      updateLinkMarker(pUv, player.rot || 0, lbl, !flMatch, false, false, player?.scene || null);
     } else {
       updateLinkMarker(null, 0, "", false, false);
     }
   }
 
-  function updateLinkMarker(uv, rotDeg, label, dimmed = false, isOverworld = false, smooth = false) {
+  function updateLinkMarker(uv, rotDeg, label, dimmed = false, isOverworld = false, smooth = false, scene = null) {
     const marker = $("linkMarker");
     state.lastLinkOverworldUv = isOverworld ? uv : null;
     if (!uv) {
@@ -1868,11 +1870,26 @@
       marker.classList.remove("above-banner", "on-overworld", "live-smooth");
       state.linkArrowDeg = null;
       state.lastLinkMapKey = null;
+      state.lastLinkUv = null;
+      state.lastLinkScene = null;
       return;
     }
     const mapKey = isOverworld ? "overworld" : `${state.activePlaceId || ""}:${state.activeFloorId || ""}`;
-    const useSmooth = Boolean(smooth && !marker.classList.contains("hidden") && state.lastLinkMapKey === mapKey);
+    const isLoadingMap = Boolean($("mapCanvasInner")?.classList.contains("is-loading"));
+    const prevUv = state.lastLinkUv;
+    const jumpDist = prevUv ? Math.hypot(uv.x - prevUv.x, uv.y - prevUv.y) : Infinity;
+    const sceneSame = !scene || !state.lastLinkScene || state.lastLinkScene === scene;
+    const useSmooth = Boolean(
+      smooth &&
+        !isLoadingMap &&
+        !marker.classList.contains("hidden") &&
+        state.lastLinkMapKey === mapKey &&
+        sceneSame &&
+        jumpDist <= 0.08
+    );
     state.lastLinkMapKey = mapKey;
+    state.lastLinkUv = { x: uv.x, y: uv.y };
+    state.lastLinkScene = scene || null;
     marker.classList.toggle("live-smooth", useSmooth);
     marker.classList.remove("hidden");
     marker.classList.toggle("on-overworld", Boolean(isOverworld));
@@ -1897,6 +1914,9 @@
       lblEl.classList.add("hidden");
     }
     refreshLinkOverlapClass();
+    if (!useSmooth) {
+      void marker.offsetWidth;
+    }
   }
 
   function showTooltip(e, it) {
@@ -2220,7 +2240,7 @@
 
     if (state.viewMode === "overworld") {
       const owPos = player.projected?.overworld || null;
-      updateLinkMarker(owPos, player.rot || 0, "", false, true, true);
+      updateLinkMarker(owPos, player.rot || 0, "", false, true, true, player?.scene || null);
     } else if (state.viewMode === "place") {
       const place = getPlaceById(state.activePlaceId);
       if (place && player.place === place.id) {
@@ -2231,7 +2251,7 @@
           const flMatch = player.floor === activeMap.id;
           const flObj = maps.find((m) => m.id === player.floor);
           const lbl = flMatch ? "" : `${flObj ? locText(flObj.label) : player.floor}`;
-          updateLinkMarker(pUv, player.rot || 0, lbl, !flMatch, false, true);
+          updateLinkMarker(pUv, player.rot || 0, lbl, !flMatch, false, true, player?.scene || null);
         } else {
           updateLinkMarker(null, 0, "", false, false, false);
         }
