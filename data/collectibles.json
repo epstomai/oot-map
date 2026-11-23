@@ -6674,7 +6674,9 @@
     },
     "age": "both",
     "night": false,
-    "requires": [],
+    "requires": [
+      "zeldas-lullaby"
+    ],
     "coords": [
       142.345,
       98.306,
@@ -6690,14 +6692,14 @@
       "en": "Broken pedestal in the Royal Family's Tomb"
     },
     "hint": {
-      "zh-CN": "进入王家之墓最深处石碑房，对绿水池旁基座的思绪吹奏《太阳之歌》。",
-      "ja": "王家の墓最奥の緑の水たまり横の印の前で『太陽の歌』を演奏する。",
-      "en": "Play the Sun's Song next to the mark."
+      "zh-CN": "【吹笛点・读取即计数】吹《塞尔达摇篮曲》进王家之墓最深处读取即收集；原地吹《太阳之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】『ゼルダの子守唄』で王家の墓に入り最奥で読むだけで収集完了。『太陽の歌』で大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Open the Royal Family's Tomb with Zelda's Lullaby and read to record; play Sun's Song for a Fairy Spirit."
     },
     "guide": {
-      "zh-CN": "在墓地三角神力徽章上吹《塞尔达摇篮曲》进入王家之墓，走到刻有《太阳之歌》的石碑房间，在绿色毒水旁残破石台处查看妖精的思绪并在旁边吹奏《太阳之歌》。",
-      "ja": "カカリコ村墓地の王家の墓に入り、太陽の歌が刻まれた最奥の部屋まで進みます。緑色の水辺にある壊れた台座の「妖精の想い」のそばで『太陽の歌』を吹きましょう。",
-      "en": "In the Graveyard, enter the Royal Family's Tomb by playing Zelda's Lullaby on the Triforce and go on to the last room, the one with the stone monument that teaches the Sun's Song.\n\nThere, above the green liquid, is a broken pedestal with the thought of a fairy who can't remember the melody carved into the monument and wants to hear it again so she won't forget it. **Play the Sun's Song next to the mark.**"
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】在卡卡利科墓地最深处三角神力石板前吹《塞尔达摇篮曲》炸开王家之墓，进入最深处石碑房（学太阳之歌的房间），调查绿水池旁残破基座上的思绪即永久计入收集（双时期均可）。\n\n附加效果：原地吹奏《太阳之歌》可召唤大妖精回满血魔（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】カカリコ村の墓地奥で『ゼルダの子守唄』を吹いて王家の墓を開き、最奥の石碑部屋の壊れた台座にある印を読むと収集済みになります（両時代対応）。\n\nここで『太陽の歌』を吹くと回復用の大妖精が出現します（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] Play Zelda's Lullaby on the Triforce slab to open the Royal Family's Tomb, reach the final inscription chamber, and inspect the broken pedestal by the green pool (Child or Adult) to record it.\n\nBonus: Play **Sun's Song** here to summon a Giant Fairy for a full health and magic refill (optional—does not affect collection count)."
     }
   },
   {
@@ -6728,14 +6730,14 @@
       "en": "Spirit Temple stairway"
     },
     "hint": {
-      "zh-CN": "来到获得银手套的大平台边缘石栏，在思绪旁吹奏《暴风雨之歌》。",
-      "ja": "銀のグローブを取った外の高台の縁にある印の前で『嵐の歌』を吹く。",
-      "en": "Play the Song of Storms in front of the mark."
+      "zh-CN": "【吹笛点・读取即计数】双时期到达魂之神殿外高台矮墙直接读取即收集；原地吹《暴风雨之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】魂の神殿前の高台の低い壁で読むだけで収集完了。『嵐の歌』で回復用の大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Child or Adult: read on the low wall at the Spirit Temple plaza; play Song of Storms for a Fairy Spirit."
     },
     "guide": {
-      "zh-CN": "来到沙漠巨像魂之神殿二楼室外拿取银手套的高台，两座火台之间的低矮围墙上留有妖精的思绪。站在标记前吹奏《暴风雨之歌》即可回复体力与魔力。",
-      "ja": "砂漠の巨像で銀のグローブの宝箱がある高台へ出ると、2つの燭台の間の低い壁に「妖精の想い」があります。ここで『嵐の歌』を吹くと魔力とハートが回復します。",
-      "en": "In the Desert Colossus, on the ledge where you get the Silver Gauntlets, between the two torch stands, the thought is on the low wall at the edge. The fairy says the view is breathtaking, but she can't stand such dry air and wishes a good downpour would come. Playing the Song of Storms here restores your magic and your health."
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】来到沙漠巨像・魂之神殿门外台阶旁（银手套宝箱所在高台边缘的矮石墙），按A读取思绪即永久计入收集（少年/青年期均可）。\n\n附加效果：在思绪旁吹奏《暴风雨之歌》可召唤大妖精回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】巨大邪神像・魂の神殿前の高台（銀のグローブの宝箱側）の低い石壁にある印を読むと収集済みになります（両時代対応）。\n\nここで『嵐の歌』を吹くと回復用の大妖精が出現します（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] Stand on the low stone ledge outside the Spirit Temple at Desert Colossus (near the Silver Gauntlets chest platform) and read the mark (Child or Adult) to record it.\n\nBonus: Play **Song of Storms** here to summon a Giant Fairy for a full health and magic refill (optional—does not affect collection count)."
     }
   },
   {
@@ -6748,9 +6750,11 @@
       "x": 0.8537,
       "y": 0.4245
     },
-    "age": "both",
+    "age": "adult",
     "night": false,
-    "requires": [],
+    "requires": [
+      "blue-fire"
+    ],
     "coords": [
       79.085,
       104.18,
@@ -6766,14 +6770,14 @@
       "en": "Ice tunnel next to the Compass room"
     },
     "hint": {
-      "zh-CN": "用蓝色火焰融化红冰进入地刺冰块走廊，在墙面思绪前吹奏《太阳之歌》。",
-      "ja": "青い炎で赤い氷を溶かした先の壁の印の前で『太陽の歌』を演奏する。",
-      "en": "Play the Sun's Song next to the mark."
+      "zh-CN": "【吹笛点・读取即计数】蓝火融化红冰进入罗盘房旁冰封走廊读取即收集；吹《太阳之歌》召唤大妖精回血魔。",
+      "ja": "【演奏点・読むだけで記録】青い炎で赤い氷を溶かして進み読むだけで収集完了。『太陽の歌』で回復用の大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Melt the red ice with Blue Fire and read to record; play Sun's Song for a healing Fairy Spirit."
     },
     "guide": {
-      "zh-CN": "在冰之洞窟取得罗盘后用蓝色火焰融化红冰进入通往推冰块房的冰冻走廊，沿墙面可看到妖精的思绪。在她身旁吹奏《太阳之歌》即可回应她的愿望。",
-      "ja": "氷の洞窟で青い炎を使って赤い氷を溶かした先、トゲ罠のある氷の通路壁に「妖精の想い」があります。近くで『太陽の歌』を吹いてあげましょう。",
-      "en": "In the Ice Cavern, once you have the Compass, fill a bottle with the Blue Fire in that area and melt the block of red ice next to it. Follow the frozen tunnel behind it, the one leading to the spike trap corridor and the ice block room: you'll see this Fairy Thought on its wall. The fairy's wings are frosted over and she'd give anything to spend a little while in the sun. **Play the Sun's Song next to the mark.**"
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】青年期在冰之洞窟用瓶装蓝火融化红冰，进入罗盘房旁的地刺冰块走廊，在墙面思绪处按A读取即永久计入收集。\n\n附加效果：在思绪前吹奏《太阳之歌》可召唤大妖精回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】氷の洞窟で青い炎を使って赤い氷を溶かし、コンパス部屋横の氷の通路の壁にある印を読むと収集済みになります。\n\nここで『太陽の歌』を吹くと回復用の大妖精が現れます（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] In the Ice Cavern, melt the red ice with Blue Fire to enter the icy spike corridor next to the Compass room and read the wall mark to record it.\n\nBonus: Play **Sun's Song** here to summon a Giant Fairy that restores full health and magic (optional—does not affect collection count)."
     }
   },
   {
@@ -6786,7 +6790,7 @@
       "x": 0.1954,
       "y": 0.7415
     },
-    "age": "both",
+    "age": "child",
     "night": false,
     "requires": [],
     "coords": [
@@ -6804,14 +6808,14 @@
       "en": "Pot alcove on the west shore"
     },
     "hint": {
-      "zh-CN": "沿着海利亚湖西岸一直走到最南端凹室，砸碎壁龛内的陶罐找出妖精。",
-      "ja": "ハイリア湖西岸南端のくぼみにある印を読み、置かれたツボを割る。",
-      "en": "Break the pots in the alcove: a fairy is hiding in one."
+      "zh-CN": "【纯提示・仅少年期】海利亚湖西岸最南端陶罐壁龛直接读取即收集（提示砸开陶罐藏着妖精）。",
+      "ja": "【純ヒント・子供限定】ハイリア湖西岸南端のツボ横で読むだけで収集完了（ツボの中に妖精のヒント）。",
+      "en": "[Pure Hint · Child Only] Read in the pot alcove on Lake Hylia's southwest shore as Child (hints at a Fairy inside the pots)."
     },
     "guide": {
-      "zh-CN": "沿着海利亚湖西岸向南走到底，进入摆着麻袋、木桶与陶罐的岩壁凹室查看墙上的妖精思绪，然后把壁龛里的陶罐全部砸破即可放出一只回复妖精与卢比。",
-      "ja": "ハイリア湖の西岸を南端付近まで進むと木箱やツボが並ぶ岩のくぼみがあり、壁に「妖精の想い」が刻まれています。くぼみの中のツボを割ると妖精が現れます。",
-      "en": "At Lake Hylia, follow the west shore south almost to the end: this thought is in an alcove in the rock wall, with pots, sacks, and barrels. The fairy says her secret for playing hide-and-seek is a spot the other fairies can't throw or break. **Break the pots in the alcove**: a fairy comes out of one, and there are a few Rupees too."
+      "zh-CN": "【纯提示・仅少年期】注意该点仅在少年期出现！沿海利亚湖西岸走到最南端凹室壁龛，直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作探索提示：砸碎旁边陶罐会飞出妖精与蓝卢比。",
+      "ja": "【純ヒント・子供限定】※子供時代のみ出現。ハイリア湖西岸の南端にあるくぼみの印を読むだけで収集済みになります（演奏不要）。横のツボを割ると妖精が出てくるヒントです。",
+      "en": "[Pure Hint · Child Only] Appears in Child era only. Follow the west shore of Lake Hylia to its southernmost alcove and read the mark to record it (no song needed—hints that smashing the pots reveals a Fairy)."
     }
   },
   {
@@ -6824,7 +6828,7 @@
       "x": 0.7015,
       "y": 0.1962
     },
-    "age": "both",
+    "age": "child",
     "night": false,
     "requires": [],
     "coords": [
@@ -6842,14 +6846,14 @@
       "en": "Ruins by the drawbridge"
     },
     "hint": {
-      "zh-CN": "离开城下町向东来到俯瞰河道的小丘遗迹，撞击旁边松树震落蓝卢比。",
-      "ja": "城下町東の小高い遺跡で印を読んだ後、すぐ横の松の木に体当たりする。",
-      "en": "Roll into the trees: sometimes something falls from the branches."
+      "zh-CN": "【纯提示・仅少年期】吊桥东侧小丘遗迹墙直接读取即收集（提示撞击旁边松树可震落蓝卢比）。",
+      "ja": "【純ヒント・子供限定】跳ね橋東の丘の遺跡壁で読むだけで収集完了（木に体当たりでルピーのヒント）。",
+      "en": "[Pure Hint · Child Only] Read on the hill ruins east of the drawbridge as Child (hints at rolling into trees for rupees)."
     },
     "guide": {
-      "zh-CN": "走出海拉鲁城下町吊桥往东走上临河小丘，在布满青苔的石墙遗迹上可找到最初的妖精思绪，提示树梢常常藏着东西——前滚翻撞击旁边松树树干即可掉出蓝卢比。",
-      "ja": "城下町の跳ね橋を出て東の川沿いの丘にある苔むした遺跡の壁に「妖精の想い」があります。すぐ隣の松の木に向かってローリングすると青いルピーが落ちてきます。",
-      "en": "Leave Hyrule Castle Town across the drawbridge and head east to the knoll overlooking the river: among the ruins of a moss-covered stone wall is the first Fairy Thought, and Navi takes the chance to explain what they are. The fairy says that when something falls on someone from a tree, it's no accident: it's her, hiding things in the branches. **Roll into tree trunks** to shake loose whatever they hold; the pine next to it drops a Blue Rupee."
+      "zh-CN": "【纯提示・仅少年期】注意该点仅在少年期出现！离开城下町吊桥向东登上俯瞰河道的小丘遗迹，直接按A读取砖墙上的思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作机制提示：滚撞旁边松树会震落蓝色卢比。",
+      "ja": "【純ヒント・子供限定】※子供時代のみ出現。跳ね橋から東の丘にある遺跡壁の印を読むだけで収集済みになります（演奏不要）。近くの木に体当たりすると青ルピーが落ちるヒントです。",
+      "en": "[Pure Hint · Child Only] Appears in Child era only. Head east from the drawbridge to the hilltop ruins overlooking the river and read the mark to record it (no song needed—hints that rolling into trees drops rupees)."
     }
   },
   {
@@ -6880,14 +6884,14 @@
       "en": "Chest cave by Gerudo Valley"
     },
     "hint": {
-      "zh-CN": "青年期走入西侧崖壁洞穴看到思绪，记住提示回到少年期来开宝箱拿心之碎片。",
-      "ja": "西の岩棚の下にある洞窟で想いを読んだ後、子供時代に宝箱を開ける。",
-      "en": "Come back as a child and open the chest in the cave."
+      "zh-CN": "【机关联动・仅青年期】青年期走入格鲁德峡谷前崖壁洞穴读取即收集，并解锁少年期同洞穴的上锁心之碎片宝箱。",
+      "ja": "【仕掛け連動・大人限定】大人時代にゲルドの谷手前の洞穴で読むと収集完了。子供時代の鍵付き宝箱が開くようになる。",
+      "en": "[Unlock Trigger · Adult Only] Read inside the cliff nook by Gerudo Valley as Adult; unlocks the locked Piece of Heart chest in Child era."
     },
     "guide": {
-      "zh-CN": "在海拉鲁平原西端通往格鲁德之谷的荒漠段北侧山壁有一处浅洞窟。青年期进去箱子已经打开且留有思绪提示；回到少年期再来就能开启未上锁的宝箱获得心之碎片（秘密洞窟需炸开下方岩棚）。",
-      "ja": "ハイラル平原西端のゲルドの谷手前、北側の岩崖に開いた洞窟（秘窟）の中にある「妖精の想い」。大人時代は宝箱が空になっていますが、子供時代に訪れるとハートのかけらを入手できます。",
-      "en": "In the west of Hyrule Field, in the arid stretch leading to Gerudo Valley, there's a shallow cave in the northern rock face with a chest inside. The fairy who left her thought here tells the kid in the pointy hat that the treasure is for him and that she didn't lock it. As an adult you're too late: the chest is open and empty. **Come back as a child and open the chest**, which then does hold a Piece of Heart."
+      "zh-CN": "【机关联动・仅青年期】青年期来到海拉鲁平原西侧通往格鲁德峡谷前的崖壁洞穴，按A读取思绪即永久计入收集。\n\n联动效果：读取后会永久解锁少年期同一洞穴里原本无法打开的上锁宝箱（内含心之碎片，无需吹笛）。",
+      "ja": "【仕掛け連動・大人限定】大人時代にハイラル平原西側、ゲルドの谷入口手前の崖穴で印を読むと収集済みになります。\n\n連動効果：読むことで子供時代の同じ穴にある開かなかった宝箱の鍵が外れ、ハートのかけらを入手できるようになります。",
+      "en": "[Unlock Trigger · Adult Only] As Adult, enter the cliffside cave just east of Gerudo Valley and read the mark to record it.\n\nLinked effect: Reading this permanently unlocks the previously locked Piece of Heart chest inside the same cave when you return as Child."
     }
   },
   {
@@ -6902,7 +6906,12 @@
     },
     "age": "both",
     "night": false,
-    "requires": [],
+    "requires": [
+      [
+        "bombs",
+        "megaton-hammer"
+      ]
+    ],
     "coords": [
       49.963,
       126.597,
@@ -6918,14 +6927,14 @@
       "en": "Gossip Stone grotto south of the ranch"
     },
     "hint": {
-      "zh-CN": "少年期炸开牧场东南池塘旁灌木环秘窟，读思绪并击杀墙上大蜘蛛后再于青年期撞碎木箱。",
-      "ja": "子供時代に壁の大クモを倒し、大人時代に木箱を壊して黄金のクモを出す。",
-      "en": "Break the wooden crate under the Big Skulltula."
+      "zh-CN": "【机关联动・双时期】炸开牧场东南灌木环秘窟直接读取即收集；少年/青年期文本不同，提示清蜘蛛拿金蜘蛛。",
+      "ja": "【仕掛け連動・両時代】牧場南東の茂み輪の隠し穴を爆破して読むだけで収集完了。子供／大人で内容が変化。",
+      "en": "[Linked Secret · Both Eras] Bomb/hammer open the bush-ring grotto south of Lon Lon Ranch and read to record; text changes across eras."
     },
     "guide": {
-      "zh-CN": "在荣蓉牧场东南方小水塘旁灌木环中炸开或用重锤砸开秘窟进入，读取岩壁上妖精的思绪：少年期先消灭挂在木箱上方墙面的大蜘蛛，再于青年期回来撞碎木箱即可出现黄金蜘蛛。",
-      "ja": "ロンロン牧場南東の池そばの草むら中央を爆破して降りた隠し穴の壁にあります。子供時代に木箱上の通常スタルチュラを倒し、大人時代に下の木箱をローリングで壊すと黄金のスタルチュラが出現します。",
-      "en": "Southeast of Lon Lon Ranch, next to a small pond, a ring of bushes covers a grotto that opens with a Megaton Hammer strike in the center. Inside there's a Skulltula hanging on the wall above a wooden crate, and a Gossip Stone, and the thought is on the rock wall. The fairy found a shiny golden bug here, but the pest on the wall pounced on her before she could catch it. **Finish off the wall Skulltula as a child and, as an adult, roll into the wooden crate beneath it to break it**: inside is the golden bug, a Gold Skulltula."
+      "zh-CN": "【机关联动・双时期】用炸弹或百万吨重锤震开荣蓉牧场东南侧池塘旁灌木环中央的隐藏洞口，跳入闲聊石秘窟按A读取思绪即永久计入收集（无需吹笛）。\n\n联动细节：该点按时期与是否击杀墙上大蜘蛛共有3段不同文本——在少年期干掉墙上大蜘蛛后，青年期再来撞碎木箱可捕获黄金蜘蛛。",
+      "ja": "【仕掛け連動・両時代】ロンロン牧場南東の池横の茂み輪の中央をバクダンやハンマーで開け、隠し穴内の印を読むと収集済みになります。\n\n子供時代に壁のスタルウォールを倒しておくと、大人時代のテキストが変化し木箱から黄金のスタルチュラを入手できます。",
+      "en": "[Linked Secret · Both Eras] Open the grotto in the center of the bush ring southeast of Lon Lon Ranch with a Bomb or Megaton Hammer and read the mark inside to record it.\n\nLinked detail: Features 3 text variants across eras—defeat the wall Skullwalltula as Child, then return as Adult and smash the crate for a Gold Skulltula."
     }
   },
   {
@@ -6956,14 +6965,14 @@
       "en": "Tree by the Business Scrub's hole"
     },
     "hint": {
-      "zh-CN": "城下町吊桥向东沿护城河墙走至树旁读思绪，记住暗号少年期去找商贩买碎片。",
-      "ja": "城下町東のお堀沿いの木で暗号のヒントを読み、子供時代に穴の商人と話す。",
-      "en": "Say \"Sell somethin', will ya?\" to the Business Scrub in the hole next door."
+      "zh-CN": "【机关联动・仅青年期】青年期护城河东侧树旁直接读取即收集，并解锁少年期商贩秘窟暗号「卖点东西呗」。",
+      "ja": "【仕掛け連動・大人限定】大人時代に堀沿いの木の下で読むと収集完了。子供時代のアキンドナッツの合言葉が解禁。",
+      "en": "[Unlock Trigger · Adult Only] Read by the tree east of the drawbridge as Adult; unlocks the Business Scrub password in Child era."
     },
     "guide": {
-      "zh-CN": "走出城下町吊桥向东沿城墙外草地前行，就在孤树树干上留有妖精的思绪，帮你破译旁边隐藏秘窟里德库商贩的购买暗号，少年期用100卢比买下心之碎片即可。",
-      "ja": "ハイラル城下町東のお堀沿いに立つ木に「妖精の想い」があります。すぐそばの隠し穴にいるアキンドナッツの合言葉を教えてくれるので、子供時代に100ルピーでハートのかけらを購入しましょう。",
-      "en": "Leave Hyrule Castle Town across the drawbridge and head east along the strip of grass between the wall and the river: this thought is on a tree right against the wall and, a few steps away, there's a hole with a Business Scrub who only sells to those who know the password. The fairy says she finally figured it out, and that it wasn't \"Not bad at all...\" or \"I'll make the dishbursement.\" As an adult he has nothing left, so **go as a child and tell him \"Sell somethin', will ya?\"**: he'll sell you a Piece of Heart for 100 Rupees."
+      "zh-CN": "【机关联动・仅青年期】青年期走出城下町吊桥向东沿护城河石墙走到大树旁，按A读取思绪即永久计入收集。\n\n联动效果：读取后写入进度，会在少年期同一位置旁的秘窟中解锁德库商贩的暗号「卖点东西呗」，可用10卢比买到心之碎片（无需吹笛）。",
+      "ja": "【仕掛け連動・大人限定】大人時代に城下町の跳ね橋から東の堀沿いにある大木の下で読むと収集済みになります。\n\n連動効果：読むことで子供時代のすぐ近くの隠し穴にいるアキンドナッツとの合言葉が解禁され、ハートのかけらを購入できるようになります。",
+      "en": "[Unlock Trigger · Adult Only] As Adult, head east from the Hyrule Castle Town drawbridge along the moat wall to the tree and read the mark to record it.\n\nLinked effect: Reading this unlocks the secret password for the Business Scrub grotto right nearby in Child era so you can buy his Piece of Heart."
     }
   },
   {
@@ -6994,14 +7003,14 @@
       "en": "Ruins by the ranch fence"
     },
     "hint": {
-      "zh-CN": "绕到荣蓉牧场西南角木栅栏外的爬藤砖墙读思绪，吹奏《太阳之歌》。",
-      "ja": "ロンロン牧場南西の柵沿いにある壁の印の前で『太陽の歌』を演奏する。",
-      "en": "Play the Sun's Song to switch from day to night."
+      "zh-CN": "【吹笛点・读取即计数】双时期直接读取即可收集；原地吹《太阳之歌》可召唤大妖精回满血魔。",
+      "ja": "【演奏点・読むだけで記録】子供／大人どちらでも読むだけで収集完了。その場で『太陽の歌』を吹くと回復用の大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Child or Adult: reading records progress; play Sun's Song here to summon a healing Fairy Spirit."
     },
     "guide": {
-      "zh-CN": "在海拉鲁平原沿着荣蓉牧场外围走到西南角木栅栏紧贴着的爬藤砖墙遗迹底部，读取思绪后直接吹奏《太阳之歌》切换昼夜即可获得体力与魔力回复。",
-      "ja": "ハイラル平原側、ロンロン牧場の南西角の柵すぐ外にあるツタの絡んだレンガ壁の下部にあります。その場で『太陽の歌』を奏でると妖精が喜んで回復してくれます。",
-      "en": "In Hyrule Field, go around the outside of Lon Lon Ranch to its southwest corner: right against the wooden fence are the ruins of an ivy-covered brick wall, and the thought is at the bottom, on the face of the wall. The fairy says she loves the view of the field from there, by night and by day, and that she'd like to switch from one to the other without having to wait. **Play the Sun's Song** and she'll restore your health and magic."
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】绕到荣蓉牧场西南角木栅栏外的爬藤遗迹砖墙，靠近按A读取思绪即永久计入收集（少年/青年期均可）。\n\n附加效果：此点绑定了大妖精出现点，在思绪旁吹奏《太阳之歌》会召唤大妖精为你回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】ロンロン牧場の南西角の柵外にある蔦の絡まる遺跡壁でAを押して読むと収集済みになります（子供・大人両対応）。\n\nここで『太陽の歌』を奏でると大妖精が現れ、体力と魔力を全回復してくれます（演奏自体はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] Walk around to the vine-covered ruin wall outside the southwest fence of Lon Lon Ranch and read the mark with Navi (Child or Adult) to permanently record it.\n\nBonus: Play **Sun's Song** here to summon a Giant Fairy that restores full health and magic (optional—does not affect collection count)."
     }
   },
   {
@@ -7032,14 +7041,14 @@
       "en": "Rock nook in northwest Hyrule Field"
     },
     "hint": {
-      "zh-CN": "来到海拉鲁平原最西北角靠近河岸摆着木桶麻袋的岩壁凹口读思绪。",
-      "ja": "ハイラル平原北西端のタルや袋が置かれた岩のくぼみ入口で読む。",
-      "en": "At the far northwest of Hyrule Field, by the river, there's a nook in the rock with barrels, sacks and a table, and this thought is on the w"
+      "zh-CN": "【纯提示・仅少年期】平原西北角河岸岩窟直接读取即收集（战斗提示：匹哈特怕火）。",
+      "ja": "【純ヒント・子供限定】平原北西の川岸の岩くぼみで読むだけで収集完了（ピーハットは火に弱いヒント）。",
+      "en": "[Pure Hint · Child Only] Read in the northwest Hyrule Field river nook as Child (combat tip: Peahats are weak to fire)."
     },
     "guide": {
-      "zh-CN": "来到海拉鲁平原西北隅靠近河道的岩壁凹室入口处（里面堆着木桶、麻袋与木桌），墙面上留有提示用《迪恩之火》烧毁平原飞盘怪的妖精思绪。",
-      "ja": "ハイラル平原の北西端、川沿いにあるタル・麻袋・テーブルが置かれた岩のくぼみ入口の壁にあります。ピーハットをディンの炎で焼き払えることを教えてくれます。",
-      "en": "At the far northwest of Hyrule Field, by the river, there's a nook in the rock with barrels, sacks and a table, and this thought is on the wall at its entrance. The fairy says Peahats scare her because they're huge, put down roots and act like they own the field, but that, like any plant, they can't stand fire. **Burn the Peahats with Din's Fire**."
+      "zh-CN": "【纯提示・仅少年期】少年期来到海拉鲁平原最西北角靠近河岸、摆着木桶麻袋的岩壁凹口，直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作战斗提示：盘踞在平原上的匹哈特弱火。",
+      "ja": "【純ヒント・子供限定】子供時代にハイラル平原北西端の川岸にある樽と袋の岩くぼみで印を読むだけで収集済みになります（演奏不要）。ピーハットが炎に弱いという戦闘ヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, visit the rock nook with barrels and sacks along the river in far northwest Hyrule Field and read the mark to record it (no song needed—hints that Peahats are weak to fire)."
     }
   },
   {
@@ -7052,7 +7061,7 @@
       "x": 0.4937,
       "y": 0.3145
     },
-    "age": "both",
+    "age": "child",
     "night": false,
     "requires": [],
     "coords": [
@@ -7070,14 +7079,14 @@
       "en": "Wall of the ranch garden"
     },
     "hint": {
-      "zh-CN": "走到荣蓉牧场主屋与马厩后方花园的木箱推车旁砖墙读思绪。",
-      "ja": "牧場の家と馬小屋の裏手、荷車と木箱が置かれたレンガ壁で読む。",
-      "en": "Play Epona's Song to a cow."
+      "zh-CN": "【纯提示・仅少年期】荣蓉牧场后院花园奶牛旁砖墙直接读取即收集（提示对牛吹《艾波娜之歌》领牛奶）。",
+      "ja": "【純ヒント・子供限定】ロンロン牧場裏庭の牛横のレンガ壁で読むだけで収集完了（牛にエポナの歌のヒント）。",
+      "en": "[Pure Hint · Child Only] Read on the brick wall behind Lon Lon Ranch as Child to record (hints at playing Epona's Song to cows)."
     },
     "guide": {
-      "zh-CN": "在荣蓉牧场绕到屋子与马厩后面的后花园，木箱、木桶与木推车旁的爬藤砖墙上留有妖精思绪，提示对着牧场奶牛吹奏《艾波娜之歌》即可获得隆隆牛奶。",
-      "ja": "ロンロン牧場の建物裏の庭、木箱やタル・荷車が並ぶレンガ壁に「妖精の想い」があります。牛の前で『エポナの歌』を吹くとミルクがもらえるヒントです。",
-      "en": "In Lon Lon Ranch, go around behind the house and the stable to the garden: the thought is on the ivy-covered brick wall, among some crates, barrels and a wooden cart. The fairy says the little tune that boy plays is very pretty and has the cows going crazy. It's Epona's Song, but playing it next to the mark does nothing: **play it to a cow** and she'll give you Lon Lon Milk."
+      "zh-CN": "【纯提示・仅少年期】注意该点仅在少年期出现！走到荣蓉牧场主屋与马厩后方花园（木箱推车与奶牛旁砖墙），直接按A读取思绪即永久计入收集（读取本身无需吹笛）。\n\n思绪内容仅作彩蛋提示：提示对奶牛吹《艾波娜之歌》可免费装满荣蓉牛奶。",
+      "ja": "【純ヒント・子供限定】※子供時代のみ出現。ロンロン牧場裏庭の牛の近くにあるレンガ壁で印を読むだけで収集済みになります（読むのに演奏は不要）。牛に『エポナの歌』を聴かせるとミルクがもらえるヒントです。",
+      "en": "[Pure Hint · Child Only] Appears in Child era only. Head behind the farmhouse and stables at Lon Lon Ranch and read the mark on the brick wall by the cows to record it (no song required to collect—it simply hints that playing Epona's Song to cows gives free milk)."
     }
   },
   {
@@ -7092,7 +7101,10 @@
     },
     "age": "child",
     "night": false,
-    "requires": [],
+    "requires": [
+      "song-of-storms",
+      "deku-sticks"
+    ],
     "coords": [
       -54.272,
       100.996,
@@ -7108,14 +7120,14 @@
       "en": "Coffin in the Gibdo room"
     },
     "hint": {
-      "zh-CN": "用点燃的木棒烧开井底B1棺材房蜘蛛网，在立式棺材侧面吹奏《暴风雨之歌》。",
-      "ja": "井戸の底B1Fの棺桶部屋で、立てかけられた棺桶横の印の前で『嵐の歌』を吹く。",
-      "en": "Play the Song of Storms next to the coffin."
+      "zh-CN": "【吹笛点・读取即计数】少年期进井底B1烧开棺材房蛛网读取即收集；原地吹《暴风雨之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】子供時代に井戸の底B1の棺部屋で読むだけで収集完了。『嵐の歌』で回復用の大妖精が出現。",
+      "en": "[Song Spot · Read to Count] As Child in Bottom of the Well B1, burn the cobweb and read to record; play Song of Storms for a Fairy Spirit."
     },
     "guide": {
-      "zh-CN": "在卡卡利科村井底B1进入布满蜘蛛网棺材的吉布多房间，用火把点燃木棒烧网清理后，在一口直立棺材侧面可见妖精思绪。站在棺材旁吹奏《暴风雨之歌》即可恢复体力与魔力。",
-      "ja": "井戸の底B1Fのクモの巣を燃やす棺桶部屋（ギブドの部屋）で、立っている棺桶の側面にある「妖精の想い」のそばで『嵐の歌』を吹くとハートと魔力が回復します。",
-      "en": "In the Bottom of the Well, go down to B1 and enter the Gibdo room, the one with the web-wrapped coffins, which you clear by burning them with a Deku Stick lit at the torches. This Fairy Thought is on the side of one of the standing coffins: the fairy misses that man's song about going \"around and around\" and wishes someone around here knew it. **Play the Song of Storms next to the coffin** to restore magic and health."
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】先在青年期风车屋吹《暴风雨之歌》抽干水井，再回少年期进入井底B1。用点燃的德库木棒烧开木乃伊棺材房门口蜘蛛网，在立式棺材侧面按A读取思绪即永久计入收集。\n\n附加效果：在思绪旁吹奏《暴风雨之歌》可召唤大妖精回满血魔（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】大人時代の風車小屋で『嵐の歌』を吹いて井戸の水を抜き、子供時代に井戸の底B1へ。デクの棒の炎でクモの巣を焼き、棺部屋の縦置き棺の側面にある印を読むと収集済みになります。\n\nここで『嵐の歌』を吹くと回復用の大妖精が現れます（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] Drain the well with Song of Storms as Adult, then enter Bottom of the Well B1 as Child. Burn the cobweb blocking the Gibdo coffin room with a lit Deku Stick and read the mark on the upright coffin to record it.\n\nBonus: Play **Song of Storms** here to summon a Giant Fairy for full HP & MP recovery (optional—does not affect collection count)."
     }
   },
   {
@@ -7146,14 +7158,14 @@
       "en": "Leaf circle near Goron City"
     },
     "hint": {
-      "zh-CN": "登山道快到鼓隆城入口前右侧岩台种草坑旁读思绪，站落叶圈吹《暴风雨之歌》。",
-      "ja": "登山道・ゴロンシティ入口近くの岩棚で印を読み、落ち葉の輪で『嵐の歌』を吹く。",
-      "en": "Play the Song of Storms on the leaf circle."
+      "zh-CN": "【纯提示・仅少年期】鼓隆城入口前右侧岩台直接读取即收集（提示在落叶圈吹《暴风雨之歌》开奶牛秘窟）。",
+      "ja": "【純ヒント・子供限定】ゴロンシティ手前右の岩場で読むだけで収集完了（落ち葉の輪で『嵐の歌』のヒント）。",
+      "en": "[Pure Hint · Child Only] Read on the rock ledge near Goron City as Child (hints at playing Song of Storms in the leaf circle)."
     },
     "guide": {
-      "zh-CN": "攀登死亡之山登山道走到快到鼓隆城入口前的右侧岩台，小植物旁壁面留有妖精思绪。在地面落叶圆圈中心吹奏《暴风雨之歌》即可打开隐藏秘窟。",
-      "ja": "デスマウンテン登山道、ゴロンシティ入口から少し下った右手岩棚の穴横に「妖精の想い」があります。足元の落ち葉が舞う輪の上で『嵐の歌』を奏でると隠し穴が開きます。",
-      "en": "Climbing Death Mountain Trail, a few steps from the entrance to Goron City, there's a rock ledge on the right with a hole in the ground with a plant in it, and on the wall beside it, this thought. The fairy says that on calm days the leaves on the ground dance slowly in circles, but on stormy days they spin at full speed and look like they're about to fly off. **Play the Song of Storms on the circle** to get into the hole."
+      "zh-CN": "【纯提示・仅少年期】少年期沿死亡山登山道快到鼓隆城入口前的右侧岩壁读取思绪即永久计入收集（读取本身无需吹笛，此处不召唤大妖精）。\n\n思绪内容仅作秘窟提示：站在旁边落叶圆阵中吹奏《暴风雨之歌》可震开隐藏奶牛秘窟。",
+      "ja": "【純ヒント・子供限定】子供時代にデスマウンテン登山道、ゴロンシティ入口手前右側の岩壁で印を読むだけで収集済みになります（読むのに演奏不要・大妖精出現点ではありません）。横の落ち葉の輪で『嵐の歌』を吹くと隠し穴が開くヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, read the mark on the rocky ledge just before Goron City on Death Mountain Trail to record it (no song needed to collect and no Fairy Spirit spawns here—it hints that playing Song of Storms inside the nearby swirling leaf circle opens a secret cow grotto)."
     }
   },
   {
@@ -7166,9 +7178,13 @@
       "x": 0.5899,
       "y": 0.8418
     },
-    "age": "both",
+    "age": "adult",
     "night": false,
-    "requires": [],
+    "requires": [
+      "dins-fire",
+      "lens-of-truth",
+      "hover-boots"
+    ],
     "coords": [
       16.908,
       57.372,
@@ -7184,14 +7200,14 @@
       "en": "Wall of the ceiling spike room"
     },
     "hint": {
-      "zh-CN": "到达暗之神殿B3过天井落刺区后，在红卢比牢房外的墙洞旁读取思绪。",
-      "ja": "落下するトゲ天井と赤ルピー牢屋を越えた先の壁穴横で読む。",
-      "en": "On B3 of the Shadow Temple is the room where the hidden block shields you from the spikes falling from the ceiling. Past the cell with the R"
+      "zh-CN": "【吹笛点・读取即计数】青年期到达暗之神殿B3天井落刺区外墙洞读取即收集；吹《暴风雨之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】大人時代に闇の神殿B3のトゲ天井部屋の外壁で読むだけで収集完了。『嵐の歌』で大妖精が出現。",
+      "en": "[Song Spot · Read to Count] In Shadow Temple B3 past the falling-spike ceiling, read by the wall hole; play Song of Storms for a Fairy Spirit."
     },
     "guide": {
-      "zh-CN": "在暗之神殿B3使用隐藏方块挡过下坠天花板尖刺并经过放着红卢比宝箱的牢房，继续向前在一个墙洞旁边即可找到提示利用强风的妖精思绪。",
-      "ja": "闇の神殿B3F、ブロックで防ぐトゲ天井部屋を抜けて赤ルピーの牢屋を通り過ぎた先の壁穴の隣に「妖精の想い」が残されています。",
-      "en": "On B3 of the Shadow Temple is the room where the hidden block shields you from the spikes falling from the ceiling. Past the cell with the Red Rupee chest, next to a hole in the wall, you'll see this Fairy Thought. The fairy says she loves places where the wind blows hard and **that this place could really use a good gust of wind**."
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】青年期在暗之神殿推进至B3，通过天井落刺机关区后，在红卢比牢房外的墙洞旁按A读取思绪即永久计入收集。\n\n附加效果：原地吹奏《暴风雨之歌》可召唤大妖精回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】闇の神殿B3で落下するトゲ天井エリアを抜けた先、赤ルピーの牢屋外にある壁の穴横の印を読むと収集済みになります。\n\nここで『嵐の歌』を奏でると回復用の大妖精が現れます（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] In the Shadow Temple (B3), clear the falling-spike ceiling room and read the mark by the wall opening outside the red-rupee cell to record it.\n\nBonus: Play **Song of Storms** here to summon a Giant Fairy that restores full health and magic (optional—does not affect collection count)."
     }
   },
   {
@@ -7242,7 +7258,7 @@
       "x": 0.7153,
       "y": 0.4777
     },
-    "age": "child",
+    "age": "both",
     "night": false,
     "requires": [],
     "coords": [
@@ -7260,14 +7276,14 @@
       "en": "Ruins at the Royal Family's Tomb entrance"
     },
     "hint": {
-      "zh-CN": "走近墓地最深处王家之墓门前三角神力石板旁的碎石即可看到。",
-      "ja": "墓地最奥のトライフォース台座のそば、入口石垣の印を読む。",
-      "en": "The Sun's Song paralyzes ReDeads."
+      "zh-CN": "【纯提示・双时期】王家之墓门前石阶残垣直接读取即收集（提示墓下对僵尸吹《太阳之歌》可定身）。",
+      "ja": "【純ヒント・両時代】王家の墓前の石段脇で読むだけで収集完了（リーデッドに『太陽の歌』のヒント）。",
+      "en": "[Pure Hint · Both Eras] Read by the steps before the Royal Family's Tomb (Child or Adult) to record (hints at freezing ReDeads with Sun's Song)."
     },
     "guide": {
-      "zh-CN": "走到卡卡利科村墓地最深处打开王家之墓的三角神力石板旁，破损石垣上留有提示用《太阳之歌》定住里德（僵尸）的妖精思绪。",
-      "ja": "カカリコ村の墓地最奥にある王家の墓の入口（トライフォース紋章の床前）の崩れた石垣に「妖精の想い」があり、『太陽の歌』でリーデッドの動きを止められることが分かります。",
-      "en": "In the Graveyard, go up to the slab with the Triforce that opens the Royal Family's Tomb: this thought is among the broken stones of the entrance.\n\nThe fairy tells how she ended up at the bottom of a grave, how a horrifying monster came at her, and how it stopped chasing her when she sang a song that dazzled it, but she can't remember what it was called. **It's the Sun's Song: play it to paralyze the ReDeads.**"
+      "zh-CN": "【纯提示・双时期】少年期与青年期均存在！走近卡卡利科墓地最深处王家之墓门前三角神力石板旁的石阶残垣，直接按A读取思绪即永久计入收集（墓碑炸开前后均可读，读取本身无需吹笛）。\n\n思绪内容仅作战斗提示：在墓穴下吹奏《太阳之歌》可定住可怕的僵尸。",
+      "ja": "【純ヒント・両時代】子供・大人どちらでも出現。墓地奥の王家の墓入口、トライフォース石板横の崩れた石段付近で印を読むだけで収集済みになります（演奏不要）。墓の下で『太陽の歌』を吹くとリーデッドの動きを止められるヒントです。",
+      "en": "[Pure Hint · Both Eras] Present in both Child and Adult eras (before and after opening the tomb). Inspect the ruins beside the Triforce slab in front of the Royal Family's Tomb to record it (no song required—it hints at freezing ReDeads inside the tomb with Sun's Song)."
     }
   },
   {
@@ -7298,14 +7314,14 @@
       "en": "Ruins by the exit to Lake Hylia"
     },
     "hint": {
-      "zh-CN": "在海拉鲁平原南端通往海利亚湖的林间石柱遗迹上查看，原地用木棒轻敲蝴蝶。",
-      "ja": "平原南端の木立にある石柱で想いを読んだ後、動かずにチョウをデクの棒で叩く。",
-      "en": "Hit a butterfly with a Deku Stick: it turns into a Fairy."
+      "zh-CN": "【纯提示・仅少年期】海利亚湖出口旁石柱遗迹直接读取即收集（反话提示：拿木棒对着蝴蝶静止可变妖精）。",
+      "ja": "【純ヒント・子供限定】ハイリア湖出口横の石柱遺跡で読むだけで収集完了（デクの棒で蝶が妖精になるヒント）。",
+      "en": "[Pure Hint · Child Only] Read at the stone ruins near Lake Hylia's entrance as Child (hints at holding a Deku Stick near butterflies)."
     },
     "guide": {
-      "zh-CN": "来到海拉鲁平原最南端靠近海利亚湖下坡路的树林石柱遗迹，其中一根柱子侧壁刻有妖精思绪。按提示原地不动挥动德库木棒碰触蝴蝶，蝴蝶便会化作恢复妖精。",
-      "ja": "ハイラル平原南端・ハイリア湖へ降りる道近くの木立の石柱に「妖精の想い」があります。その場から動かずに飛んでいるチョウをデクの棒で叩くと妖精に変化します。",
-      "en": "At the southern tip of Hyrule Field, near the path down to Lake Hylia, there are some stone ruins among the trees: the thought is on the face of one of the pillars.\n\nThe fairy begs that no one ever swing a stick at a butterfly, and even less so without moving. **Hit a butterfly with a Deku Stick without moving from the spot: it turns into a Fairy.**"
+      "zh-CN": "【纯提示・仅少年期】少年期来到海拉鲁平原南端通往海利亚湖的林间石柱遗迹，直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容是反话机制提示：手持德库木棒贴近旁边蝴蝶静止不动，蝴蝶会变成可装瓶的妖精。",
+      "ja": "【純ヒント・子供限定】子供時代にハイラル平原南端・ハイリア湖入口横の石柱遺跡で印を読むだけで収集済みになります（演奏不要）。デクの棒を蝶に近づけて静止すると妖精に変わるヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, inspect the stone pillar ruins by the south exit to Lake Hylia to record it (no song needed—playfully hints that holding a Deku Stick still near a butterfly turns it into a Fairy)."
     }
   },
   {
@@ -7336,14 +7352,14 @@
       "en": "Rock nook by the entrance to Zora's River"
     },
     "hint": {
-      "zh-CN": "在平原东侧靠近卓拉河入口稍南的营火木桶岩窟内壁读取思绪。",
-      "ja": "平原東部のゾーラ川入口少し南、焚き火跡とタルがある岩壁で読む。",
-      "en": "Look for Rupees laid out in shapes in pits, holes and underwater."
+      "zh-CN": "【纯提示・仅少年期】卓拉河入口南侧营火木桶岩窟直接读取即收集（提示旁边水塘秘窟藏有卢比）。",
+      "ja": "【純ヒント・子供限定】ゾーラ川入口南の岩のくぼみで読むだけで収集完了（近くの水場隠し穴のヒント）。",
+      "en": "[Pure Hint · Child Only] Read inside the rock nook south of Zora's River entrance as Child (hints at rupees in the nearby grotto)."
     },
     "guide": {
-      "zh-CN": "来到海拉鲁平原东缘、卓拉河入口稍偏南方的岩壁凹口（内部有木桶、长凳桌与篝火余烬），墙面上刻着提示在洞窟、水底与坑道收集排列卢比的妖精思绪。",
-      "ja": "ハイラル平原の東端、ゾーラ川入口の少し南にある木箱・ベンチ・焚き火跡のある岩のくぼみ壁面に「妖精の想い」があります。穴や水中に並べられたルピーを探すヒントです。",
-      "en": "On the eastern edge of Hyrule Field, a little south of the entrance to Zora's River, there's a nook in the rock with barrels, a table, a bench and the remains of a campfire: the thought is on the rock wall.\n\nThe fairy loves laying out Rupees in pretty shapes. She hides them in pits and holes, and underwater too, and doesn't mind if someone takes them. **Look for Rupees laid out in shapes in pits, holes and underwater.**"
+      "zh-CN": "【纯提示・仅少年期】少年期在海拉鲁平原东侧、靠近卓拉河入口稍南的营火木桶岩窟内壁，直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作探索提示：暗示附近隐藏洞穴水底藏有卢比。",
+      "ja": "【純ヒント・子供限定】子供時代にゾーラ川入口の少し南にある焚き火と樽の岩くぼみで印を読むだけで収集済みになります（演奏不要）。近くの隠し穴の水底にルピーがあるヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, read the mark on the inner wall of the campfire-and-barrel rock nook just south of the Zora's River entrance to record it (no song needed—hints at rupees in the nearby underwater grotto)."
     }
   },
   {
@@ -7374,14 +7390,14 @@
       "en": "Rocks by the moat west of the drawbridge"
     },
     "hint": {
-      "zh-CN": "走出城下町吊桥向西沿护城河岸走到排水口对面巨石旁读取思绪。",
-      "ja": "城下町跳ね橋を出て西へ進み、水路対岸の大岩の横で読む。",
-      "en": "The fairy says she's hidden her whole fortune in a wooden crate."
+      "zh-CN": "【纯提示・仅少年期】城下町吊桥西侧护城河巨石旁直接读取即收集（提示撞碎旁边木箱有卢比）。",
+      "ja": "【純ヒント・子供限定】跳ね橋西の堀沿いの岩横で読むだけで収集完了（横の木箱にルピーのヒント）。",
+      "en": "[Pure Hint · Child Only] Read by the boulders along the moat west of the drawbridge as Child (hints at rupees in the nearby crate)."
     },
     "guide": {
-      "zh-CN": "走出海拉鲁城下町吊桥往西沿着护城河岸走，在城墙出水口对面的几块大岩石旁可以发现留有隐藏宝箱提示（把财产藏在木箱里）的妖精思绪。",
-      "ja": "城下町の跳ね橋を出て西側のお堀沿いを進むと、城壁から水が流れ出る対岸の大岩そばに「妖精の想い」があります。木箱の中にルピーを隠しているというつぶやきが聞けます。",
-      "en": "Leave Hyrule Castle Town across the drawbridge and head west along the bank of the moat: across from the wall where the water pours out there are some big rocks, and this thought is next to them.\n\nThe fairy says no one will ever suspect she's hidden her whole fortune in a wooden crate."
+      "zh-CN": "【纯提示・仅少年期】少年期走出城下町吊桥，向西沿护城河岸走到排水口对面巨石旁，直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作小彩蛋提示：旁边木箱撞碎后有卢比。",
+      "ja": "【純ヒント・子供限定】子供時代に城下町の跳ね橋から西へ堀沿いに進み、岩の横にある印を読むだけで収集済みになります（演奏不要）。近くの木箱にルピーがあるヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, walk west along the moat from the Castle Town drawbridge to the rocks across from the drain and read the mark to record it (no song needed—simply hints at the crate nearby)."
     }
   },
   {
@@ -7412,14 +7428,14 @@
       "en": "Cart by the vegetable patch near Kakariko"
     },
     "hint": {
-      "zh-CN": "平原东北方靠近通往卡卡利科村上坡路的矮石墙木推车板上读取思绪。",
-      "ja": "平原北東のカカリコ村登り口近くにある、低い石壁横の荷車で読む。",
-      "en": "There are Bugs scurrying among the plants in the vegetable patch next door."
+      "zh-CN": "【纯提示・仅少年期】平原东北卡卡利科村旁菜地推车处直接读取即收集（提示旁边藏有秘窟）。",
+      "ja": "【純ヒント・子供限定】カカリコ村手前の畑の荷車前で読むだけで収集完了（近くの隠し穴のヒント）。",
+      "en": "[Pure Hint · Child Only] Read on the cart near the Kakariko climb as Child to record (hints at the nearby hidden grotto)."
     },
     "guide": {
-      "zh-CN": "在海拉鲁平原东北部、距离通往卡卡利科村坡道不远的矮石墙旁停着一辆木制手推车，车板上的妖精思绪提示下方菜地杂草丛中躲着许多可用空瓶捕捉的小虫。",
-      "ja": "ハイラル平原北東、カカリコ村への坂道近くにある低い石壁に寄せられた木製荷車の板に「妖精の想い」があります。すぐ下の畑にムシがたくさん隠れていると教えてくれます。",
-      "en": "In northeast Hyrule Field, not far from the way up to Kakariko Village, there's a wooden cart against a low stone wall: the thought is on its planks.\n\nThe fairy says the place looks lonely, as if there were nothing but weeds, but that if you look closely you'll see little ones scurrying around on the sly. **Go down to the vegetable patch: there are Bugs scurrying among the plants.**"
+      "zh-CN": "【纯提示・仅少年期】少年期来到海拉鲁平原东北方靠近通往卡卡利科村上坡路的矮石墙菜地推车旁，直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作探索提示：暗示附近杂草/秘窟里藏着隐藏空间与紫卢比宝箱。",
+      "ja": "【純ヒント・子供限定】子供時代にカカリコ村への坂道手前の畑にある木製荷車前で印を読むだけで収集済みになります（演奏不要）。近くの隠し穴のヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, inspect the wooden cart by the low stone wall near the path up to Kakariko Village to record it (no song required). The note simply hints at the nearby hidden grotto."
     }
   },
   {
@@ -7464,6 +7480,163 @@
       "zh-CN": "在荣蓉牧场东南方小池塘旁灌木环内炸开（或重锤震开）进入隐藏秘窟，里面有闲聊石、妖精的思绪与木箱上方墙壁的大蜘蛛。必须拜访两次：少年期先读取思绪并打掉墙上的普通蜘蛛，青年期再回来前滚翻撞碎木箱，黄金蜘蛛就会跳出，击败拾取印记后再读思绪还会收到妖精的道谢。",
       "ja": "ロンロン牧場南東の池そばの草むら中央をバクダン等で開いて入る隠し穴です。子供時代に壁のスタルチュラを倒しておき、大人時代にその真下の木箱をローリングで壊すと黄金のスタルチュラが現れます。",
       "en": "Southeast of Lon Lon Ranch, next to a small pond and before the path down to Lake Hylia, a ring of bushes covers a grotto: open it with a Bomb or, as an adult, with a Megaton Hammer strike in the center, and drop down the hole. Inside there's a Gossip Stone, a Fairy Thought on the rock wall and, at the back, a Skulltula hanging on the wall above a wooden crate.\n\nYou'll need to go down twice. **As a child, read the thought and finish off the wall Skulltula.** Then come back as an adult and **roll into the wooden crate to break it**: the Gold Skulltula comes out; defeat it with your sword and grab the token. Read the thought again and the fairy thanks you for getting rid of the pest."
+    }
+  },
+  {
+    "id": "rio-thought-01",
+    "n": 209,
+    "cat": "thought",
+    "place": "rio",
+    "at": {
+      "map": "principal",
+      "x": 0.322,
+      "y": 0.3645
+    },
+    "age": "child",
+    "night": false,
+    "requires": [],
+    "coords": [
+      -27.17,
+      105.17,
+      -30.93
+    ],
+    "rule": {
+      "type": "bool32",
+      "flag": "HaveReadHrlField_Note13"
+    },
+    "title": {
+      "zh-CN": "卓拉河中段北岸石旁",
+      "ja": "ゾーラ川中流北岸の岩横",
+      "en": "Rock ledge along mid Zora's River"
+    },
+    "hint": {
+      "zh-CN": "【纯提示・仅少年期】卓拉河中段北岸可搬起石块旁直接读取即收集（提示把石头下虫子放进软土洞）。",
+      "ja": "【純ヒント・子供限定】ゾーラ川中流の持ち上げられる岩の横で読むだけで収集完了（虫を軟らかい土へ入れるヒント）。",
+      "en": "[Pure Hint · Child Only] Read beside the liftable rock along mid Zora's River as Child (hints at dropping bugs into soft soil)."
+    },
+    "guide": {
+      "zh-CN": "【纯提示・仅少年期】少年期沿卓拉河向上游走到中段北岸台地（旁边有可搬起、藏着虫子的石块），直接按A读取思绪即永久计入收集（无需吹笛）。\n\n思绪内容仅作机制提示：把石头底下的虫子装瓶放进魔法豆软土洞，可以逼出藏在洞里的黄金蜘蛛。",
+      "ja": "【純ヒント・子供限定】子供時代にゾーラ川中流の北岸（ムシが隠れている持ち上げ岩のすぐ横）で印を読むだけで収集済みになります（演奏不要）。岩の下のムシを軟らかい土の穴に入れると黄金のスタルチュラが出てくるヒントです。",
+      "en": "[Pure Hint · Child Only] As Child, walk up to the north ledge along mid Zora's River next to the liftable rock containing bugs and read the mark to record it (no song needed—hints at dropping bottled bugs into soft soil patches to flush out Gold Skulltulas)."
+    }
+  },
+  {
+    "id": "bosque-thought-01",
+    "n": 210,
+    "cat": "thought",
+    "place": "bosque",
+    "at": {
+      "map": "2F",
+      "x": 0.8642,
+      "y": 0.1557
+    },
+    "age": "adult",
+    "night": false,
+    "requires": [
+      "hookshot"
+    ],
+    "coords": [
+      55.01,
+      119.9,
+      -53.86
+    ],
+    "rule": {
+      "type": "bool32",
+      "flag": "HaveReadHrlField_Note19"
+    },
+    "title": {
+      "zh-CN": "森之神殿扭曲走廊壁面",
+      "ja": "森の神殿・ねじれた回廊の壁",
+      "en": "Twisted corridor wall in Forest Temple"
+    },
+    "hint": {
+      "zh-CN": "【吹笛点・读取即计数】青年期进入森之神殿东北侧扭曲走廊读取即收集；原地吹《太阳之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】森の神殿のねじれた回廊で読むだけで収集完了。『太陽の歌』で回復用の大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Read in the Forest Temple's twisted corridor to record; play Sun's Song for a healing Fairy Spirit."
+    },
+    "guide": {
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】青年期在森之神殿推进至东北侧的扭曲走廊（Room 19），在壁面发光思绪处按A读取即永久计入收集。\n\n附加效果：原地吹奏《太阳之歌》可召唤大妖精回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】森の神殿の北東側にあるねじれた回廊（Room 19）の壁の印を読むと収集済みになります。\n\nここで『太陽の歌』を奏でると回復用の大妖精が現れます（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] Reach the northeast twisted corridor (Room 19) in the Forest Temple and inspect the glowing mark on the wall to record it.\n\nBonus: Play **Sun's Song** here to summon a Giant Fairy that restores full health and magic (optional—does not affect collection count)."
+    }
+  },
+  {
+    "id": "fuego-thought-01",
+    "n": 211,
+    "cat": "thought",
+    "place": "fuego",
+    "at": {
+      "map": "4F",
+      "x": 0.133,
+      "y": 0.5761
+    },
+    "age": "adult",
+    "night": false,
+    "requires": [],
+    "coords": [
+      -63.75,
+      194.3,
+      10.79
+    ],
+    "rule": {
+      "type": "bool32",
+      "flag": "HaveReadHrlField_Note20"
+    },
+    "title": {
+      "zh-CN": "炎之神殿4F滚石迷宫区",
+      "ja": "炎の神殿4F・転がる岩の迷路",
+      "en": "Boulder maze ledge in Fire Temple (4F)"
+    },
+    "hint": {
+      "zh-CN": "【吹笛点・读取即计数】青年期到达炎之神殿4F滚石与火墙迷宫区读取即收集；原地吹《太阳之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】炎の神殿4Fの転がる岩と炎の壁エリアで読むだけで収集完了。『太陽の歌』で大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Read in the Fire Temple 4F boulder & fire-wall maze to record; play Sun's Song for a Fairy Spirit."
+    },
+    "guide": {
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】青年期在炎之神殿4F进入滚石与限时火墙迷宫房间（Room 13），找到墙面思绪按A读取即永久计入收集。\n\n附加效果：原地吹奏《太阳之歌》可召唤大妖精回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】炎の神殿4Fの転がる岩と炎の壁の迷路エリア（Room 13）にある印を読むと収集済みになります。\n\nここで『太陽の歌』を吹くと回復用の大妖精が現れます（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] In the Fire Temple (4F), reach the rolling-boulder and timed fire-wall maze room (Room 13) and read the mark to record it.\n\nBonus: Play **Sun's Song** here to summon a Giant Fairy that restores full health and magic (optional—does not affect collection count)."
+    }
+  },
+  {
+    "id": "agua-thought-01",
+    "n": 212,
+    "cat": "thought",
+    "place": "agua",
+    "at": {
+      "map": "1F",
+      "x": 0.3252,
+      "y": 0.6769
+    },
+    "age": "adult",
+    "night": false,
+    "requires": [
+      "iron-boots",
+      "hookshot"
+    ],
+    "coords": [
+      -54.09,
+      105.67,
+      -11.5
+    ],
+    "rule": {
+      "type": "bool32",
+      "flag": "HaveReadHrlField_Note22"
+    },
+    "title": {
+      "zh-CN": "水之神殿1F西侧浮台水道区",
+      "ja": "水の神殿1F・西側浮き足場エリア",
+      "en": "West floating-platform chamber in Water Temple (1F)"
+    },
+    "hint": {
+      "zh-CN": "【吹笛点・读取即计数】青年期进入水之神殿西侧浮台水道区（Room 5）读取即收集；原地吹《太阳之歌》召唤大妖精。",
+      "ja": "【演奏点・読むだけで記録】水の神殿西側の浮き足場エリア（Room 5）で読むだけで収集完了。『太陽の歌』で大妖精が出現。",
+      "en": "[Song Spot · Read to Count] Read in the Water Temple's west floating-platform chamber (Room 5) to record; play Sun's Song for a Fairy Spirit."
+    },
+    "guide": {
+      "zh-CN": "【吹笛召唤大妖精・读取即计数】青年期在水之神殿前往西侧带有钩爪标靶与浮台的房间（Room 5，1F高度），调查墙面思绪按A读取即永久计入收集。\n\n附加效果：原地吹奏《太阳之歌》可召唤大妖精回满生命与魔力（吹笛不影响收集计数）。",
+      "ja": "【演奏ポイント・読むだけで収集】水の神殿の西側にあるフックショット的と浮き足場の部屋（Room 5・1F）で印を読むと収集済みになります。\n\nここで『太陽の歌』を吹くと回復用の大妖精が現れます（演奏はカウント不要）。",
+      "en": "[Fairy Spirit Spot · Read to Count] In the Water Temple, head to the west hookshot-and-floating-platform chamber (Room 5, 1F level) and read the mark to record it.\n\nBonus: Play **Sun's Song** here to summon a Giant Fairy that restores full health and magic (optional—does not affect collection count)."
     }
   }
 ]

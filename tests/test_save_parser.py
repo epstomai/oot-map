@@ -33,7 +33,7 @@ DEFAULT_SAVE_ROOT = r"F:\games\SwitchGames\hookshot\game\user\save"
 
 class TestOoTTracker(unittest.TestCase):
     def test_catalog_completeness(self):
-        self.assertEqual(len(catalog.collectibles), 184)
+        self.assertEqual(len(catalog.collectibles), 188)
         self.assertEqual(len(catalog.places), 32)
         self.assertEqual(len(catalog.categories), 7)
 
@@ -74,6 +74,36 @@ class TestOoTTracker(unittest.TestCase):
         # Verify Gerudo Fortress -> Gerudo Valley arrow points southwest (-144, not +144)
         gf_valle = next(ex for ex in catalog.places_by_id["fortaleza"]["exits"] if ex["to"] == "valle")
         self.assertEqual(gf_valle["rot"], -144)
+
+    def test_fairy_thoughts_complete_23_and_ages(self):
+        thoughts = {it["id"]: it for it in catalog.collectibles if it["cat"] == "thought"}
+        self.assertEqual(len(thoughts), 23)
+        expected_flags = {
+            f"HaveReadHrlField_Note{n}"
+            for n in (
+                "00", "01", "02", "04", "06", "07", "08", "09", "10", "11", "12",
+                "13", "14", "15", "16", "19", "20", "21", "22", "23", "24", "25", "26",
+            )
+        }
+        actual_flags = set()
+        for tid, it in thoughts.items():
+            self.assertEqual(it["rule"]["type"], "bool32")
+            flag = it["rule"]["flag"]
+            actual_flags.add(flag)
+            self.assertIn(flag, catalog.hashes, f"Missing hash for {flag}")
+            for req in it.get("requires", []):
+                keys = req if isinstance(req, list) else [req]
+                for k in keys:
+                    self.assertIn(k, catalog.requirements, f"Invalid req {k} on {tid}")
+        self.assertEqual(actual_flags, expected_flags)
+        # Verify corrected ages from ROMFS Banc
+        self.assertEqual(thoughts["lonlon-thought-01"]["age"], "child")
+        self.assertEqual(thoughts["llanura-thought-01"]["age"], "child")
+        self.assertEqual(thoughts["lago-thought-01"]["age"], "child")
+        self.assertEqual(thoughts["cementerio-thought-02"]["age"], "both")
+        # Verify the 4 newly added temple/river thoughts
+        for nid in ("rio-thought-01", "bosque-thought-01", "fuego-thought-01", "agua-thought-01"):
+            self.assertIn(nid, thoughts)
 
     def test_magic_bean_rules_and_hashes(self):
         expected = {
@@ -215,7 +245,7 @@ class TestOoTTracker(unittest.TestCase):
             cat_res = client.get("/api/catalog")
             self.assertEqual(cat_res.status_code, 200)
             cat_json = cat_res.json()
-            self.assertEqual(len(cat_json["collectibles"]), 184)
+            self.assertEqual(len(cat_json["collectibles"]), 188)
 
             st_res = client.get("/api/state")
             self.assertEqual(st_res.status_code, 200)

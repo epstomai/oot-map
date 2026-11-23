@@ -1133,7 +1133,7 @@
       $("valHeroPos").textContent = "-";
     }
 
-    const total = state.catalog?.collectibles?.length || 184;
+    const total = state.catalog?.collectibles?.length || 188;
     const done = state.catalog
       ? state.catalog.collectibles.filter((it) => isCollected(it.id)).length
       : 0;
@@ -1187,7 +1187,7 @@
           const row1 = document.createElement("div");
           row1.className = "slot-title-row";
           const label = profiles.length > 1 ? `${prof.id.slice(0, 6)} / ${sl.slot}` : sl.slot;
-          row1.innerHTML = `<span>${label}</span><span>${sl.collected_count ?? "?"}/${sl.total_count ?? 184}</span>`;
+          row1.innerHTML = `<span>${label}</span><span>${sl.collected_count ?? "?"}/${sl.total_count ?? 188}</span>`;
 
           const row2 = document.createElement("div");
           row2.className = "slot-sub";

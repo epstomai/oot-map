@@ -130,7 +130,11 @@
     "Sequence_IsChildhood": 3466731731,
     "Sequence_IsInDreamWorld": 2078226068,
     "Sequence_ReservedDungeonRoomID": 84036050,
-    "SubEvent_FindRichard_GetHeartPiece": 4076516624
+    "SubEvent_FindRichard_GetHeartPiece": 4076516624,
+    "HaveReadHrlField_Note13": 993498171,
+    "HaveReadHrlField_Note19": 3616773659,
+    "HaveReadHrlField_Note20": 3366226444,
+    "HaveReadHrlField_Note22": 1124098896
   },
   "b64_known_sample": [
     121319800191208,

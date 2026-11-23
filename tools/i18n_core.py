@@ -312,15 +312,15 @@ CATEGORIES_I18N = {
     "thought": {
         "zh-CN": {
             "name": "妖精的思绪",
-            "intro": "重制版新增的隐藏收集要素，共有19处发光印记散布在海拉鲁各地。接近后由娜薇为你读出妖精留下的思绪，其中往往藏着吹奏特定曲目或寻找心之碎片/蜘蛛的线索。",
+            "intro": "重制版新增的隐藏收集要素，全游戏共有23处发光印记散布在海拉鲁各地与神殿中。靠近按A由娜薇读出即可永久计入收集进度（HaveReadHrlField_NoteXX）：其中11处为纯探索提示、3处读取后会联动解锁暗号/宝箱/机关、9处额外绑定了吹奏《太阳之歌》或《暴风雨之歌》召唤回血回魔大妖精的点位（吹笛不影响收集计数）。",
         },
         "ja": {
             "name": "妖精の想い",
-            "intro": "リメイク版で追加された全19か所の隠し要素。各地の印に近づくとナビィが妖精の想いを読み上げてくれます。特定のオカリナ曲や隠しアイテムのヒントになっている場所も多くあります。",
+            "intro": "リメイク版で追加された全23か所の隠し要素。各地や神殿の印をナビィに読み上げてもらうと収集済みとして記録されます。内訳は探索ヒント11か所、宝箱や合言葉と連動する仕掛け3か所、さらに太陽の歌／嵐の歌で回復用の大妖精を呼べるポイント9か所です（演奏は収集カウント不要）。",
         },
         "en": {
             "name": "Fairy Thoughts",
-            "intro": "Exclusive to the Remake: 19 hidden marks across Hyrule that Navi reads aloud. Most contain a clue—often hinting at a song to play nearby for a Piece of Heart or Gold Skulltula.",
+            "intro": "Exclusive to the Remake: 23 hidden marks across Hyrule and its temples. Simply inspecting a mark with Navi permanently records it in your save. Of the 23 marks, 11 are pure exploration hints, 3 unlock linked secrets/chests/passwords, and 9 also feature a Great Fairy spirit spot triggered by Sun's Song or Song of Storms (playing the song restores full health & magic and is not required for completion count).",
         },
     },
     "key": {
