@@ -140,7 +140,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_KokiriForest"
+      "flag": "IsPlantedMagicBean_SmallFarm.6092667454768667954"
     },
     "title": {
       "zh-CN": "商店后方松软泥土",
@@ -165,8 +165,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.3212,
-      "y": 0.4867
+      "x": 0.3253,
+      "y": 0.5179
     },
     "age": "child",
     "night": false,
@@ -205,8 +205,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.6929,
-      "y": 0.5758
+      "x": 0.6967,
+      "y": 0.608
     },
     "age": "child",
     "night": false,
@@ -245,8 +245,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.3141,
-      "y": 0.6406
+      "x": 0.3182,
+      "y": 0.6782
     },
     "age": "child",
     "night": false,
@@ -286,8 +286,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.512,
-      "y": 0.2726
+      "x": 0.5159,
+      "y": 0.2976
     },
     "age": "child",
     "night": false,
@@ -327,8 +327,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.5442,
-      "y": 0.244
+      "x": 0.5427,
+      "y": 0.2778
     },
     "age": "adult",
     "night": true,
@@ -368,8 +368,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.3357,
-      "y": 0.6496
+      "x": 0.3398,
+      "y": 0.6782
     },
     "age": "both",
     "night": false,
@@ -381,7 +381,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_LostWood02"
+      "flag": "IsPlantedMagicBean_SmallFarm.5234955674857122897"
     },
     "title": {
       "zh-CN": "通往平原吊桥旁的松土",
@@ -406,8 +406,8 @@
     "place": "perdido",
     "at": {
       "map": "principal",
-      "x": 0.5335,
-      "y": 0.2744
+      "x": 0.5375,
+      "y": 0.2976
     },
     "age": "both",
     "night": false,
@@ -419,7 +419,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_LostWood01"
+      "flag": "IsPlantedMagicBean_SmallFarm.176409868210268833"
     },
     "title": {
       "zh-CN": "双德库商贩旁的松土",
@@ -540,8 +540,8 @@
       138.388
     ],
     "rule": {
-      "type": "b64",
-      "hash": "2967378296224661060"
+      "type": "bool32",
+      "flag": "IsTreasureBoxOpen.2967378296224661060"
     },
     "title": {
       "zh-CN": "格鲁德谷入口前宝箱洞",
@@ -1498,8 +1498,8 @@
       -10.921
     ],
     "rule": {
-      "type": "b64",
-      "hash": "5534919361313859554"
+      "type": "bool32",
+      "flag": "IsTreasureBoxOpen.5534919361313859554"
     },
     "title": {
       "zh-CN": "与丹培鬼魂赛跑2次内",
@@ -1536,8 +1536,8 @@
       23.154
     ],
     "rule": {
-      "type": "b64",
-      "hash": "9622128545943056087"
+      "type": "bool32",
+      "flag": "IsTreasureBoxOpen.9622128545943056087"
     },
     "title": {
       "zh-CN": "王室墓穴前方的墓碑",
@@ -1698,7 +1698,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_Graveyard"
+      "flag": "IsPlantedMagicBean_SmallFarm.17500344509500247365"
     },
     "title": {
       "zh-CN": "墓地左上松软泥土",
@@ -1953,7 +1953,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_DeathMountainTrail"
+      "flag": "IsPlantedMagicBean_SmallFarm.18350441421271687772"
     },
     "title": {
       "zh-CN": "多东哥洞窟前松土",
@@ -2333,7 +2333,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_DeathMountainCrater"
+      "flag": "IsPlantedMagicBean_SmallFarm.12044463103654268862"
     },
     "title": {
       "zh-CN": "波莱罗台座旁松土",
@@ -2738,11 +2738,8 @@
       -11.865
     ],
     "rule": {
-      "type": "bool32_any",
-      "flags": [
-        "Gimmick_MagicBeanSoil_ZoraRiver",
-        "Gimmick_MagicBeanSoil_ZoraRiver02"
-      ]
+      "type": "bool32",
+      "flag": "IsPlantedMagicBean_SmallFarm.17092212646454540992"
     },
     "title": {
       "zh-CN": "魔法豆卖家旁的松软泥土",
@@ -3385,7 +3382,7 @@
       "x": 0.5704,
       "y": 0.218
     },
-    "age": "child",
+    "age": "both",
     "night": false,
     "requires": [],
     "coords": [
@@ -3395,7 +3392,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_LakeHylia"
+      "flag": "IsPlantedMagicBean_SmallFarm.6833516270248855649"
     },
     "title": {
       "zh-CN": "实验室外墙旁松软泥土",
@@ -3470,8 +3467,8 @@
       34.982
     ],
     "rule": {
-      "type": "b64",
-      "hash": "15856256242099990922"
+      "type": "bool32",
+      "flag": "IsTreasureBoxOpen.15856256242099990922"
     },
     "title": {
       "zh-CN": "峡谷悬崖窄台宝箱",
@@ -3673,7 +3670,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_GerudoValley"
+      "flag": "IsPlantedMagicBean_SmallFarm.10857724324414230743"
     },
     "title": {
       "zh-CN": "峡谷底部奶牛旁松土",
@@ -4039,7 +4036,7 @@
     ],
     "rule": {
       "type": "bool32",
-      "flag": "Gimmick_MagicBeanSoil_DesertColossus"
+      "flag": "IsPlantedMagicBean_SmallFarm.14429198438059673734"
     },
     "title": {
       "zh-CN": "神殿入口左侧松土",
@@ -6527,8 +6524,8 @@
       -4.877
     ],
     "rule": {
-      "type": "b64",
-      "hash": "3130048366421939233"
+      "type": "bool32",
+      "flag": "IsTreasureBoxOpen.3130048366421939233"
     },
     "title": {
       "zh-CN": "瀑布后点火把宝箱",
@@ -6567,8 +6564,8 @@
       -93.672
     ],
     "rule": {
-      "type": "b64",
-      "hash": "12343753510713797715"
+      "type": "bool32",
+      "flag": "IsTreasureBoxOpen.12343753510713797715"
     },
     "title": {
       "zh-CN": "要塞最顶层屋顶宝箱",

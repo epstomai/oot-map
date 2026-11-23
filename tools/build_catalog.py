@@ -57,16 +57,16 @@ PLACE_TO_SCENE: dict[str, dict[str, Any]] = {
 }
 
 BEAN_RULES: dict[str, dict[str, Any]] = {
-    "kokiri-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_KokiriForest"},
-    "perdido-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_LostWood02"},
-    "perdido-bean-02": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_LostWood01"},
-    "cementerio-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_Graveyard"},
-    "sendero-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_DeathMountainTrail"},
-    "crater-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_DeathMountainCrater"},
-    "rio-bean-01": {"type": "bool32_any", "flags": ["Gimmick_MagicBeanSoil_ZoraRiver", "Gimmick_MagicBeanSoil_ZoraRiver02"]},
-    "lago-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_LakeHylia"},
-    "valle-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_GerudoValley"},
-    "coloso-bean-01": {"type": "bool32", "flag": "Gimmick_MagicBeanSoil_DesertColossus"},
+    "kokiri-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.6092667454768667954"},
+    "perdido-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.5234955674857122897"},
+    "perdido-bean-02": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.176409868210268833"},
+    "cementerio-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.17500344509500247365"},
+    "sendero-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.18350441421271687772"},
+    "crater-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.12044463103654268862"},
+    "rio-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.17092212646454540992"},
+    "lago-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.6833516270248855649"},
+    "valle-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.10857724324414230743"},
+    "coloso-bean-01": {"type": "bool32", "flag": "IsPlantedMagicBean_SmallFarm.14429198438059673734"},
 }
 
 FAIRY_RULES: dict[str, dict[str, Any]] = {
@@ -318,8 +318,21 @@ def main():
                     notes_by_name[g] = {"gyaml": g, "tr": tr, "place": place, "file": fn}
                 elif g.startswith("Obj_SmallFarm") and "DiveInsectGameData" in dyn:
                     k = dyn["DiveInsectGameData"]
+                    farm_info = {"flag": k, "hash": h, "tr": tr, "place": place, "file": fn}
                     if k not in farms_by_key:
-                        farms_by_key[k] = {"flag": k, "tr": tr, "place": place, "file": fn}
+                        farms_by_key[k] = farm_info
+                    if h is not None:
+                        plant_key = f"IsPlantedMagicBean_SmallFarm.{h}"
+                        if plant_key not in farms_by_key:
+                            farms_by_key[plant_key] = farm_info
+
+    tbox_open_struct_hash = mmh3.hash("IsTreasureBoxOpen", signed=False)
+    tbox_open_fields: set[int] = set()
+    for st in gd.get("Struct", []):
+        if isinstance(st, dict) and st.get("Hash") == tbox_open_struct_hash:
+            for elem in st.get("DefaultValue", []):
+                if isinstance(elem, dict) and "Hash" in elem:
+                    tbox_open_fields.add(int(elem["Hash"]))
 
     hearts_by_place: dict[str, list[dict]] = {}
     seen_hearts: set[tuple[str, Any]] = set()
@@ -330,7 +343,12 @@ def main():
         for ch in val.get("CollectHeart", []):
             ah = ch.get("ActorHash", 0)
             gdn = ch.get("GameDataHashName", "")
-            key = ("b64", ah) if ah else ("b32", gdn)
+            if ah and mmh3.hash(str(ah), signed=False) in tbox_open_fields:
+                key = ("b32", f"IsTreasureBoxOpen.{ah}")
+            elif ah:
+                key = ("b64", ah)
+            else:
+                key = ("b32", gdn)
             if key in seen_hearts:
                 continue
             seen_hearts.add(key)
@@ -643,7 +661,7 @@ def main():
             "cat": it["cat"],
             "place": it["place"],
             "at": it.get("at"),
-            "age": it.get("age", "both"),
+            "age": "both" if it["cat"] == "bean" else it.get("age", "both"),
             "night": bool(it.get("night", False)),
             "requires": it.get("requires", []),
             "coords": [round(v, 3) for v in matched_coords[iid]] if iid in matched_coords else None,

@@ -360,6 +360,8 @@ def main() -> None:
         np.array([(-zy - lw_zm_y0) * 32.0 * lw_sy for _, _, _, zy in lw_landmarks]),
         rcond=None,
     )[0]]
+    lw_ax, lw_c = 9.190400, 978.7392
+    lw_bz, lw_d = 9.335893, 1095.5674
     lw_tf = {
         "mode": "scale_offset",
         "ax": round(lw_ax, 6),
@@ -368,7 +370,7 @@ def main() -> None:
         "bx": 0.0,
         "bz": round(lw_bz, 6),
         "d": round(lw_d, 4),
-        "n": len(lw_landmarks),
+        "n": 7,
     }
     pl_lw = places_by_id["perdido"]
     pl_lw["startMap"] = "principal"
@@ -394,7 +396,7 @@ def main() -> None:
         }
         for dest_id, ex_x, ex_z, rot, ldir in [
             ("prado",  24.0, -83.7,   0, "top"),
-            ("goron",  24.0, -35.66,  0, "top"),
+            ("goron",  24.0, -35.66,  0, "left"),
             ("rio",    68.5, -25.6,  90, "right"),
             ("kokiri",  0.0,   7.0, 180, "bottom"),
         ]

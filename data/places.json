@@ -70,7 +70,36 @@
         "zh-CN": "冒险开始的村庄。包含3只黄金蜘蛛与1处魔法豆松土：少年期夜晚可抓无所不知兄弟屋后及商店后方虫洞蜘蛛（顺便种下魔法豆），青年期夜晚可用钩爪拿下双胞胎屋顶后方的第3只蜘蛛。",
         "ja": "冒険が始まるコキリの森。黄金のスタルチュラ3匹と魔法のマメの土が1か所あります。子供時代にはものしり兄弟の家の裏（夜）と店の裏のムシ穴（昼夜不問）を回収し、同じ土にマメを植えておきましょう。大人時代の夜にフックショットで双子の家の屋根裏の3匹目を取れます。",
         "en": "The starting village holds 3 Gold Skulltulas and 1 Magic Bean soil patch. Get the two Child Skulltulas behind the Know-It-All House (night) and the shop soft soil (bugs, any time), plant a Magic Bean there, and return as Adult at night with the Hookshot for the third."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "deku",
+          "x": 0.8273,
+          "y": 0.3661,
+          "rot": 101,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "perdido",
+          "x": 0.4013,
+          "y": 0.1356,
+          "rot": -25,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "llanura",
+          "x": 0.0791,
+          "y": 0.3116,
+          "rot": -90,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "perdido",
@@ -110,13 +139,13 @@
       ],
       "transform": {
         "mode": "scale_offset",
-        "ax": 9.198631,
+        "ax": 9.1904,
         "az": 0.0,
-        "c": 970.6248,
+        "c": 978.7392,
         "bx": 0.0,
-        "bz": 9.225477,
-        "d": 1031.2999,
-        "n": 9
+        "bz": 9.335893,
+        "d": 1095.5674,
+        "n": 7
       },
       "dungeon_floors": [],
       "name": {
@@ -133,8 +162,8 @@
         {
           "map": "principal",
           "to": "prado",
-          "x": 0.5817,
-          "y": 0.1265,
+          "x": 0.5856,
+          "y": 0.1534,
           "rot": 0,
           "dir": "top",
           "icon": "maps/map_icon_exit.webp"
@@ -142,17 +171,17 @@
         {
           "map": "principal",
           "to": "goron",
-          "x": 0.5817,
-          "y": 0.3429,
+          "x": 0.5856,
+          "y": 0.3724,
           "rot": 0,
-          "dir": "top",
+          "dir": "left",
           "icon": "maps/map_icon_exit.webp"
         },
         {
           "map": "principal",
           "to": "rio",
-          "x": 0.7816,
-          "y": 0.3882,
+          "x": 0.7853,
+          "y": 0.4182,
           "rot": 90,
           "dir": "right",
           "icon": "maps/map_icon_exit.webp"
@@ -160,9 +189,9 @@
         {
           "map": "principal",
           "to": "kokiri",
-          "x": 0.4739,
-          "y": 0.5351,
-          "rot": 180,
+          "x": 0.4779,
+          "y": 0.5669,
+          "rot": -180,
           "dir": "bottom",
           "icon": "maps/map_icon_exit.webp"
         }
@@ -224,7 +253,27 @@
         "zh-CN": "通往森之神殿的迷宫花园。仅在青年期夜晚迷宫右侧墙壁出现1只黄金蜘蛛，用钩爪即可击落收集。",
         "ja": "森の神殿へ続く迷路庭園。大人時代の夜のみ、階段手前の右側壁面に黄金のスタルチュラが1匹現れます。フックショットで倒しましょう。",
         "en": "A single Adult night Gold Skulltula waits on the right-hand wall halfway through the maze leading to the Forest Temple."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "bosque",
+          "x": 0.4856,
+          "y": 0.0873,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "perdido",
+          "x": 0.4828,
+          "y": 0.9473,
+          "rot": -180,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "llanura",
@@ -282,7 +331,72 @@
         "zh-CN": "广袤的中央平原藏有2块心之碎片、3只黄金蜘蛛与多达10处妖精的思绪。多数目标隐藏在需要炸弹或重锤炸开的地下秘窟中。",
         "ja": "広大なハイラル平原にはハートのかけら2個、黄金のスタルチュラ3匹、そして10か所の妖精の想いが隠されています。バクダンやメガトンハンマーで開く隠し穴が多いので要チェック。",
         "en": "Hyrule Field hides 2 Pieces of Heart, 3 Gold Skulltulas, and 10 Fairy Thoughts, many tucked inside grottos opened with Bombs or the Megaton Hammer."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "ciudadela",
+          "x": 0.5702,
+          "y": 0.152,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "kakariko",
+          "x": 0.8854,
+          "y": 0.143,
+          "rot": 42,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "rio",
+          "x": 0.8937,
+          "y": 0.3954,
+          "rot": 129,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "kokiri",
+          "x": 0.8762,
+          "y": 0.7067,
+          "rot": 62,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "lago",
+          "x": 0.4276,
+          "y": 0.8774,
+          "rot": -150,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "valle",
+          "x": 0.0913,
+          "y": 0.4251,
+          "rot": -54,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "lonlon",
+          "x": 0.4779,
+          "y": 0.4583,
+          "rot": -180,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "lonlon",
@@ -340,7 +454,18 @@
         "zh-CN": "牧场内有4只黄金蜘蛛（注意窗口与石塔高处）、石塔最深处箱后的心之碎片、1处妖精的思绪，以及唤醒塔隆后参加超级鸡小游戏获得的空瓶。",
         "ja": "ロンロン牧場には黄金のスタルチュラ3匹、石塔奥のハートのかけら、妖精の想い1か所、そしてタロンを起こした後に遊べるスーパーコッコ探しで手に入るあきビンがあります。",
         "en": "Lon Lon Ranch holds 3 Gold Skulltulas, a Piece of Heart inside the stone silo, 1 Fairy Thought, and a Bottle won from Talon's Super Cucco game after waking him at Hyrule Castle."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "llanura",
+          "x": 0.6485,
+          "y": 0.16,
+          "rot": 10,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "ciudadela",
@@ -414,7 +539,45 @@
         "zh-CN": "海拉鲁城下町包含3块心之碎片（夜晚宝箱屋、寻狗任务、炸弹鼠保龄球）、入口警卫室的1只黄金蜘蛛，以及药店抓虫与幽灵屋500分兑换的2个空瓶。",
         "ja": "ハイラル城下町にはハートのかけら3個（宝箱屋・リチャード探し・ボムチュウボウリング）、見張り小屋のスタルチュラ1匹、さらに子供時代のクスリ屋と大人時代のゴーストショップで2つのあきビンが手に入ります。",
         "en": "Hyrule Castle Town offers 3 Pieces of Heart (Treasure Chest Shop, Richard's dog, Bombchu Bowling), 1 Gold Skulltula in the Guard House, and 2 Bottles (Potion Shop bugs as Child, Poe Collector 500 pts as Adult)."
-      }
+      },
+      "exits": [
+        {
+          "map": "nino",
+          "to": "llanura",
+          "x": 0.5018,
+          "y": 0.9127,
+          "rot": -180,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "nino",
+          "to": "castillo",
+          "x": 0.5008,
+          "y": 0.2315,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "llanura",
+          "x": 0.5018,
+          "y": 0.9127,
+          "rot": -180,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "castillo",
+          "x": 0.5008,
+          "y": 0.2315,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "castillo",
@@ -499,7 +662,36 @@
         "zh-CN": "少年期海拉鲁城堡与青年期加侬城堡共用区域，包含3只黄金蜘蛛（庭院树、暴风雨秘窟、废墟拱门）及2座大妖精之泉（迪恩之火、双倍防御）。",
         "ja": "子供時代のハイラル城と大人時代のガノン城周辺。黄金のスタルチュラ3匹（庭園の木・嵐の歌の穴・廃墟のアーチ）と2つの大妖精の泉（ディンの炎・防御力2倍）があります。",
         "en": "Covers Hyrule Castle as Child and outside Ganon's Castle as Adult, containing 3 Gold Skulltulas and 2 Great Fairy Fountains."
-      }
+      },
+      "exits": [
+        {
+          "map": "nino",
+          "to": "ciudadela",
+          "x": 0.4632,
+          "y": 0.9023,
+          "rot": -161,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "ciudadela",
+          "x": 0.4425,
+          "y": 0.9459,
+          "rot": -167,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "ganon",
+          "x": 0.3139,
+          "y": 0.1138,
+          "rot": -35,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "kakariko",
@@ -574,7 +766,72 @@
         "zh-CN": "收集密度极高的村庄：共4块心之碎片（含50蜘蛛奖励与风车/屋顶）、6只黄金蜘蛛，以及集齐7只走失鸡获得的空瓶。",
         "ja": "収集物が非常に多い村。ハートのかけら4個（50匹報酬含む）、黄金のスタルチュラ6匹、そして7羽のコッコ集めでもらえるあきビンがあります。",
         "en": "A packed hub with 4 Pieces of Heart (including the 50-Skulltula reward), 6 Gold Skulltulas, and the Cucco Lady's Bottle."
-      }
+      },
+      "exits": [
+        {
+          "map": "nino",
+          "to": "llanura",
+          "x": 0.1123,
+          "y": 0.5824,
+          "rot": -66,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "nino",
+          "to": "sendero",
+          "x": 0.5725,
+          "y": 0.1031,
+          "rot": 5,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "nino",
+          "to": "cementerio",
+          "x": 0.9051,
+          "y": 0.6479,
+          "rot": 90,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "nino",
+          "to": "pozo",
+          "x": 0.645,
+          "y": 0.5125,
+          "rot": 120,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "llanura",
+          "x": 0.1123,
+          "y": 0.5824,
+          "rot": -66,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "sendero",
+          "x": 0.5725,
+          "y": 0.1031,
+          "rot": 5,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "cementerio",
+          "x": 0.9051,
+          "y": 0.6479,
+          "rot": 90,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "cementerio",
@@ -648,7 +905,36 @@
         "zh-CN": "卡卡利科墓地包含4块心之碎片（夜晚掘墓、丹培赛跑、王室墓穴前墓碑、高台）、2只黄金蜘蛛、1处魔法豆松土和2处妖精的思绪。",
         "ja": "カカリコ村の墓地にはハートのかけら4個（夜の穴掘り・ダンペイ競争・王家の墓前の墓石・高台）、スタルチュラ2匹、魔法のマメの土1か所、妖精の想い2か所があります。",
         "en": "The Graveyard features 4 Pieces of Heart (gravedigging tour, Dampé race, grave chest, high ledge), 2 Gold Skulltulas, 1 Magic Bean patch, and 2 Fairy Thoughts."
-      }
+      },
+      "exits": [
+        {
+          "map": "nino",
+          "to": "kakariko",
+          "x": 0.0878,
+          "y": 0.5625,
+          "rot": -87,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "kakariko",
+          "x": 0.0878,
+          "y": 0.5625,
+          "rot": -87,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "sombra",
+          "x": 0.8817,
+          "y": 0.4757,
+          "rot": 90,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "sendero",
@@ -706,7 +992,45 @@
         "zh-CN": "通往山顶的登山道有1块心之碎片、4只黄金蜘蛛、多东哥洞窟前魔法豆松土、1处妖精的思绪，以及山顶大妖精之泉（魔力槽/回旋斩）。",
         "ja": "登山道にはハートのかけら1個、黄金のスタルチュラ4匹、ドドンゴの洞窟前のマメの土、妖精の想い1か所、そして山頂の大妖精の泉があります。",
         "en": "Death Mountain Trail has 1 Piece of Heart, 4 Gold Skulltulas, 1 Magic Bean patch, 1 Fairy Thought, and the summit Great Fairy Fountain."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "crater",
+          "x": 0.7005,
+          "y": 0.0691,
+          "rot": -1,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "dodongos",
+          "x": 0.3524,
+          "y": 0.5524,
+          "rot": -50,
+          "dir": "left",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "goron",
+          "x": 0.5328,
+          "y": 0.3202,
+          "rot": -40,
+          "dir": "left",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "kakariko",
+          "x": 0.4971,
+          "y": 0.8892,
+          "rot": 175,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "goron",
@@ -764,7 +1088,36 @@
         "zh-CN": "鼓隆族居住的洞穴城市。少年期点燃全部火把向旋转大壶投炸弹可得心之碎片；迷宫尽头木箱与青年期天花板悬岩各有1只黄金蜘蛛。",
         "ja": "ゴロン族の都市。子供時代に燭台を灯して回る大ツボにバクダンを入れるとハートのかけら。岩迷路の木箱と大人時代の天井岩に黄金のスタルチュラが各1匹います。",
         "en": "Goron City holds 1 Piece of Heart (spinning pot), 1 Child Gold Skulltula in the boulder maze crate, and 1 Adult Gold Skulltula on the ceiling overhang."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "crater",
+          "x": 0.5369,
+          "y": 0.059,
+          "rot": 0,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "perdido",
+          "x": 0.7681,
+          "y": 0.4913,
+          "rot": 80,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "sendero",
+          "x": 0.5524,
+          "y": 0.8874,
+          "rot": -180,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "crater",
@@ -822,7 +1175,36 @@
         "zh-CN": "炙热的火山口地区：少年期需要火之波莱罗快速种豆、抓虫蜘蛛与找商贩买碎片；青年期穿红衣采集高岩/洞壁碎片并前往双倍魔力大妖精之泉。",
         "ja": "高熱の火口エリア。子供時代に炎のボレロで移動しマメ植え・ムシ穴・アキンドナッツ回収を行い、大人時代にゴロンの服を着てかけら2個と魔力2倍の大妖精へ向かいます。",
         "en": "Heat-filled crater with 3 Pieces of Heart, 2 Gold Skulltulas, 1 Magic Bean patch, and the Double Magic Great Fairy Fountain."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "sendero",
+          "x": 0.7172,
+          "y": 0.8871,
+          "rot": 153,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "goron",
+          "x": 0.1126,
+          "y": 0.2466,
+          "rot": -69,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "fuego",
+          "x": 0.585,
+          "y": 0.0811,
+          "rot": 0,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "rio",
@@ -880,7 +1262,36 @@
         "zh-CN": "通往卓拉领地的溪流峡谷：包含4块心之碎片（青蛙合奏、瀑布高台、河中柱、母鸡滑翔洞）、4只黄金蜘蛛，以及站着魔法豆卖家的松软泥土。",
         "ja": "ゾーラの里へ続く渓谷。カエルの合唱などハートのかけら4個、黄金のスタルチュラ4匹、マメ売り子が座る魔法のマメの土があります。",
         "en": "Features 4 Pieces of Heart (including the frog choir), 4 Gold Skulltulas, and the Magic Bean salesman with a soft soil patch."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "llanura",
+          "x": 0.0525,
+          "y": 0.7835,
+          "rot": -97,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "perdido",
+          "x": 0.8872,
+          "y": 0.5027,
+          "rot": -180,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "dominio",
+          "x": 0.9668,
+          "y": 0.2971,
+          "rot": 90,
+          "dir": "left",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "dominio",
@@ -939,7 +1350,36 @@
         "zh-CN": "卓拉族水下宫殿：少年期在瀑布后点燃全部火把得心之碎片，青年期夜晚在瀑布旁岩石上用钩爪击落1只黄金蜘蛛。",
         "ja": "ゾーラの里。子供時代に滝裏の燭台を全て灯すとハートのかけら、大人時代の夜に凍結した滝の横の壁面から黄金のスタルチュラを回収できます。",
         "en": "Zora's Domain has 1 Piece of Heart (lighting all torches behind the waterfall as Child) and 1 Adult night Gold Skulltula by the frozen waterfall."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "rio",
+          "x": 0.3195,
+          "y": 0.1314,
+          "rot": -5,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "fuente",
+          "x": 0.9179,
+          "y": 0.7401,
+          "rot": 90,
+          "dir": "left",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "lago",
+          "x": 0.2926,
+          "y": 0.546,
+          "rot": -106,
+          "dir": "left",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "fuente",
@@ -1013,7 +1453,45 @@
         "zh-CN": "加卜加卜大人所在的圣泉：少年期及青年期水面漂流冰块各藏有心之碎片，共有3只黄金蜘蛛，以及授予《花之风》的大妖精之泉。",
         "ja": "ジャブジャブ様がいた聖なる泉。氷上のハートのかけら2個、黄金のスタルチュラ3匹、そして『フロルの風』を授ける大妖精の泉があります。",
         "en": "Zora's Fountain holds 2 Pieces of Heart (underwater & floating ice), 3 Gold Skulltulas, and the Great Fairy of Farore's Wind."
-      }
+      },
+      "exits": [
+        {
+          "map": "nino",
+          "to": "dominio",
+          "x": 0.135,
+          "y": 0.4181,
+          "rot": -90,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "nino",
+          "to": "jabu",
+          "x": 0.3938,
+          "y": 0.4181,
+          "rot": 90,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "dominio",
+          "x": 0.135,
+          "y": 0.4174,
+          "rot": -90,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "adulto",
+          "to": "hielo",
+          "x": 0.5955,
+          "y": 0.1225,
+          "rot": 0,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "lago",
@@ -1071,7 +1549,45 @@
         "zh-CN": "海拉鲁南部的广阔湖泊：包含3块心之碎片（钓鱼、潜水、博士屋顶）、5只黄金蜘蛛、1处豆苗土、露托的信空瓶，以及西岸1处妖精的思绪。",
         "ja": "広大なハイリア湖畔。ハートのかけら3個（釣り・潜水・研究所屋根）、黄金のスタルチュラ5匹、マメの土、ルトの手紙入りあきビン、西岸の妖精の想いがあります。",
         "en": "Lake Hylia has 3 Pieces of Heart, 5 Gold Skulltulas, 1 Magic Bean patch, Ruto's Letter Bottle, and 1 Fairy Thought on the west shore."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "llanura",
+          "x": 0.7883,
+          "y": 0.1544,
+          "rot": 35,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "valle",
+          "x": 0.2991,
+          "y": 0.1223,
+          "rot": -17,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "agua",
+          "x": 0.5108,
+          "y": 0.524,
+          "rot": -150,
+          "dir": "bottom",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "dominio",
+          "x": 0.6458,
+          "y": 0.3358,
+          "rot": 42,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "valle",
@@ -1129,7 +1645,36 @@
         "zh-CN": "通往西部格鲁德地区的峡谷：包含2块心之碎片（瀑布后与帐篷旁岩台）、4只黄金蜘蛛与峡谷底部的1处魔法豆松土。",
         "ja": "ゲルド地方へ続く渓谷。ハートのかけら2個（滝の裏と崖の宝箱）、黄金のスタルチュラ4匹、川底の魔法のマメの土1か所があります。",
         "en": "Gerudo Valley features 2 Pieces of Heart, 4 Gold Skulltulas, and 1 Magic Bean patch by the cow at the canyon floor."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "fortaleza",
+          "x": 0.1035,
+          "y": 0.5336,
+          "rot": -81,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "llanura",
+          "x": 0.8822,
+          "y": 0.7494,
+          "rot": -164,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "lago",
+          "x": 0.4891,
+          "y": 0.97,
+          "rot": -180,
+          "dir": "top",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "fortaleza",
@@ -1187,7 +1732,36 @@
         "zh-CN": "取得格鲁德通行证后可自由探索：包含2块心之碎片（骑马射箭1000分与屋顶宝箱）以及夜晚出现的2只黄金蜘蛛。",
         "ja": "ゲルドの会員証入手後に探索できる砦。流鏑馬1000点と屋上宝箱のハートのかけら2個、夜出現の黄金のスタルチュラ2匹があります。",
         "en": "After earning the Gerudo Token, collect 2 Pieces of Heart (Horseback Archery 1,000 pts & rooftop chest) and 2 night Gold Skulltulas."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "valle",
+          "x": 0.1254,
+          "y": 0.526,
+          "rot": -144,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "desierto",
+          "x": 0.0793,
+          "y": 0.1125,
+          "rot": -39,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "gerudo",
+          "x": 0.2347,
+          "y": 0.6212,
+          "rot": 0,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "desierto",
@@ -1323,7 +1897,27 @@
         "zh-CN": "魂之神殿入口所在的大沙漠遗迹：包含1块心之碎片（须先少年期种豆）、3只黄金蜘蛛、1处豆土、1处妖精的思绪与《娜尤之爱》大妖精之泉。",
         "ja": "魂の神殿の入口がある砂漠の遺跡。ハートのかけら1個、黄金のスタルチュラ3匹、マメの土、妖精の想い1か所、『ネールの愛』の大妖精の泉があります。",
         "en": "Outside the Spirit Temple: 1 Piece of Heart (via Magic Bean), 3 Gold Skulltulas, 1 Magic Bean patch, 1 Fairy Thought, and Nayru's Love Great Fairy."
-      }
+      },
+      "exits": [
+        {
+          "map": "principal",
+          "to": "espiritu",
+          "x": 0.246,
+          "y": 0.4846,
+          "rot": -120,
+          "dir": "right",
+          "icon": "maps/map_icon_exit.webp"
+        },
+        {
+          "map": "principal",
+          "to": "desierto",
+          "x": 0.9078,
+          "y": 0.4355,
+          "rot": 90,
+          "dir": "left",
+          "icon": "maps/map_icon_exit.webp"
+        }
+      ]
     },
     {
       "id": "deku",

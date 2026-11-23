@@ -59,6 +59,9 @@ for (const place of placesBlob.places || []) {
   for (const m of place.maps || []) {
     if (m.image) referencedMaps.add(path.basename(m.image));
   }
+  for (const ex of place.exits || []) {
+    if (ex.icon) referencedMaps.add(path.basename(ex.icon));
+  }
 }
 
 let copiedCount = 0;

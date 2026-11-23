@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import struct
 import sys
 import tempfile
 import unittest
@@ -50,6 +51,127 @@ class TestOoTTracker(unittest.TestCase):
             for m in p.get("maps", []):
                 svg_path = os.path.join(MAPS_DIR, os.path.basename(m["image"]))
                 self.assertTrue(os.path.isfile(svg_path), f"Missing map SVG: {svg_path}")
+            for ex in p.get("exits", []):
+                self.assertIn(ex["to"], catalog.places_by_id, f"Invalid exit target {ex['to']} on {p['id']}")
+                self.assertTrue(0.0 <= ex["x"] <= 1.0 and 0.0 <= ex["y"] <= 1.0, f"OOB exit on {p['id']}: {ex}")
+                if ex.get("icon"):
+                    icon_path = os.path.join(MAPS_DIR, os.path.basename(ex["icon"]))
+                    self.assertTrue(os.path.isfile(icon_path), f"Missing exit icon: {icon_path}")
+
+        self.assertGreaterEqual(len(catalog.places_by_id["llanura"].get("exits", [])), 7)
+        lw_exits = {ex["to"]: ex for ex in catalog.places_by_id["perdido"].get("exits", [])}
+        self.assertEqual(set(lw_exits.keys()), {"prado", "goron", "rio", "kokiri"})
+        # Verify Zora River exit is aligned with the blue pond (y ~= 0.418, not 0.388)
+        self.assertAlmostEqual(lw_exits["rio"]["y"], 0.4182, places=3)
+        # Verify Kakariko Bottom of the Well exit is on the well (x ~= 0.645, not 0.724 windmill)
+        kak_pozo = next(ex for ex in catalog.places_by_id["kakariko"]["exits"] if ex["to"] == "pozo")
+        self.assertAlmostEqual(kak_pozo["x"], 0.6450, places=3)
+        self.assertAlmostEqual(kak_pozo["y"], 0.5125, places=3)
+        # Verify Death Mountain Trail -> Goron City exit is on the tunnel mouth (not 0.630 trail)
+        dmt_goron = next(ex for ex in catalog.places_by_id["sendero"]["exits"] if ex["to"] == "goron")
+        self.assertAlmostEqual(dmt_goron["x"], 0.5328, places=3)
+        self.assertAlmostEqual(dmt_goron["y"], 0.3202, places=3)
+        # Verify Gerudo Fortress -> Gerudo Valley arrow points southwest (-144, not +144)
+        gf_valle = next(ex for ex in catalog.places_by_id["fortaleza"]["exits"] if ex["to"] == "valle")
+        self.assertEqual(gf_valle["rot"], -144)
+
+    def test_magic_bean_rules_and_hashes(self):
+        expected = {
+            "kokiri-bean-01": ("IsPlantedMagicBean_SmallFarm.6092667454768667954", 3042626269),
+            "perdido-bean-01": ("IsPlantedMagicBean_SmallFarm.5234955674857122897", 1589607563),
+            "perdido-bean-02": ("IsPlantedMagicBean_SmallFarm.176409868210268833", 1628352828),
+            "cementerio-bean-01": ("IsPlantedMagicBean_SmallFarm.17500344509500247365", 659258941),
+            "sendero-bean-01": ("IsPlantedMagicBean_SmallFarm.18350441421271687772", 4073634450),
+            "crater-bean-01": ("IsPlantedMagicBean_SmallFarm.12044463103654268862", 1445964662),
+            "rio-bean-01": ("IsPlantedMagicBean_SmallFarm.17092212646454540992", 1592410278),
+            "lago-bean-01": ("IsPlantedMagicBean_SmallFarm.6833516270248855649", 2956424759),
+            "valle-bean-01": ("IsPlantedMagicBean_SmallFarm.10857724324414230743", 1352759134),
+            "coloso-bean-01": ("IsPlantedMagicBean_SmallFarm.14429198438059673734", 706500814),
+        }
+        beans = {it["id"]: it for it in catalog.collectibles if it["cat"] == "bean"}
+        self.assertEqual(set(beans.keys()), set(expected.keys()))
+        try:
+            import mmh3  # type: ignore
+        except ImportError:
+            mmh3 = None
+        for bid, (flag, expected_hash) in expected.items():
+            it = beans[bid]
+            self.assertEqual(it["age"], "both", f"{bid} should be visible in both eras")
+            self.assertEqual(it["rule"], {"type": "bool32", "flag": flag})
+            self.assertEqual(catalog.hashes.get(flag), expected_hash)
+            if mmh3 is not None:
+                self.assertEqual(mmh3.hash(flag, 0, signed=False), expected_hash)
+
+    def test_parse_synthetic_progress_sav_magic_beans(self):
+        planted_ids = ["kokiri-bean-01", "rio-bean-01", "lago-bean-01"]
+        unplanted_id = "crater-bean-01"
+        beans_by_id = {it["id"]: it for it in catalog.collectibles if it["cat"] == "bean"}
+        kv_pairs = [
+            (catalog.hashes[beans_by_id[bid]["rule"]["flag"]], 1) for bid in planted_ids
+        ] + [
+            (catalog.hashes[beans_by_id[unplanted_id]["rule"]["flag"]], 0),
+            # Pouring bugs (DiveInsectGameData) must NOT mark beans as planted
+            (catalog.hashes.get("Gimmick_MagicBeanSoil_DeathMountainCrater", 2189915551), 1),
+            (catalog.hashes.get("Gimmick_MagicBeanSoil_DesertColossus", 352515689), 1),
+        ]
+        end_off = 0x28 + len(kv_pairs) * 8
+        buf = bytearray(end_off + 16)
+        struct.pack_into("<III", buf, 0, 0x01020304, 0, end_off)
+        for idx, (h, v) in enumerate(kv_pairs):
+            struct.pack_into("<II", buf, 0x28 + idx * 8, h, v)
+
+        with tempfile.TemporaryDirectory() as td:
+            sav_path = os.path.join(td, "progress.sav")
+            with open(sav_path, "wb") as f:
+                f.write(buf)
+            parsed = parse_progress_sav(sav_path, catalog)
+
+        self.assertEqual(parsed["counts"]["by_cat"]["bean"], {"collected": 3, "total": 10})
+        for bid in planted_ids:
+            self.assertTrue(parsed["collected"][bid], f"{bid} should be collected")
+        self.assertFalse(parsed["collected"][unplanted_id])
+        self.assertFalse(parsed["collected"]["coloso-bean-01"])
+
+    def test_chest_heart_piece_rules_and_synthetic_save(self):
+        expected = {
+            "llanura-heart-02": ("IsTreasureBoxOpen.2967378296224661060", 3667787564),
+            "cementerio-heart-02": ("IsTreasureBoxOpen.5534919361313859554", 2201084167),
+            "cementerio-heart-03": ("IsTreasureBoxOpen.9622128545943056087", 2626274661),
+            "valle-heart-02": ("IsTreasureBoxOpen.15856256242099990922", 1879175548),
+            "dominio-heart-01": ("IsTreasureBoxOpen.3130048366421939233", 2707918553),
+            "fortaleza-heart-02": ("IsTreasureBoxOpen.12343753510713797715", 1755114472),
+        }
+        hearts = {it["id"]: it for it in catalog.collectibles if it["cat"] == "heart"}
+        try:
+            import mmh3  # type: ignore
+        except ImportError:
+            mmh3 = None
+        for hid, (flag, expected_hash) in expected.items():
+            self.assertEqual(hearts[hid]["rule"], {"type": "bool32", "flag": flag})
+            self.assertEqual(catalog.hashes.get(flag), expected_hash)
+            if mmh3 is not None:
+                self.assertEqual(mmh3.hash(flag, 0, signed=False), expected_hash)
+
+        opened_ids = ["dominio-heart-01", "valle-heart-02", "cementerio-heart-03"]
+        kv_pairs = [(expected[hid][1], 1) for hid in opened_ids] + [
+            (expected["fortaleza-heart-02"][1], 0),
+        ]
+        end_off = 0x28 + len(kv_pairs) * 8
+        buf = bytearray(end_off + 16)
+        struct.pack_into("<III", buf, 0, 0x01020304, 0, end_off)
+        for idx, (h, v) in enumerate(kv_pairs):
+            struct.pack_into("<II", buf, 0x28 + idx * 8, h, v)
+
+        with tempfile.TemporaryDirectory() as td:
+            sav_path = os.path.join(td, "progress.sav")
+            with open(sav_path, "wb") as f:
+                f.write(buf)
+            parsed = parse_progress_sav(sav_path, catalog)
+
+        self.assertEqual(parsed["counts"]["by_cat"]["heart"], {"collected": 3, "total": 36})
+        for hid in opened_ids:
+            self.assertTrue(parsed["collected"][hid], f"{hid} should be collected")
+        self.assertFalse(parsed["collected"]["fortaleza-heart-02"])
 
     def test_parse_all_six_save_slots(self):
         if not os.path.isdir(DEFAULT_SAVE_ROOT):
