@@ -78,6 +78,13 @@ class TestOoTTracker(unittest.TestCase):
         gtg_tf = catalog.places_by_id["gerudo"]["transform"]
         self.assertAlmostEqual(gtg_tf["ax"] * 69.06 + gtg_tf["c"], 1454.6, delta=2.0)
         self.assertAlmostEqual(gtg_tf["bz"] * (-43.92) + gtg_tf["d"], 894.5, delta=2.0)
+        # Verify Haunted Wasteland transform aligns the 18 flag posts and gate exits on wasteland_hd.webp
+        hw_tf = catalog.places_by_id["desierto"]["transform"]
+        self.assertAlmostEqual(hw_tf["ax"] * (-99.51) + hw_tf["c"], 425.96, delta=4.0)
+        self.assertAlmostEqual(hw_tf["bz"] * 27.32 + hw_tf["d"], 1484.68, delta=8.0)
+        hw_exits = {ex["to"]: ex for ex in catalog.places_by_id["desierto"]["exits"]}
+        self.assertAlmostEqual(hw_exits["coloso"]["x"], 0.1854, places=3)
+        self.assertAlmostEqual(hw_exits["fortaleza"]["x"], 0.8271, places=3)
 
     def test_fairy_thoughts_complete_23_and_ages(self):
         thoughts = {it["id"]: it for it in catalog.collectibles if it["cat"] == "thought"}

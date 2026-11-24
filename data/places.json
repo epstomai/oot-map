@@ -1801,13 +1801,13 @@
       ],
       "transform": {
         "mode": "scale_offset",
-        "ax": 7.323383,
+        "ax": 5.70952,
         "az": 0.0,
-        "c": 965.9224,
+        "c": 991.903,
         "bx": 0.0,
-        "bz": 7.323383,
-        "d": 1483.4372,
-        "n": 3
+        "bz": 5.636478,
+        "d": 1323.9424,
+        "n": 18
       },
       "dungeon_floors": [],
       "name": {
@@ -1824,8 +1824,8 @@
         {
           "map": "principal",
           "to": "coloso",
-          "x": 0.0518,
-          "y": 0.5248,
+          "x": 0.1854,
+          "y": 0.4929,
           "rot": -90,
           "dir": "top",
           "icon": "maps/map_icon_exit.webp"
@@ -1833,8 +1833,8 @@
         {
           "map": "principal",
           "to": "fortaleza",
-          "x": 0.894,
-          "y": 0.9199,
+          "x": 0.8271,
+          "y": 0.8055,
           "rot": 90,
           "dir": "top",
           "icon": "maps/map_icon_exit.webp"

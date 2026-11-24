@@ -3818,8 +3818,8 @@
     "place": "desierto",
     "at": {
       "map": "principal",
-      "x": 0.5289,
-      "y": 0.3675
+      "x": 0.529,
+      "y": 0.3718
     },
     "age": "adult",
     "night": false,

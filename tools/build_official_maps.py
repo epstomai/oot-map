@@ -410,21 +410,18 @@ def main() -> None:
     hw_hd = align_gemini_image_to_reference(GEMINI_WASTELAND_SRC, hw_ref, out_size=hw_sz)
     Image.fromarray(hw_hd, "RGB").save(os.path.join(MAPS_DIR, "wasteland_hd.webp"), "WEBP", quality=94, method=6)
 
-    hw_scale_factor = hw_sz / 402.0
-    hw_s = 1.4375 * hw_scale_factor
-    hw_u_gs = (59.05 - hw_zm_x0) * 32.0 * hw_scale_factor
-    hw_v_gs = (118.46 - hw_zm_y0) * 32.0 * hw_scale_factor
-    hw_c = hw_u_gs - hw_s * 16.0
-    hw_d = hw_v_gs - hw_s * (-99.8)
+    # Fitted directly against all 18 Obj_Flag_A_01 flag posts on wasteland_hd.webp (RMS 4.26px on 2048x2048)
+    hw_ax, hw_c = 5.709520, 991.9030
+    hw_bz, hw_d = 5.636478, 1323.9424
     hw_tf = {
         "mode": "scale_offset",
-        "ax": round(hw_s, 6),
+        "ax": round(hw_ax, 6),
         "az": 0.0,
         "c": round(hw_c, 4),
         "bx": 0.0,
-        "bz": round(hw_s, 6),
+        "bz": round(hw_bz, 6),
         "d": round(hw_d, 4),
-        "n": 3,
+        "n": 18,
     }
     pl_hw = places_by_id["desierto"]
     pl_hw["startMap"] = "principal"
@@ -442,8 +439,8 @@ def main() -> None:
         {
             "map": "principal",
             "to": "coloso",
-            "x": round((hw_s * (-117.4) + hw_c) / float(hw_sz), 4),
-            "y": round((hw_s * (-55.8) + hw_d) / float(hw_sz), 4),
+            "x": round((hw_ax * (-107.21) + hw_c) / float(hw_sz), 4),
+            "y": round((hw_bz * (-55.8) + hw_d) / float(hw_sz), 4),
             "rot": -90,
             "dir": "top",
             "icon": "maps/map_icon_exit.webp",
@@ -451,8 +448,8 @@ def main() -> None:
         {
             "map": "principal",
             "to": "fortaleza",
-            "x": round((hw_s * 118.1 + hw_c) / float(hw_sz), 4),
-            "y": round((hw_s * 54.7 + hw_d) / float(hw_sz), 4),
+            "x": round((hw_ax * 122.94 + hw_c) / float(hw_sz), 4),
+            "y": round((hw_bz * 57.77 + hw_d) / float(hw_sz), 4),
             "rot": 90,
             "dir": "top",
             "icon": "maps/map_icon_exit.webp",
