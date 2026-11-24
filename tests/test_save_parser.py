@@ -74,6 +74,10 @@ class TestOoTTracker(unittest.TestCase):
         # Verify Gerudo Fortress -> Gerudo Valley arrow points southwest (-144, not +144)
         gf_valle = next(ex for ex in catalog.places_by_id["fortaleza"]["exits"] if ex["to"] == "valle")
         self.assertEqual(gf_valle["rot"], -144)
+        # Verify Gerudo Training Ground transform aligns Entrance (-1.8, -6.1) & WaterDevice (69.06, -43.92) to official_gerudo_1F.webp
+        gtg_tf = catalog.places_by_id["gerudo"]["transform"]
+        self.assertAlmostEqual(gtg_tf["ax"] * 69.06 + gtg_tf["c"], 1454.6, delta=2.0)
+        self.assertAlmostEqual(gtg_tf["bz"] * (-43.92) + gtg_tf["d"], 894.5, delta=2.0)
 
     def test_fairy_thoughts_complete_23_and_ages(self):
         thoughts = {it["id"]: it for it in catalog.collectibles if it["cat"] == "thought"}

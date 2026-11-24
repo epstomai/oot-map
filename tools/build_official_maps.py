@@ -662,7 +662,20 @@ def main() -> None:
     print("=== Building Gerudo Training Ground & Inside Ganon's Castle Official Maps (Pure CPU) ===")
     for pid, (cinfo, sc_name, fl_slugs) in zn_dungeon_specs.items():
         pl = places_by_id[pid]
-        tf = make_engine_tf(cinfo["CameraPos"]["X"], cinfo["CameraPos"]["Z"], cinfo["Height"])
+        if pid == "gerudo":
+            # Zelda Maps Gerudo Training Ground tile crop is offset from cap_arr[35] (CamX≈+10.0, CamZ≈-66.6, H≈259.8)
+            tf = {
+                "mode": "scale_offset",
+                "ax": 7.698295,
+                "az": 0.0,
+                "c": 923.0056,
+                "bx": 0.0,
+                "bz": 7.698295,
+                "d": 1232.6626,
+                "n": 12,
+            }
+        else:
+            tf = make_engine_tf(cinfo["CameraPos"]["X"], cinfo["CameraPos"]["Z"], cinfo["Height"])
         rendered_zn: list[tuple[str, np.ndarray, np.ndarray]] = []
         for fl_id, slug in fl_slugs:
             comp, p_alpha = fetch_zm_dungeon_2000x1440(slug)
